@@ -1,0 +1,1558 @@
+Feb 17 17:40:05 localhost su[3700]: Successful su for man by root
+Feb 17 17:40:05 localhost su[3700]: + ??? root:man
+Feb 17 17:40:05 localhost su[3700]: pam_unix(su:session): session opened for user man by (uid=0)
+Feb 17 17:40:25 localhost su[3700]: pam_unix(su:session): session closed for user man
+Feb 17 17:54:29 localhost sshd[5542]: Accepted publickey for billybob from 192.168.1.101 port 55564 ssh2: RSA SHA256:chQaEj8bIy1KpZkrjRFdDyqOQe9WGyAoyGeclhivzV0
+Feb 17 17:54:29 localhost sshd[5542]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+Feb 17 17:54:43 localhost su[5906]: Successful su for root by billybob
+Feb 17 17:54:43 localhost su[5906]: + /dev/pts/3 billybob:root
+Feb 17 17:54:43 localhost su[5906]: pam_unix(su:session): session opened for user root by billybob(uid=1000)
+Feb 17 18:01:58 localhost su[5906]: pam_unix(su:session): session closed for user root
+Feb 17 18:01:59 localhost sshd[5557]: Received disconnect from 192.168.1.101 port 55564:11: disconnected by user
+Feb 17 18:01:59 localhost sshd[5557]: Disconnected from user billybob 192.168.1.101 port 55564
+Feb 17 18:01:59 localhost sshd[5542]: pam_unix(sshd:session): session closed for user billybob
+Feb 17 22:18:42 localhost sshd[3518]: Received disconnect from 192.168.1.101 port 54740:11: disconnected by user
+Feb 17 22:18:42 localhost sshd[3518]: Disconnected from user billybob 192.168.1.101 port 54740
+Feb 17 22:18:42 localhost sshd[3510]: pam_unix(sshd:session): session closed for user billybob
+Feb 17 22:41:44 localhost sshd[3500]: Received disconnect from 192.168.1.101 port 54738:11: disconnected by user
+Feb 17 22:41:44 localhost sshd[3500]: Disconnected from user root 192.168.1.101 port 54738
+Feb 17 22:41:44 localhost sshd[3500]: pam_unix(sshd:session): session closed for user root
+Feb 17 22:41:45 localhost lightdm: pam_unix(lightdm-greeter:session): session closed for user root
+Feb 17 22:41:48 localhost sshd[3259]: Received signal 15; terminating.
+Feb 19 06:27:45 localhost polkitd[2970]: Loading rules from directory /etc/polkit-1/rules.d
+Feb 19 06:27:45 localhost polkitd[2970]: Loading rules from directory /usr/share/polkit-1/rules.d
+Feb 19 06:27:45 localhost polkitd[2970]: Finished loading, compiling and executing 2 rules
+Feb 19 06:27:45 localhost polkitd[2970]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
+Feb 19 06:27:46 localhost sshd[3273]: Server listening on 0.0.0.0 port 22.
+Feb 19 06:27:46 localhost sshd[3273]: Server listening on :: port 22.
+Feb 19 06:27:50 localhost lightdm: pam_unix(lightdm-greeter:session): session opened for user root by (uid=0)
+Feb 19 06:27:50 localhost lightdm: pam_ck_connector(lightdm-greeter:session): nox11 mode, ignoring PAM_TTY :0
+Feb 19 06:30:01 localhost su[3538]: Successful su for man by root
+Feb 19 06:30:01 localhost su[3538]: + ??? root:man
+Feb 19 06:30:01 localhost su[3538]: pam_unix(su:session): session opened for user man by (uid=0)
+Feb 19 06:30:22 localhost su[3538]: pam_unix(su:session): session closed for user man
+Feb 19 09:42:55 localhost sshd[9091]: Accepted keyboard-interactive/pam for billybob from 192.168.1.115 port 59316 ssh2
+Feb 19 09:42:55 localhost sshd[9091]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+Feb 19 13:09:07 localhost su[11017]: Successful su for root by billybob
+Feb 19 13:09:07 localhost su[11017]: + /dev/pts/0 billybob:root
+Feb 19 13:09:07 localhost su[11017]: pam_unix(su:session): session opened for user root by billybob(uid=1000)
+Feb 19 14:46:30 localhost sshd[11538]: Invalid user labrea from 192.168.1.115 port 33396
+Feb 19 14:46:30 localhost sshd[11540]: pam_tally2(sshd:auth): pam_get_uid; no such user
+Feb 19 14:46:30 localhost sshd[11538]: Postponed keyboard-interactive for invalid user labrea from 192.168.1.115 port 33396 ssh2 [preauth]
+Feb 19 14:46:35 localhost sshd[11538]: Connection closed by invalid user labrea 192.168.1.115 port 33396 [preauth]
+Feb 19 15:57:24 localhost sshd[11930]: Accepted publickey for root from 192.168.1.115 port 33472 ssh2: RSA SHA256:ANmXNvtX7iSlswtrEgXlveTkTyE5ySDCOJfTpSRK9wA
+Feb 19 15:57:24 localhost sshd[11930]: pam_unix(sshd:session): session opened for user root by (uid=0)
+Feb 19 16:03:51 localhost su[11998]: Successful su for billybob by root
+Feb 19 16:03:51 localhost su[11998]: + /dev/pts/0 root:billybob
+Feb 19 16:03:51 localhost su[11998]: pam_unix(su:session): session opened for user billybob by billybob(uid=0)
+Feb 19 16:21:42 localhost su[11998]: pam_unix(su:session): session closed for user billybob
+Feb 19 16:21:42 localhost su[11017]: pam_unix(su:session): session closed for user root
+Feb 19 20:57:34 localhost sshd[14079]: Accepted publickey for root from 192.168.1.101 port 40372 ssh2: RSA SHA256:SRYQE52DTaMykNlntpAIxjnVQMRwZz1aVNMnoB2OxNk
+Feb 19 20:57:34 localhost sshd[14079]: pam_unix(sshd:session): session opened for user root by (uid=0)
+Feb 19 21:04:46 localhost sshd[14414]: Accepted publickey for root from 192.168.1.101 port 40952 ssh2: RSA SHA256:SRYQE52DTaMykNlntpAIxjnVQMRwZz1aVNMnoB2OxNk
+Feb 19 21:04:46 localhost sshd[14414]: pam_unix(sshd:session): session opened for user root by (uid=0)
+Feb 19 21:04:53 localhost sshd[14414]: Received disconnect from 192.168.1.101 port 40952:11: disconnected by user
+Feb 19 21:04:53 localhost sshd[14414]: Disconnected from user root 192.168.1.101 port 40952
+Feb 19 21:04:53 localhost sshd[14414]: pam_unix(sshd:session): session closed for user root
+Feb 19 21:56:34 localhost sshd[14079]: Received disconnect from 192.168.1.101 port 40372:11: disconnected by user
+Feb 19 21:56:34 localhost sshd[14079]: Disconnected from user root 192.168.1.101 port 40372
+Feb 19 21:56:34 localhost sshd[14079]: pam_unix(sshd:session): session closed for user root
+Feb 19 21:56:34 localhost lightdm: pam_unix(lightdm-greeter:session): session closed for user root
+Feb 19 21:56:36 localhost sshd[3273]: Received signal 15; terminating.
+Feb 20 06:25:41 localhost polkitd[2991]: Loading rules from directory /etc/polkit-1/rules.d
+Feb 20 06:25:41 localhost polkitd[2991]: Loading rules from directory /usr/share/polkit-1/rules.d
+Feb 20 06:25:41 localhost polkitd[2991]: Finished loading, compiling and executing 2 rules
+Feb 20 06:25:41 localhost polkitd[2991]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
+Feb 20 06:25:41 localhost sshd[3272]: Server listening on 0.0.0.0 port 22.
+Feb 20 06:25:41 localhost sshd[3272]: Server listening on :: port 22.
+Feb 20 06:25:46 localhost lightdm: pam_unix(lightdm-greeter:session): session opened for user root by (uid=0)
+Feb 20 06:25:46 localhost lightdm: pam_ck_connector(lightdm-greeter:session): nox11 mode, ignoring PAM_TTY :0
+Feb 20 06:40:01 localhost su[3589]: Successful su for man by root
+Feb 20 06:40:01 localhost su[3589]: + ??? root:man
+Feb 20 06:40:01 localhost su[3589]: pam_unix(su:session): session opened for user man by (uid=0)
+Feb 20 06:40:10 localhost su[3589]: pam_unix(su:session): session closed for user man
+Feb 20 07:15:52 localhost sshd[4339]: Accepted keyboard-interactive/pam for billybob from 192.168.1.115 port 54028 ssh2
+Feb 20 07:15:52 localhost sshd[4339]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+Feb 20 14:42:13 localhost sshd[8300]: Accepted publickey for billybob from 192.168.1.115 port 54342 ssh2: RSA SHA256:s7ckJWULRXKCWx8oDWt8t7eAQ94Bh7dw5ZKXYeir7Aw
+Feb 20 14:42:13 localhost sshd[8300]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+Feb 20 14:50:01 localhost su[8332]: pam_unix(su:auth): authentication failure; logname=billybob uid=1000 euid=0 tty=/dev/pts/1 ruser=billybob rhost=  user=root
+Feb 20 14:50:03 localhost su[8332]: pam_authenticate: Authentication failure
+Feb 20 14:50:03 localhost su[8332]: FAILED su for root by billybob
+Feb 20 14:50:03 localhost su[8332]: - /dev/pts/1 billybob:root
+Feb 20 14:50:04 localhost su[8355]: Successful su for root by billybob
+Feb 20 14:50:04 localhost su[8355]: + /dev/pts/1 billybob:root
+Feb 20 14:50:04 localhost su[8355]: pam_unix(su:session): session opened for user root by billybob(uid=1000)
+Feb 20 15:01:37 localhost su[8451]: Successful su for root by billybob
+Feb 20 15:01:37 localhost su[8451]: + /dev/pts/0 billybob:root
+Feb 20 15:01:37 localhost su[8451]: pam_unix(su:session): session opened for user root by billybob(uid=1000)
+Feb 20 19:47:43 localhost lightdm: pam_unix(lightdm-greeter:session): session closed for user root
+Feb 20 19:47:43 localhost lightdm: pam_unix(lightdm:session): session opened for user billybob by (uid=0)
+Feb 20 19:47:43 localhost lightdm: pam_ck_connector(lightdm:session): nox11 mode, ignoring PAM_TTY :0
+Feb 20 19:47:45 localhost polkitd[2991]: Registered Authentication Agent for unix-session:/org/freedesktop/ConsoleKit/Session4 (system bus name :1.15 [/usr/lib64/libexec/polkit-kde-authentication-agent-1], object path /org/kde/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8)
+Feb 20 19:49:56 localhost dbus-daemon[9870]: [session uid=1000 pid=9868] Failed to activate service 'org.a11y.Bus': timed out (service_start_timeout=120000ms)
+Feb 20 19:51:57 localhost dbus-daemon[9870]: [session uid=1000 pid=9868] Failed to activate service 'org.a11y.Bus': timed out (service_start_timeout=120000ms)
+Feb 20 20:19:44 localhost sshd[11660]: Accepted publickey for root from 192.168.1.101 port 56332 ssh2: RSA SHA256:SRYQE52DTaMykNlntpAIxjnVQMRwZz1aVNMnoB2OxNk
+Feb 20 20:19:44 localhost sshd[11660]: pam_unix(sshd:session): session opened for user root by (uid=0)
+Feb 20 20:23:40 localhost sshd[11700]: Accepted publickey for root from 192.168.1.101 port 56418 ssh2: RSA SHA256:SRYQE52DTaMykNlntpAIxjnVQMRwZz1aVNMnoB2OxNk
+Feb 20 20:23:40 localhost sshd[11700]: pam_unix(sshd:session): session opened for user root by (uid=0)
+Feb 20 20:36:21 localhost sshd[11700]: Received disconnect from 192.168.1.101 port 56418:11: disconnected by user
+Feb 20 20:36:21 localhost sshd[11700]: Disconnected from user root 192.168.1.101 port 56418
+Feb 20 20:36:21 localhost sshd[11700]: pam_unix(sshd:session): session closed for user root
+Feb 20 20:39:34 localhost sshd[11660]: Received disconnect from 192.168.1.101 port 56332:11: disconnected by user
+Feb 20 20:39:34 localhost sshd[11660]: Disconnected from user root 192.168.1.101 port 56332
+Feb 20 20:39:34 localhost sshd[11660]: pam_unix(sshd:session): session closed for user root
+Feb 20 20:39:35 localhost polkitd[2991]: Unregistered Authentication Agent for unix-session:/org/freedesktop/ConsoleKit/Session4 (system bus name :1.15, object path /org/kde/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8) (disconnected from bus)
+Feb 20 20:39:36 localhost lightdm: pam_unix(lightdm:session): session closed for user billybob
+Feb 20 20:39:37 localhost sshd[3272]: Received signal 15; terminating.
+Feb 21 06:22:48 localhost polkitd[2965]: Loading rules from directory /etc/polkit-1/rules.d
+Feb 21 06:22:48 localhost polkitd[2965]: Loading rules from directory /usr/share/polkit-1/rules.d
+Feb 21 06:22:48 localhost polkitd[2965]: Finished loading, compiling and executing 2 rules
+Feb 21 06:22:48 localhost polkitd[2965]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
+Feb 21 06:22:49 localhost sshd[3267]: Server listening on 0.0.0.0 port 22.
+Feb 21 06:22:49 localhost sshd[3267]: Server listening on :: port 22.
+Feb 21 06:22:53 localhost lightdm: pam_unix(lightdm-greeter:session): session opened for user root by (uid=0)
+Feb 21 06:22:53 localhost lightdm: pam_ck_connector(lightdm-greeter:session): nox11 mode, ignoring PAM_TTY :0
+Feb 21 06:50:02 localhost su[3636]: Successful su for man by root
+Feb 21 06:50:02 localhost su[3636]: + ??? root:man
+Feb 21 06:50:02 localhost su[3636]: pam_unix(su:session): session opened for user man by (uid=0)
+Feb 21 06:50:21 localhost su[3636]: pam_unix(su:session): session closed for user man
+Feb 21 07:56:11 localhost sshd[7681]: Accepted keyboard-interactive/pam for billybob from 192.168.1.115 port 55304 ssh2
+Feb 21 07:56:11 localhost sshd[7681]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+Feb 21 08:14:16 localhost su[8515]: Successful su for root by billybob
+Feb 21 08:14:16 localhost su[8515]: + /dev/pts/0 billybob:root
+Feb 21 08:14:16 localhost su[8515]: pam_unix(su:session): session opened for user root by billybob(uid=1000)
+Feb 21 11:09:42 localhost su[8515]: pam_unix(su:session): session closed for user root
+Feb 21 11:09:47 localhost sshd[7690]: Received disconnect from 192.168.1.115 port 55304:11: disconnected by user
+Feb 21 11:09:47 localhost sshd[7690]: Disconnected from user billybob 192.168.1.115 port 55304
+Feb 21 11:09:47 localhost sshd[7681]: pam_unix(sshd:session): session closed for user billybob
+Feb 21 13:30:25 localhost sshd[10018]: Accepted keyboard-interactive/pam for billybob from 192.168.1.115 port 55570 ssh2
+Feb 21 13:30:25 localhost sshd[10018]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+Feb 21 13:30:26 localhost sshd[10027]: Received disconnect from 192.168.1.115 port 55570:11: disconnected by user
+Feb 21 13:30:26 localhost sshd[10027]: Disconnected from user billybob 192.168.1.115 port 55570
+Feb 21 13:30:26 localhost sshd[10018]: pam_unix(sshd:session): session closed for user billybob
+Feb 21 13:50:04 localhost sshd[10108]: Accepted keyboard-interactive/pam for billybob from 192.168.1.115 port 55594 ssh2
+Feb 21 13:50:04 localhost sshd[10108]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+Feb 21 14:07:19 localhost sshd[10108]: pam_unix(sshd:session): session closed for user billybob
+Feb 21 14:59:16 localhost lightdm: pam_unix(lightdm-greeter:session): session closed for user root
+Feb 21 14:59:17 localhost sshd[3267]: Received signal 15; terminating.
+Feb 21 14:59:37 localhost polkitd[2962]: Loading rules from directory /etc/polkit-1/rules.d
+Feb 21 14:59:37 localhost polkitd[2962]: Loading rules from directory /usr/share/polkit-1/rules.d
+Feb 21 14:59:37 localhost polkitd[2962]: Finished loading, compiling and executing 2 rules
+Feb 21 14:59:37 localhost polkitd[2962]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
+Feb 21 14:59:38 localhost sshd[3261]: Server listening on 0.0.0.0 port 22.
+Feb 21 14:59:38 localhost sshd[3261]: Server listening on :: port 22.
+Feb 21 14:59:42 localhost lightdm: pam_unix(lightdm-greeter:session): session opened for user root by (uid=0)
+Feb 21 14:59:42 localhost lightdm: pam_ck_connector(lightdm-greeter:session): nox11 mode, ignoring PAM_TTY :0
+Feb 21 16:39:04 localhost sshd[3966]: Accepted publickey for billybob from 192.168.1.115 port 55748 ssh2: RSA SHA256:chQaEj8bIy1KpZkrjRFdDyqOQe9WGyAoyGeclhivzV0
+Feb 21 16:39:04 localhost sshd[3966]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+Feb 21 16:42:36 localhost sshd[3974]: Received disconnect from 192.168.1.115 port 55748:11: disconnected by user
+Feb 21 16:42:36 localhost sshd[3974]: Disconnected from user billybob 192.168.1.115 port 55748
+Feb 21 16:42:36 localhost sshd[3966]: pam_unix(sshd:session): session closed for user billybob
+Feb 21 16:43:23 localhost sshd[4016]: Accepted publickey for billybob from 192.168.1.115 port 55764 ssh2: RSA SHA256:chQaEj8bIy1KpZkrjRFdDyqOQe9WGyAoyGeclhivzV0
+Feb 21 16:43:23 localhost sshd[4016]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+Feb 21 16:56:43 localhost sshd[4024]: Received disconnect from 192.168.1.115 port 55764:11: disconnected by user
+Feb 21 16:56:43 localhost sshd[4024]: Disconnected from user billybob 192.168.1.115 port 55764
+Feb 21 16:56:43 localhost sshd[4016]: pam_unix(sshd:session): session closed for user billybob
+Feb 21 20:44:33 localhost lightdm: pam_unix(lightdm-greeter:session): session closed for user root
+Feb 21 20:44:33 localhost lightdm: pam_unix(lightdm:session): session opened for user billybob by (uid=0)
+Feb 21 20:44:33 localhost lightdm: pam_ck_connector(lightdm:session): nox11 mode, ignoring PAM_TTY :0
+Feb 21 20:44:35 localhost polkitd[2962]: Registered Authentication Agent for unix-session:/org/freedesktop/ConsoleKit/Session4 (system bus name :1.20 [/usr/lib64/libexec/polkit-kde-authentication-agent-1], object path /org/kde/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8)
+Feb 21 20:47:00 localhost su[5859]: Successful su for root by billybob
+Feb 21 20:47:00 localhost su[5859]: + /dev/pts/1 billybob:root
+Feb 21 20:47:00 localhost su[5859]: pam_unix(su:session): session opened for user root by billybob(uid=1000)
+Feb 21 20:51:21 localhost sshd[5932]: Accepted publickey for root from 192.168.1.101 port 58118 ssh2: RSA SHA256:SRYQE52DTaMykNlntpAIxjnVQMRwZz1aVNMnoB2OxNk
+Feb 21 20:51:21 localhost sshd[5932]: pam_unix(sshd:session): session opened for user root by (uid=0)
+Feb 21 21:01:51 localhost sshd[5932]: Received disconnect from 192.168.1.101 port 58118:11: disconnected by user
+Feb 21 21:01:51 localhost sshd[5932]: Disconnected from user root 192.168.1.101 port 58118
+Feb 21 21:01:51 localhost sshd[5932]: pam_unix(sshd:session): session closed for user root
+Feb 21 21:01:58 localhost sshd[8035]: Accepted publickey for billybob from 192.168.1.101 port 58748 ssh2: RSA SHA256:chQaEj8bIy1KpZkrjRFdDyqOQe9WGyAoyGeclhivzV0
+Feb 21 21:01:58 localhost sshd[8035]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+Feb 21 21:17:14 localhost su[9533]: Successful su for root by billybob
+Feb 21 21:17:14 localhost su[9533]: + /dev/pts/2 billybob:root
+Feb 21 21:17:14 localhost su[9533]: pam_unix(su:session): session opened for user root by billybob(uid=1000)
+Feb 21 21:17:18 localhost su[9533]: pam_unix(su:session): session closed for user root
+Feb 21 21:17:18 localhost polkitd[2962]: Unregistered Authentication Agent for unix-session:/org/freedesktop/ConsoleKit/Session4 (system bus name :1.20, object path /org/kde/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8) (disconnected from bus)
+Feb 21 21:17:18 localhost su[5859]: pam_unix(su:session): session closed for user root
+Feb 21 21:17:19 localhost lightdm: pam_unix(lightdm:session): session closed for user billybob
+Feb 21 21:17:20 localhost sshd[8043]: Received disconnect from 192.168.1.101 port 58748:11: disconnected by user
+Feb 21 21:17:20 localhost sshd[8043]: Disconnected from user billybob 192.168.1.101 port 58748
+Feb 21 21:17:20 localhost sshd[8035]: pam_unix(sshd:session): session closed for user billybob
+Feb 21 21:17:20 localhost sshd[3261]: Received signal 15; terminating.
+Feb 22 16:27:38 localhost polkitd[2966]: Loading rules from directory /etc/polkit-1/rules.d
+Feb 22 16:27:38 localhost polkitd[2966]: Loading rules from directory /usr/share/polkit-1/rules.d
+Feb 22 16:27:38 localhost polkitd[2966]: Finished loading, compiling and executing 2 rules
+Feb 22 16:27:38 localhost polkitd[2966]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
+Feb 22 16:27:39 localhost sshd[3266]: Server listening on 0.0.0.0 port 22.
+Feb 22 16:27:39 localhost sshd[3266]: Server listening on :: port 22.
+Feb 22 16:27:43 localhost lightdm: pam_unix(lightdm-greeter:session): session opened for user root by (uid=0)
+Feb 22 16:27:43 localhost lightdm: pam_ck_connector(lightdm-greeter:session): nox11 mode, ignoring PAM_TTY :0
+Feb 22 16:29:33 localhost lightdm: pam_unix(lightdm-greeter:session): session closed for user root
+Feb 22 16:29:33 localhost lightdm: pam_unix(lightdm:session): session opened for user billybob by (uid=0)
+Feb 22 16:29:33 localhost lightdm: pam_ck_connector(lightdm:session): nox11 mode, ignoring PAM_TTY :0
+Feb 22 16:29:36 localhost polkitd[2966]: Registered Authentication Agent for unix-session:/org/freedesktop/ConsoleKit/Session2 (system bus name :1.17 [/usr/lib64/libexec/polkit-kde-authentication-agent-1], object path /org/kde/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8)
+Feb 22 16:30:03 localhost su[4383]: Successful su for man by root
+Feb 22 16:30:03 localhost su[4383]: + ??? root:man
+Feb 22 16:30:03 localhost su[4383]: pam_unix(su:session): session opened for user man by (uid=0)
+Feb 22 16:30:28 localhost su[4383]: pam_unix(su:session): session closed for user man
+Feb 22 16:31:54 localhost dbus-daemon[3522]: [session uid=1000 pid=3520] Failed to activate service 'org.a11y.Bus': timed out (service_start_timeout=120000ms)
+Feb 22 17:48:04 localhost dbus-daemon[3522]: [session uid=1000 pid=3520] Failed to activate service 'org.a11y.Bus': timed out (service_start_timeout=120000ms)
+Feb 22 20:07:17 localhost sshd[9385]: Accepted publickey for root from 192.168.1.101 port 34490 ssh2: RSA SHA256:SRYQE52DTaMykNlntpAIxjnVQMRwZz1aVNMnoB2OxNk
+Feb 22 20:07:17 localhost sshd[9385]: pam_unix(sshd:session): session opened for user root by (uid=0)
+Feb 22 20:16:15 localhost sshd[9385]: Received disconnect from 192.168.1.101 port 34490:11: disconnected by user
+Feb 22 20:16:15 localhost sshd[9385]: Disconnected from user root 192.168.1.101 port 34490
+Feb 22 20:16:15 localhost sshd[9385]: pam_unix(sshd:session): session closed for user root
+Feb 22 20:16:35 localhost sshd[32212]: Accepted publickey for billybob from 192.168.1.101 port 34520 ssh2: RSA SHA256:chQaEj8bIy1KpZkrjRFdDyqOQe9WGyAoyGeclhivzV0
+Feb 22 20:16:35 localhost sshd[32212]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+Feb 22 20:19:07 localhost su[32366]: Successful su for root by billybob
+Feb 22 20:19:07 localhost su[32366]: + /dev/pts/2 billybob:root
+Feb 22 20:19:07 localhost su[32366]: pam_unix(su:session): session opened for user root by billybob(uid=1000)
+Feb 22 20:19:12 localhost su[32366]: pam_unix(su:session): session closed for user root
+Feb 22 20:19:14 localhost sshd[32220]: Received disconnect from 192.168.1.101 port 34520:11: disconnected by user
+Feb 22 20:19:14 localhost sshd[32220]: Disconnected from user billybob 192.168.1.101 port 34520
+Feb 22 20:19:14 localhost sshd[32212]: pam_unix(sshd:session): session closed for user billybob
+Feb 23 03:10:01 localhost su[1925]: Successful su for man by root
+Feb 23 03:10:01 localhost su[1925]: + ??? root:man
+Feb 23 03:10:01 localhost su[1925]: pam_unix(su:session): session opened for user man by (uid=0)
+Feb 23 03:10:25 localhost su[1925]: pam_unix(su:session): session closed for user man
+Feb 23 20:24:01 localhost sshd[10856]: Accepted publickey for root from 192.168.1.101 port 41024 ssh2: RSA SHA256:SRYQE52DTaMykNlntpAIxjnVQMRwZz1aVNMnoB2OxNk
+Feb 23 20:24:01 localhost sshd[10856]: pam_unix(sshd:session): session opened for user root by (uid=0)
+Feb 23 20:27:05 localhost sshd[10878]: Accepted publickey for root from 192.168.1.101 port 41032 ssh2: RSA SHA256:SRYQE52DTaMykNlntpAIxjnVQMRwZz1aVNMnoB2OxNk
+Feb 23 20:27:05 localhost sshd[10878]: pam_unix(sshd:session): session opened for user root by (uid=0)
+Feb 23 20:30:25 localhost sshd[10918]: Accepted publickey for root from 192.168.1.100 port 54100 ssh2: RSA SHA256:QW4ErgDUT7epSmk9sF8WJmizNue1nYTijdoCtTUZlB4
+Feb 23 20:30:25 localhost sshd[10918]: pam_unix(sshd:session): session opened for user root by (uid=0)
+Feb 23 20:40:27 localhost sshd[10918]: Received disconnect from 192.168.1.100 port 54100:11: disconnected by user
+Feb 23 20:40:27 localhost sshd[10918]: Disconnected from user root 192.168.1.100 port 54100
+Feb 23 20:40:27 localhost sshd[10918]: pam_unix(sshd:session): session closed for user root
+Feb 23 20:46:43 localhost sshd[6931]: Accepted publickey for root from 192.168.1.101 port 41140 ssh2: RSA SHA256:SRYQE52DTaMykNlntpAIxjnVQMRwZz1aVNMnoB2OxNk
+Feb 23 20:46:43 localhost sshd[6931]: pam_unix(sshd:session): session opened for user root by (uid=0)
+Feb 23 20:52:00 localhost sshd[6931]: Received disconnect from 192.168.1.101 port 41140:11: disconnected by user
+Feb 23 20:52:00 localhost sshd[6931]: Disconnected from user root 192.168.1.101 port 41140
+Feb 23 20:52:00 localhost sshd[6931]: pam_unix(sshd:session): session closed for user root
+Feb 23 20:53:32 localhost sshd[10878]: Received disconnect from 192.168.1.101 port 41032:11: disconnected by user
+Feb 23 20:53:32 localhost sshd[10878]: Disconnected from user root 192.168.1.101 port 41032
+Feb 23 20:53:32 localhost sshd[10878]: pam_unix(sshd:session): session closed for user root
+Feb 23 21:40:28 localhost polkitd[2966]: Reloading rules
+Feb 23 21:40:28 localhost polkitd[2966]: Collecting garbage unconditionally...
+Feb 23 21:40:28 localhost polkitd[2966]: Loading rules from directory /etc/polkit-1/rules.d
+Feb 23 21:40:28 localhost polkitd[2966]: Loading rules from directory /usr/share/polkit-1/rules.d
+Feb 23 21:40:28 localhost polkitd[2966]: Finished loading, compiling and executing 2 rules
+Feb 23 21:40:28 localhost polkitd[2966]: Reloading rules
+Feb 23 21:40:28 localhost polkitd[2966]: Collecting garbage unconditionally...
+Feb 23 21:40:28 localhost polkitd[2966]: Loading rules from directory /etc/polkit-1/rules.d
+Feb 23 21:40:28 localhost polkitd[2966]: Loading rules from directory /usr/share/polkit-1/rules.d
+Feb 23 21:40:28 localhost polkitd[2966]: Finished loading, compiling and executing 2 rules
+Feb 23 21:58:36 localhost sshd[13372]: Accepted publickey for root from 192.168.1.101 port 44220 ssh2: RSA SHA256:SRYQE52DTaMykNlntpAIxjnVQMRwZz1aVNMnoB2OxNk
+Feb 23 21:58:37 localhost sshd[13372]: pam_unix(sshd:session): session opened for user root by (uid=0)
+Feb 23 21:58:37 localhost sshd[13372]: Received disconnect from 192.168.1.101 port 44220:11: disconnected by user
+Feb 23 21:58:37 localhost sshd[13372]: Disconnected from user root 192.168.1.101 port 44220
+Feb 23 21:58:37 localhost sshd[13372]: pam_unix(sshd:session): session closed for user root
+Feb 23 21:58:45 localhost sshd[15203]: Accepted publickey for root from 192.168.1.101 port 44222 ssh2: RSA SHA256:SRYQE52DTaMykNlntpAIxjnVQMRwZz1aVNMnoB2OxNk
+Feb 23 21:58:45 localhost sshd[15203]: pam_unix(sshd:session): session opened for user root by (uid=0)
+Feb 23 21:58:45 localhost sshd[15203]: Received disconnect from 192.168.1.101 port 44222:11: disconnected by user
+Feb 23 21:58:45 localhost sshd[15203]: Disconnected from user root 192.168.1.101 port 44222
+Feb 23 21:58:45 localhost sshd[15203]: pam_unix(sshd:session): session closed for user root
+Feb 23 22:55:32 localhost polkitd[2966]: Unregistered Authentication Agent for unix-session:/org/freedesktop/ConsoleKit/Session2 (system bus name :1.17, object path /org/kde/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8) (disconnected from bus)
+Feb 23 22:55:33 localhost lightdm: pam_unix(lightdm:session): session closed for user billybob
+Feb 23 22:55:33 localhost sshd[3266]: Received signal 15; terminating.
+Feb 24 19:18:45 localhost polkitd[2965]: Loading rules from directory /etc/polkit-1/rules.d
+Feb 24 19:18:45 localhost polkitd[2965]: Loading rules from directory /usr/share/polkit-1/rules.d
+Feb 24 19:18:45 localhost polkitd[2965]: Finished loading, compiling and executing 2 rules
+Feb 24 19:18:45 localhost polkitd[2965]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
+Feb 24 19:18:45 localhost sshd[3268]: Server listening on 0.0.0.0 port 22.
+Feb 24 19:18:45 localhost sshd[3268]: Server listening on :: port 22.
+Feb 24 19:18:50 localhost lightdm: pam_unix(lightdm-greeter:session): session opened for user root by (uid=0)
+Feb 24 19:18:50 localhost lightdm: pam_ck_connector(lightdm-greeter:session): nox11 mode, ignoring PAM_TTY :0
+Feb 24 19:18:55 localhost lightdm: pam_unix(lightdm-greeter:session): session closed for user root
+Feb 24 19:18:55 localhost lightdm: pam_unix(lightdm:session): session opened for user billybob by (uid=0)
+Feb 24 19:18:55 localhost lightdm: pam_ck_connector(lightdm:session): nox11 mode, ignoring PAM_TTY :0
+Feb 24 19:18:58 localhost polkitd[2965]: Registered Authentication Agent for unix-session:/org/freedesktop/ConsoleKit/Session2 (system bus name :1.14 [/usr/lib64/libexec/polkit-kde-authentication-agent-1], object path /org/kde/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8)
+Feb 24 19:20:08 localhost su[4105]: Successful su for man by root
+Feb 24 19:20:08 localhost su[4105]: + ??? root:man
+Feb 24 19:20:08 localhost su[4105]: pam_unix(su:session): session opened for user man by (uid=0)
+Feb 24 19:20:48 localhost su[4105]: pam_unix(su:session): session closed for user man
+Feb 24 19:21:06 localhost dbus-daemon[3538]: [session uid=1000 pid=3536] Failed to activate service 'org.a11y.Bus': timed out (service_start_timeout=120000ms)
+Feb 24 19:21:54 localhost sshd[8477]: Accepted publickey for billybob from 192.168.1.100 port 44376 ssh2: RSA SHA256:OmU3MyqULombzC3me22dkuRfY1DLWwTjIdmBHalD0So
+Feb 24 19:21:54 localhost sshd[8477]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+Feb 24 19:22:24 localhost su[8501]: Successful su for root by billybob
+Feb 24 19:22:24 localhost su[8501]: + /dev/pts/1 billybob:root
+Feb 24 19:22:24 localhost su[8501]: pam_unix(su:session): session opened for user root by billybob(uid=1000)
+Feb 24 19:22:27 localhost polkitd[2965]: Unregistered Authentication Agent for unix-session:/org/freedesktop/ConsoleKit/Session2 (system bus name :1.14, object path /org/kde/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8) (disconnected from bus)
+Feb 24 19:22:27 localhost lightdm: pam_unix(lightdm:session): session closed for user billybob
+Feb 24 19:22:28 localhost sshd[3268]: Received signal 15; terminating.
+Feb 24 19:23:09 localhost polkitd[2991]: Loading rules from directory /etc/polkit-1/rules.d
+Feb 24 19:23:09 localhost polkitd[2991]: Loading rules from directory /usr/share/polkit-1/rules.d
+Feb 24 19:23:09 localhost polkitd[2991]: Finished loading, compiling and executing 2 rules
+Feb 24 19:23:09 localhost polkitd[2991]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
+Feb 24 19:23:10 localhost sshd[3274]: Server listening on 0.0.0.0 port 22.
+Feb 24 19:23:10 localhost sshd[3274]: Server listening on :: port 22.
+Feb 24 19:23:14 localhost lightdm: pam_unix(lightdm-greeter:session): session opened for user root by (uid=0)
+Feb 24 19:23:14 localhost lightdm: pam_ck_connector(lightdm-greeter:session): nox11 mode, ignoring PAM_TTY :0
+Feb 24 19:23:25 localhost sshd[3508]: Accepted publickey for billybob from 192.168.1.100 port 44594 ssh2: RSA SHA256:OmU3MyqULombzC3me22dkuRfY1DLWwTjIdmBHalD0So
+Feb 24 19:23:26 localhost sshd[3508]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+Feb 24 19:33:28 localhost lightdm: pam_unix(lightdm:auth): authentication failure; logname= uid=0 euid=0 tty=:0 ruser= rhost=  user=billybob
+Feb 24 19:33:33 localhost lightdm: pam_unix(lightdm-greeter:session): session closed for user root
+Feb 24 19:33:33 localhost lightdm: pam_unix(lightdm:session): session opened for user billybob by (uid=0)
+Feb 24 19:33:33 localhost lightdm: pam_ck_connector(lightdm:session): nox11 mode, ignoring PAM_TTY :0
+Feb 24 19:33:35 localhost polkitd[2991]: Registered Authentication Agent for unix-session:/org/freedesktop/ConsoleKit/Session3 (system bus name :1.18 [/usr/lib64/libexec/polkit-kde-authentication-agent-1], object path /org/kde/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8)
+Feb 24 20:41:04 localhost sshd[5362]: Accepted publickey for root from 192.168.1.101 port 39776 ssh2: RSA SHA256:SRYQE52DTaMykNlntpAIxjnVQMRwZz1aVNMnoB2OxNk
+Feb 24 20:41:04 localhost sshd[5362]: pam_unix(sshd:session): session opened for user root by (uid=0)
+Feb 24 20:54:20 localhost sshd[3516]: Received disconnect from 192.168.1.100 port 44594:11: disconnected by user
+Feb 24 20:54:20 localhost sshd[3516]: Disconnected from user billybob 192.168.1.100 port 44594
+Feb 24 20:54:20 localhost sshd[3508]: pam_unix(sshd:session): session closed for user billybob
+Feb 24 20:54:22 localhost sshd[5362]: Received disconnect from 192.168.1.101 port 39776:11: disconnected by user
+Feb 24 20:54:22 localhost sshd[5362]: Disconnected from user root 192.168.1.101 port 39776
+Feb 24 20:54:22 localhost sshd[5362]: pam_unix(sshd:session): session closed for user root
+Feb 24 20:54:29 localhost sshd[27878]: Accepted publickey for billybob from 192.168.1.101 port 39834 ssh2: RSA SHA256:chQaEj8bIy1KpZkrjRFdDyqOQe9WGyAoyGeclhivzV0
+Feb 24 20:54:29 localhost sshd[27878]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+Feb 24 20:55:17 localhost su[28016]: Successful su for root by billybob
+Feb 24 20:55:17 localhost su[28016]: + /dev/pts/0 billybob:root
+Feb 24 20:55:17 localhost su[28016]: pam_unix(su:session): session opened for user root by billybob(uid=1000)
+Feb 24 20:55:21 localhost su[28016]: pam_unix(su:session): session closed for user root
+Feb 24 20:55:21 localhost polkitd[2991]: Unregistered Authentication Agent for unix-session:/org/freedesktop/ConsoleKit/Session3 (system bus name :1.18, object path /org/kde/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8) (disconnected from bus)
+Feb 24 20:55:22 localhost lightdm: pam_unix(lightdm:session): session closed for user billybob
+Feb 24 20:55:22 localhost sshd[27886]: Received disconnect from 192.168.1.101 port 39834:11: disconnected by user
+Feb 24 20:55:22 localhost sshd[27886]: Disconnected from user billybob 192.168.1.101 port 39834
+Feb 24 20:55:22 localhost sshd[27878]: pam_unix(sshd:session): session closed for user billybob
+Feb 24 20:55:23 localhost sshd[3274]: Received signal 15; terminating.
+Feb 25 06:30:41 localhost polkitd[2974]: Loading rules from directory /etc/polkit-1/rules.d
+Feb 25 06:30:41 localhost polkitd[2974]: Loading rules from directory /usr/share/polkit-1/rules.d
+Feb 25 06:30:41 localhost polkitd[2974]: Finished loading, compiling and executing 2 rules
+Feb 25 06:30:41 localhost polkitd[2974]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
+Feb 25 06:30:42 localhost sshd[3275]: Server listening on 0.0.0.0 port 22.
+Feb 25 06:30:42 localhost sshd[3275]: Server listening on :: port 22.
+Feb 25 06:30:46 localhost lightdm: pam_unix(lightdm-greeter:session): session opened for user root by (uid=0)
+Feb 25 06:30:46 localhost lightdm: pam_ck_connector(lightdm-greeter:session): nox11 mode, ignoring PAM_TTY :0
+Feb 25 08:02:50 localhost sshd[3938]: Accepted keyboard-interactive/pam for billybob from 192.168.1.115 port 51590 ssh2
+Feb 25 08:02:50 localhost sshd[3938]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+Feb 25 08:02:52 localhost sshd[3947]: Received disconnect from 192.168.1.115 port 51590:11: disconnected by user
+Feb 25 08:02:52 localhost sshd[3947]: Disconnected from user billybob 192.168.1.115 port 51590
+Feb 25 08:02:52 localhost sshd[3938]: pam_unix(sshd:session): session closed for user billybob
+Feb 25 08:02:58 localhost sshd[3957]: Accepted keyboard-interactive/pam for billybob from 192.168.1.115 port 51592 ssh2
+Feb 25 08:02:58 localhost sshd[3957]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+Feb 25 09:11:34 localhost sshd[3966]: Received disconnect from 192.168.1.115 port 51592:11: disconnected by user
+Feb 25 09:11:34 localhost sshd[3966]: Disconnected from user billybob 192.168.1.115 port 51592
+Feb 25 09:11:34 localhost sshd[3957]: pam_unix(sshd:session): session closed for user billybob
+Feb 25 10:38:37 localhost sshd[7987]: Accepted keyboard-interactive/pam for billybob from 192.168.1.115 port 51744 ssh2
+Feb 25 10:38:37 localhost sshd[7987]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+Feb 25 11:11:34 localhost su[8966]: Successful su for root by billybob
+Feb 25 11:11:34 localhost su[8966]: + /dev/pts/0 billybob:root
+Feb 25 11:11:34 localhost su[8966]: pam_unix(su:session): session opened for user root by billybob(uid=1000)
+Feb 25 11:12:06 localhost su[8966]: pam_unix(su:session): session closed for user root
+Feb 25 13:15:17 localhost su[10215]: Successful su for root by billybob
+Feb 25 13:15:17 localhost su[10215]: + /dev/pts/0 billybob:root
+Feb 25 13:15:17 localhost su[10215]: pam_unix(su:session): session opened for user root by billybob(uid=1000)
+Feb 25 13:23:35 localhost su[10215]: pam_unix(su:session): session closed for user root
+Feb 25 13:24:16 localhost sshd[10282]: Accepted publickey for billybob from 192.168.1.115 port 51924 ssh2: RSA SHA256:s7ckJWULRXKCWx8oDWt8t7eAQ94Bh7dw5ZKXYeir7Aw
+Feb 25 13:24:16 localhost sshd[10282]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+Feb 25 13:41:39 localhost su[10444]: Successful su for root by billybob
+Feb 25 13:41:39 localhost su[10444]: + /dev/pts/0 billybob:root
+Feb 25 13:41:39 localhost su[10444]: pam_unix(su:session): session opened for user root by billybob(uid=1000)
+Feb 25 13:41:41 localhost lightdm: pam_unix(lightdm-greeter:session): session closed for user root
+Feb 25 13:41:43 localhost sshd[3275]: Received signal 15; terminating.
+Feb 25 13:42:11 localhost polkitd[2966]: Loading rules from directory /etc/polkit-1/rules.d
+Feb 25 13:42:11 localhost polkitd[2966]: Loading rules from directory /usr/share/polkit-1/rules.d
+Feb 25 13:42:11 localhost polkitd[2966]: Finished loading, compiling and executing 2 rules
+Feb 25 13:42:11 localhost polkitd[2966]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
+Feb 25 13:42:12 localhost sshd[3268]: Server listening on 0.0.0.0 port 22.
+Feb 25 13:42:12 localhost sshd[3268]: Server listening on :: port 22.
+Feb 25 13:42:16 localhost lightdm: pam_unix(lightdm-greeter:session): session opened for user root by (uid=0)
+Feb 25 13:42:16 localhost lightdm: pam_ck_connector(lightdm-greeter:session): nox11 mode, ignoring PAM_TTY :0
+Feb 25 13:44:16 localhost sshd[3509]: Accepted publickey for billybob from 192.168.1.115 port 51942 ssh2: RSA SHA256:s7ckJWULRXKCWx8oDWt8t7eAQ94Bh7dw5ZKXYeir7Aw
+Feb 25 13:44:16 localhost sshd[3509]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+Feb 25 13:44:24 localhost sshd[3520]: Accepted keyboard-interactive/pam for billybob from 192.168.1.115 port 51944 ssh2
+Feb 25 13:44:24 localhost sshd[3520]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+Feb 25 13:50:11 localhost su[3585]: Successful su for root by billybob
+Feb 25 13:50:11 localhost su[3585]: + /dev/pts/2 billybob:root
+Feb 25 13:50:11 localhost su[3585]: pam_unix(su:session): session opened for user root by billybob(uid=1000)
+Feb 25 13:52:47 localhost lightdm: pam_unix(lightdm-greeter:session): session closed for user root
+Feb 25 13:52:49 localhost sshd[3268]: Received signal 15; terminating.
+Feb 25 13:53:15 localhost polkitd[2967]: Loading rules from directory /etc/polkit-1/rules.d
+Feb 25 13:53:15 localhost polkitd[2967]: Loading rules from directory /usr/share/polkit-1/rules.d
+Feb 25 13:53:15 localhost polkitd[2967]: Finished loading, compiling and executing 2 rules
+Feb 25 13:53:15 localhost polkitd[2967]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
+Feb 25 13:53:16 localhost sshd[3267]: Server listening on 0.0.0.0 port 22.
+Feb 25 13:53:16 localhost sshd[3267]: Server listening on :: port 22.
+Feb 25 13:53:20 localhost lightdm: pam_unix(lightdm-greeter:session): session opened for user root by (uid=0)
+Feb 25 13:53:20 localhost lightdm: pam_ck_connector(lightdm-greeter:session): nox11 mode, ignoring PAM_TTY :0
+Feb 25 14:03:53 localhost sshd[3552]: Accepted publickey for billybob from 192.168.1.115 port 51966 ssh2: RSA SHA256:s7ckJWULRXKCWx8oDWt8t7eAQ94Bh7dw5ZKXYeir7Aw
+Feb 25 14:03:54 localhost sshd[3552]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+Feb 25 14:04:02 localhost sshd[3564]: Accepted keyboard-interactive/pam for billybob from 192.168.1.115 port 51968 ssh2
+Feb 25 14:04:02 localhost sshd[3564]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+Feb 25 14:35:19 localhost sshd[3579]: Received disconnect from 192.168.1.115 port 51968:11: disconnected by user
+Feb 25 14:35:19 localhost sshd[3579]: Disconnected from user billybob 192.168.1.115 port 51968
+Feb 25 14:35:19 localhost sshd[3564]: pam_unix(sshd:session): session closed for user billybob
+Feb 25 14:35:26 localhost sshd[3739]: Accepted keyboard-interactive/pam for billybob from 192.168.1.115 port 52020 ssh2
+Feb 25 14:35:26 localhost sshd[3739]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+Feb 25 14:35:32 localhost su[3751]: Successful su for root by billybob
+Feb 25 14:35:32 localhost su[3751]: + /dev/pts/1 billybob:root
+Feb 25 14:35:32 localhost su[3751]: pam_unix(su:session): session opened for user root by billybob(uid=1000)
+Feb 25 14:35:54 localhost sshd[3267]: Received signal 15; terminating.
+Feb 25 14:35:55 localhost sshd[3805]: Server listening on 0.0.0.0 port 22.
+Feb 25 14:35:55 localhost sshd[3805]: Server listening on :: port 22.
+Feb 25 14:35:57 localhost su[3751]: pam_unix(su:session): session closed for user root
+Feb 25 14:35:58 localhost sshd[3748]: Received disconnect from 192.168.1.115 port 52020:11: disconnected by user
+Feb 25 14:35:58 localhost sshd[3748]: Disconnected from user billybob 192.168.1.115 port 52020
+Feb 25 14:35:58 localhost sshd[3739]: pam_unix(sshd:session): session closed for user billybob
+Feb 25 14:36:02 localhost sshd[3817]: Accepted keyboard-interactive/pam for billybob from 192.168.1.115 port 52024 ssh2
+Feb 25 14:36:02 localhost sshd[3817]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+Feb 25 14:36:14 localhost su[3835]: pam_unix(su:auth): authentication failure; logname=billybob uid=1000 euid=0 tty=/dev/pts/1 ruser=billybob rhost=  user=root
+Feb 25 14:36:16 localhost su[3835]: pam_authenticate: Authentication failure
+Feb 25 14:36:16 localhost su[3835]: FAILED su for root by billybob
+Feb 25 14:36:16 localhost su[3835]: - /dev/pts/1 billybob:root
+Feb 25 14:36:18 localhost su[3836]: Successful su for root by billybob
+Feb 25 14:36:18 localhost su[3836]: + /dev/pts/1 billybob:root
+Feb 25 14:36:18 localhost su[3836]: pam_unix(su:session): session opened for user root by billybob(uid=1000)
+Feb 25 14:36:33 localhost sshd[3805]: Received signal 15; terminating.
+Feb 25 14:36:33 localhost sshd[3890]: Server listening on 0.0.0.0 port 22.
+Feb 25 14:36:33 localhost sshd[3890]: Server listening on :: port 22.
+Feb 25 14:36:35 localhost su[3836]: pam_unix(su:session): session closed for user root
+Feb 25 14:36:36 localhost sshd[3832]: Received disconnect from 192.168.1.115 port 52024:11: disconnected by user
+Feb 25 14:36:36 localhost sshd[3832]: Disconnected from user billybob 192.168.1.115 port 52024
+Feb 25 14:36:36 localhost sshd[3817]: pam_unix(sshd:session): session closed for user billybob
+Feb 25 14:36:39 localhost sshd[3902]: Accepted keyboard-interactive/pam for billybob from 192.168.1.115 port 52028 ssh2
+Feb 25 14:36:39 localhost sshd[3902]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+Feb 25 19:30:01 localhost su[7285]: Successful su for man by root
+Feb 25 19:30:01 localhost su[7285]: + ??? root:man
+Feb 25 19:30:01 localhost su[7285]: pam_unix(su:session): session opened for user man by (uid=0)
+Feb 25 19:30:09 localhost su[7285]: pam_unix(su:session): session closed for user man
+Feb 25 19:38:35 localhost sshd[8303]: Accepted publickey for billybob from 192.168.1.101 port 52606 ssh2: RSA SHA256:chQaEj8bIy1KpZkrjRFdDyqOQe9WGyAoyGeclhivzV0
+Feb 25 19:38:35 localhost sshd[8303]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+Feb 25 19:40:26 localhost su[8464]: Successful su for root by billybob
+Feb 25 19:40:26 localhost su[8464]: + /dev/pts/3 billybob:root
+Feb 25 19:40:26 localhost su[8464]: pam_unix(su:session): session opened for user root by billybob(uid=1000)
+Feb 25 21:39:32 localhost lightdm: pam_unix(lightdm-greeter:session): session closed for user root
+Feb 25 21:39:32 localhost lightdm: pam_unix(lightdm:session): session opened for user billybob by (uid=0)
+Feb 25 21:39:32 localhost lightdm: pam_ck_connector(lightdm:session): nox11 mode, ignoring PAM_TTY :0
+Feb 25 21:39:34 localhost polkitd[2967]: Registered Authentication Agent for unix-session:/org/freedesktop/ConsoleKit/Session8 (system bus name :1.24 [/usr/lib64/libexec/polkit-kde-authentication-agent-1], object path /org/kde/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8)
+Feb 25 21:39:43 localhost su[31138]: Successful su for root by billybob
+Feb 25 21:39:43 localhost su[31138]: + /dev/pts/5 billybob:root
+Feb 25 21:39:43 localhost su[31138]: pam_unix(su:session): session opened for user root by billybob(uid=1000)
+Feb 25 21:41:21 localhost polkitd[2967]: Unregistered Authentication Agent for unix-session:/org/freedesktop/ConsoleKit/Session8 (system bus name :1.24, object path /org/kde/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8) (disconnected from bus)
+Feb 25 21:41:21 localhost su[31138]: pam_unix(su:session): session closed for user root
+Feb 25 21:41:22 localhost lightdm: pam_unix(lightdm:session): session closed for user billybob
+Feb 25 21:41:23 localhost sshd[3890]: Received signal 15; terminating.
+Feb 26 06:19:33 localhost polkitd[2971]: Loading rules from directory /etc/polkit-1/rules.d
+Feb 26 06:19:33 localhost polkitd[2971]: Loading rules from directory /usr/share/polkit-1/rules.d
+Feb 26 06:19:33 localhost polkitd[2971]: Finished loading, compiling and executing 2 rules
+Feb 26 06:19:33 localhost polkitd[2971]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
+Feb 26 06:19:34 localhost sshd[3274]: Server listening on 0.0.0.0 port 22.
+Feb 26 06:19:34 localhost sshd[3274]: Server listening on :: port 22.
+Feb 26 06:19:37 localhost lightdm: pam_unix(lightdm-greeter:session): session opened for user root by (uid=0)
+Feb 26 06:19:37 localhost lightdm: pam_ck_connector(lightdm-greeter:session): nox11 mode, ignoring PAM_TTY :0
+Feb 26 08:59:17 localhost sshd[4253]: Accepted keyboard-interactive/pam for billybob from 192.168.1.115 port 53128 ssh2
+Feb 26 08:59:17 localhost sshd[4253]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+Feb 26 09:20:41 localhost sshd[4253]: pam_unix(sshd:session): session closed for user billybob
+Feb 26 09:20:52 localhost sshd[5500]: Accepted keyboard-interactive/pam for billybob from 192.168.1.115 port 53146 ssh2
+Feb 26 09:20:52 localhost sshd[5500]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+Feb 26 10:16:33 localhost sshd[6914]: Accepted publickey for root from 192.168.1.115 port 53198 ssh2: RSA SHA256:ANmXNvtX7iSlswtrEgXlveTkTyE5ySDCOJfTpSRK9wA
+Feb 26 10:16:33 localhost sshd[6914]: pam_unix(sshd:session): session opened for user root by (uid=0)
+Feb 26 10:50:32 localhost sshd[6914]: Received disconnect from 192.168.1.115 port 53198:11: disconnected by user
+Feb 26 10:50:32 localhost sshd[6914]: Disconnected from user root 192.168.1.115 port 53198
+Feb 26 10:50:32 localhost sshd[6914]: pam_unix(sshd:session): session closed for user root
+Feb 26 14:57:42 localhost su[11266]: Successful su for root by billybob
+Feb 26 14:57:42 localhost su[11266]: + /dev/pts/0 billybob:root
+Feb 26 14:57:42 localhost su[11266]: pam_unix(su:session): session opened for user root by billybob(uid=1000)
+Feb 26 14:58:45 localhost su[11266]: pam_unix(su:session): session closed for user root
+Feb 26 14:58:48 localhost sshd[5509]: Received disconnect from 192.168.1.115 port 53146:11: disconnected by user
+Feb 26 14:58:48 localhost sshd[5509]: Disconnected from user billybob 192.168.1.115 port 53146
+Feb 26 14:58:48 localhost sshd[5500]: pam_unix(sshd:session): session closed for user billybob
+Feb 26 14:58:52 localhost sshd[11288]: Accepted keyboard-interactive/pam for billybob from 192.168.1.115 port 53490 ssh2
+Feb 26 14:58:52 localhost sshd[11288]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+Feb 26 14:59:08 localhost sshd[11307]: Accepted publickey for billybob from 192.168.1.115 port 53492 ssh2: RSA SHA256:s7ckJWULRXKCWx8oDWt8t7eAQ94Bh7dw5ZKXYeir7Aw
+Feb 26 14:59:08 localhost sshd[11307]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+Feb 26 15:45:41 localhost su[11551]: Successful su for root by billybob
+Feb 26 15:45:41 localhost su[11551]: + /dev/pts/1 billybob:root
+Feb 26 15:45:41 localhost su[11551]: pam_unix(su:session): session opened for user root by billybob(uid=1000)
+Feb 26 15:46:10 localhost sshd[3274]: Received signal 15; terminating.
+Feb 26 15:46:10 localhost sshd[11626]: Server listening on 0.0.0.0 port 22.
+Feb 26 15:46:10 localhost sshd[11626]: Server listening on :: port 22.
+Feb 26 15:46:13 localhost su[11551]: pam_unix(su:session): session closed for user root
+Feb 26 15:47:32 localhost sshd[11288]: pam_unix(sshd:session): session closed for user billybob
+Feb 26 15:47:50 localhost sshd[11640]: Accepted keyboard-interactive/pam for billybob from 192.168.1.115 port 53558 ssh2
+Feb 26 15:47:50 localhost sshd[11640]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+Feb 26 15:57:32 localhost sshd[11315]: Received disconnect from 192.168.1.115 port 53492:11: disconnected by user
+Feb 26 15:57:32 localhost sshd[11315]: Disconnected from user billybob 192.168.1.115 port 53492
+Feb 26 15:57:32 localhost sshd[11307]: pam_unix(sshd:session): session closed for user billybob
+Feb 26 19:40:02 localhost su[13677]: Successful su for man by root
+Feb 26 19:40:02 localhost su[13677]: + ??? root:man
+Feb 26 19:40:02 localhost su[13677]: pam_unix(su:session): session opened for user man by (uid=0)
+Feb 26 19:40:19 localhost su[13677]: pam_unix(su:session): session closed for user man
+Feb 26 21:29:32 localhost sshd[18028]: Accepted publickey for root from 192.168.1.101 port 55810 ssh2: RSA SHA256:SRYQE52DTaMykNlntpAIxjnVQMRwZz1aVNMnoB2OxNk
+Feb 26 21:29:32 localhost sshd[18028]: pam_unix(sshd:session): session opened for user root by (uid=0)
+Feb 26 21:30:04 localhost sshd[18060]: Accepted publickey for billybob from 192.168.1.101 port 55814 ssh2: RSA SHA256:chQaEj8bIy1KpZkrjRFdDyqOQe9WGyAoyGeclhivzV0
+Feb 26 21:30:04 localhost sshd[18060]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+Feb 26 21:35:15 localhost sshd[18068]: Received disconnect from 192.168.1.101 port 55814:11: disconnected by user
+Feb 26 21:35:15 localhost sshd[18068]: Disconnected from user billybob 192.168.1.101 port 55814
+Feb 26 21:35:15 localhost sshd[18060]: pam_unix(sshd:session): session closed for user billybob
+Feb 26 22:20:53 localhost sshd[18028]: Received disconnect from 192.168.1.101 port 55810:11: disconnected by user
+Feb 26 22:20:53 localhost sshd[18028]: Disconnected from user root 192.168.1.101 port 55810
+Feb 26 22:20:53 localhost sshd[18028]: pam_unix(sshd:session): session closed for user root
+Feb 26 22:20:54 localhost lightdm: pam_unix(lightdm-greeter:session): session closed for user root
+Feb 26 22:20:56 localhost sshd[11626]: Received signal 15; terminating.
+Feb 27 06:23:33 localhost polkitd[2970]: Loading rules from directory /etc/polkit-1/rules.d
+Feb 27 06:23:33 localhost polkitd[2970]: Loading rules from directory /usr/share/polkit-1/rules.d
+Feb 27 06:23:33 localhost polkitd[2970]: Finished loading, compiling and executing 2 rules
+Feb 27 06:23:33 localhost polkitd[2970]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
+Feb 27 06:23:34 localhost sshd[3270]: Server listening on 0.0.0.0 port 22.
+Feb 27 06:23:34 localhost sshd[3270]: Server listening on :: port 22.
+Feb 27 06:23:38 localhost lightdm: pam_unix(lightdm-greeter:session): session opened for user root by (uid=0)
+Feb 27 06:23:38 localhost lightdm: pam_ck_connector(lightdm-greeter:session): nox11 mode, ignoring PAM_TTY :0
+Feb 27 08:16:33 localhost sshd[4031]: Accepted keyboard-interactive/pam for billybob from 192.168.1.115 port 54546 ssh2
+Feb 27 08:16:33 localhost sshd[4031]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+Feb 27 09:12:43 localhost sshd[4031]: pam_unix(sshd:session): session closed for user billybob
+Feb 27 09:16:19 localhost sshd[5333]: Accepted keyboard-interactive/pam for billybob from 192.168.1.115 port 54604 ssh2
+Feb 27 09:16:19 localhost sshd[5333]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+Feb 27 14:59:15 localhost sshd[10008]: Accepted publickey for billybob from 192.168.1.115 port 55020 ssh2: RSA SHA256:s7ckJWULRXKCWx8oDWt8t7eAQ94Bh7dw5ZKXYeir7Aw
+Feb 27 14:59:15 localhost sshd[10008]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+Feb 27 15:00:28 localhost sshd[10016]: Received disconnect from 192.168.1.115 port 55020:11: disconnected by user
+Feb 27 15:00:28 localhost sshd[10016]: Disconnected from user billybob 192.168.1.115 port 55020
+Feb 27 15:00:28 localhost sshd[10008]: pam_unix(sshd:session): session closed for user billybob
+Feb 27 15:00:54 localhost sshd[10061]: Accepted publickey for billybob from 192.168.1.115 port 55022 ssh2: RSA SHA256:s7ckJWULRXKCWx8oDWt8t7eAQ94Bh7dw5ZKXYeir7Aw
+Feb 27 15:00:54 localhost sshd[10061]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+Feb 27 19:50:01 localhost su[11615]: Successful su for man by root
+Feb 27 19:50:01 localhost su[11615]: + ??? root:man
+Feb 27 19:50:01 localhost su[11615]: pam_unix(su:session): session opened for user man by (uid=0)
+Feb 27 19:50:20 localhost su[11615]: pam_unix(su:session): session closed for user man
+Feb 27 20:28:50 localhost sshd[15520]: Accepted publickey for billybob from 192.168.1.101 port 48562 ssh2: RSA SHA256:chQaEj8bIy1KpZkrjRFdDyqOQe9WGyAoyGeclhivzV0
+Feb 27 20:28:50 localhost sshd[15520]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+Feb 27 20:40:22 localhost su[16700]: Successful su for root by billybob
+Feb 27 20:40:22 localhost su[16700]: + /dev/pts/2 billybob:root
+Feb 27 20:40:22 localhost su[16700]: pam_unix(su:session): session opened for user root by billybob(uid=1000)
+Feb 27 20:42:22 localhost sshd[16728]: Accepted publickey for root from 192.168.1.101 port 48576 ssh2: RSA SHA256:SRYQE52DTaMykNlntpAIxjnVQMRwZz1aVNMnoB2OxNk
+Feb 27 20:42:22 localhost sshd[16728]: pam_unix(sshd:session): session opened for user root by (uid=0)
+Feb 27 20:59:30 localhost su[16700]: pam_unix(su:session): session closed for user root
+Feb 27 21:00:31 localhost su[18829]: Successful su for root by billybob
+Feb 27 21:00:31 localhost su[18829]: + /dev/pts/2 billybob:root
+Feb 27 21:00:31 localhost su[18829]: pam_unix(su:session): session opened for user root by billybob(uid=1000)
+Feb 27 21:00:35 localhost su[18829]: pam_unix(su:session): session closed for user root
+Feb 27 21:00:35 localhost lightdm: pam_unix(lightdm-greeter:session): session closed for user root
+Feb 27 21:00:36 localhost sshd[15528]: Received disconnect from 192.168.1.101 port 48562:11: disconnected by user
+Feb 27 21:00:36 localhost sshd[15528]: Disconnected from user billybob 192.168.1.101 port 48562
+Feb 27 21:00:36 localhost sshd[15520]: pam_unix(sshd:session): session closed for user billybob
+Feb 27 21:00:37 localhost sshd[3270]: Received signal 15; terminating.
+Feb 28 06:19:47 localhost polkitd[2971]: Loading rules from directory /etc/polkit-1/rules.d
+Feb 28 06:19:47 localhost polkitd[2971]: Loading rules from directory /usr/share/polkit-1/rules.d
+Feb 28 06:19:47 localhost polkitd[2971]: Finished loading, compiling and executing 2 rules
+Feb 28 06:19:47 localhost polkitd[2971]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
+Feb 28 06:19:48 localhost sshd[3273]: Server listening on 0.0.0.0 port 22.
+Feb 28 06:19:48 localhost sshd[3273]: Server listening on :: port 22.
+Feb 28 06:19:52 localhost lightdm: pam_unix(lightdm-greeter:session): session opened for user root by (uid=0)
+Feb 28 06:19:52 localhost lightdm: pam_ck_connector(lightdm-greeter:session): nox11 mode, ignoring PAM_TTY :0
+Feb 28 08:03:35 localhost sshd[4004]: Accepted keyboard-interactive/pam for billybob from 192.168.1.115 port 55660 ssh2
+Feb 28 08:03:35 localhost sshd[4004]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+Feb 28 09:23:01 localhost sshd[23334]: Accepted keyboard-interactive/pam for billybob from 192.168.1.115 port 55730 ssh2
+Feb 28 09:23:01 localhost sshd[23334]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+Feb 28 09:23:08 localhost sshd[23343]: Received disconnect from 192.168.1.115 port 55730:11: disconnected by user
+Feb 28 09:23:08 localhost sshd[23343]: Disconnected from user billybob 192.168.1.115 port 55730
+Feb 28 09:23:08 localhost sshd[23334]: pam_unix(sshd:session): session closed for user billybob
+Feb 28 09:24:23 localhost sshd[23359]: Accepted keyboard-interactive/pam for billybob from 192.168.1.115 port 55734 ssh2
+Feb 28 09:24:23 localhost sshd[23359]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+Feb 28 09:37:28 localhost sshd[23368]: Received disconnect from 192.168.1.115 port 55734:11: disconnected by user
+Feb 28 09:37:28 localhost sshd[23368]: Disconnected from user billybob 192.168.1.115 port 55734
+Feb 28 09:37:28 localhost sshd[23359]: pam_unix(sshd:session): session closed for user billybob
+Feb 28 10:07:29 localhost sshd[23595]: Did not receive identification string from 192.168.1.115 port 57722
+Feb 28 10:08:00 localhost sshd[23596]: Did not receive identification string from 192.168.1.115 port 58132
+Feb 28 10:49:42 localhost su[23839]: Successful su for root by billybob
+Feb 28 10:49:42 localhost su[23839]: + /dev/pts/0 billybob:root
+Feb 28 10:49:42 localhost su[23839]: pam_unix(su:session): session opened for user root by billybob(uid=1000)
+Feb 28 10:51:36 localhost su[23839]: pam_unix(su:session): session closed for user root
+Feb 28 14:06:27 localhost sshd[4004]: pam_unix(sshd:session): session closed for user billybob
+Feb 28 14:06:38 localhost sshd[25648]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.1.115  user=billybob
+Feb 28 14:06:40 localhost sshd[25646]: error: PAM: Authentication failure for billybob from 192.168.1.115
+Feb 28 14:06:44 localhost sshd[25646]: Accepted keyboard-interactive/pam for billybob from 192.168.1.115 port 59086 ssh2
+Feb 28 14:06:44 localhost sshd[25646]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+Feb 28 15:29:21 localhost sshd[26415]: Accepted publickey for root from 192.168.1.115 port 59126 ssh2: RSA SHA256:ANmXNvtX7iSlswtrEgXlveTkTyE5ySDCOJfTpSRK9wA
+Feb 28 15:29:21 localhost sshd[26415]: pam_unix(sshd:session): session opened for user root by (uid=0)
+Feb 28 15:32:11 localhost lightdm: pam_unix(lightdm-greeter:session): session closed for user root
+Feb 28 15:32:13 localhost sshd[3273]: Received signal 15; terminating.
+Feb 28 15:32:41 localhost polkitd[2966]: Loading rules from directory /etc/polkit-1/rules.d
+Feb 28 15:32:41 localhost polkitd[2966]: Loading rules from directory /usr/share/polkit-1/rules.d
+Feb 28 15:32:41 localhost polkitd[2966]: Finished loading, compiling and executing 2 rules
+Feb 28 15:32:41 localhost polkitd[2966]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
+Feb 28 15:32:42 localhost sshd[3267]: Server listening on 0.0.0.0 port 22.
+Feb 28 15:32:42 localhost sshd[3267]: Server listening on :: port 22.
+Feb 28 15:32:46 localhost lightdm: pam_unix(lightdm-greeter:session): session opened for user root by (uid=0)
+Feb 28 15:32:46 localhost lightdm: pam_ck_connector(lightdm-greeter:session): nox11 mode, ignoring PAM_TTY :0
+Feb 28 15:32:55 localhost sshd[3501]: Accepted keyboard-interactive/pam for billybob from 192.168.1.115 port 59130 ssh2
+Feb 28 15:32:55 localhost sshd[3501]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+Feb 28 20:00:02 localhost su[5477]: Successful su for man by root
+Feb 28 20:00:02 localhost su[5477]: + ??? root:man
+Feb 28 20:00:02 localhost su[5477]: pam_unix(su:session): session opened for user man by (uid=0)
+Feb 28 20:00:09 localhost su[5477]: pam_unix(su:session): session closed for user man
+Feb 28 21:03:16 localhost sshd[5924]: Accepted publickey for root from 192.168.1.101 port 41994 ssh2: RSA SHA256:SRYQE52DTaMykNlntpAIxjnVQMRwZz1aVNMnoB2OxNk
+Feb 28 21:03:16 localhost sshd[5924]: pam_unix(sshd:session): session opened for user root by (uid=0)
+Feb 28 21:03:58 localhost sshd[5934]: Accepted publickey for billybob from 192.168.1.101 port 42032 ssh2: RSA SHA256:chQaEj8bIy1KpZkrjRFdDyqOQe9WGyAoyGeclhivzV0
+Feb 28 21:03:58 localhost sshd[5934]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+Feb 28 21:08:43 localhost sshd[5942]: Received disconnect from 192.168.1.101 port 42032:11: disconnected by user
+Feb 28 21:08:43 localhost sshd[5942]: Disconnected from user billybob 192.168.1.101 port 42032
+Feb 28 21:08:43 localhost sshd[5934]: pam_unix(sshd:session): session closed for user billybob
+Feb 28 21:50:36 localhost lightdm: pam_unix(lightdm-greeter:session): session closed for user root
+Feb 28 21:50:38 localhost sshd[3267]: Received signal 15; terminating.
+Mar  1 05:33:22 localhost polkitd[2968]: Loading rules from directory /etc/polkit-1/rules.d
+Mar  1 05:33:22 localhost polkitd[2968]: Loading rules from directory /usr/share/polkit-1/rules.d
+Mar  1 05:33:22 localhost polkitd[2968]: Finished loading, compiling and executing 2 rules
+Mar  1 05:33:22 localhost polkitd[2968]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
+Mar  1 05:33:23 localhost sshd[3270]: Server listening on 0.0.0.0 port 22.
+Mar  1 05:33:23 localhost sshd[3270]: Server listening on :: port 22.
+Mar  1 05:33:27 localhost lightdm: pam_unix(lightdm-greeter:session): session opened for user root by (uid=0)
+Mar  1 05:33:27 localhost lightdm: pam_ck_connector(lightdm-greeter:session): nox11 mode, ignoring PAM_TTY :0
+Mar  1 08:27:46 localhost sshd[4310]: Accepted keyboard-interactive/pam for billybob from 192.168.1.115 port 59884 ssh2
+Mar  1 08:27:46 localhost sshd[4310]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+Mar  1 08:41:52 localhost sshd[4406]: Accepted publickey for root from 192.168.1.115 port 59890 ssh2: RSA SHA256:ANmXNvtX7iSlswtrEgXlveTkTyE5ySDCOJfTpSRK9wA
+Mar  1 08:41:52 localhost sshd[4406]: pam_unix(sshd:session): session opened for user root by (uid=0)
+Mar  1 08:43:04 localhost sshd[4406]: Received disconnect from 192.168.1.115 port 59890:11: disconnected by user
+Mar  1 08:43:04 localhost sshd[4406]: Disconnected from user root 192.168.1.115 port 59890
+Mar  1 08:43:04 localhost sshd[4406]: pam_unix(sshd:session): session closed for user root
+Mar  1 09:58:23 localhost sshd[4773]: Accepted publickey for billybob from 192.168.1.115 port 59928 ssh2: RSA SHA256:s7ckJWULRXKCWx8oDWt8t7eAQ94Bh7dw5ZKXYeir7Aw
+Mar  1 09:58:23 localhost sshd[4773]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+Mar  1 09:58:55 localhost sshd[4788]: Accepted publickey for billybob from 192.168.1.115 port 59930 ssh2: RSA SHA256:s7ckJWULRXKCWx8oDWt8t7eAQ94Bh7dw5ZKXYeir7Aw
+Mar  1 09:58:55 localhost sshd[4788]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+Mar  1 09:59:03 localhost sshd[4796]: Received disconnect from 192.168.1.115 port 59930:11: disconnected by user
+Mar  1 09:59:03 localhost sshd[4796]: Disconnected from user billybob 192.168.1.115 port 59930
+Mar  1 09:59:03 localhost sshd[4788]: pam_unix(sshd:session): session closed for user billybob
+Mar  1 10:00:05 localhost sshd[4830]: Accepted publickey for root from 192.168.1.115 port 59932 ssh2: RSA SHA256:ANmXNvtX7iSlswtrEgXlveTkTyE5ySDCOJfTpSRK9wA
+Mar  1 10:00:05 localhost sshd[4830]: pam_unix(sshd:session): session opened for user root by (uid=0)
+Mar  1 10:00:51 localhost sshd[4781]: Received disconnect from 192.168.1.115 port 59928:11: disconnected by user
+Mar  1 10:00:51 localhost sshd[4781]: Disconnected from user billybob 192.168.1.115 port 59928
+Mar  1 10:00:51 localhost sshd[4773]: pam_unix(sshd:session): session closed for user billybob
+Mar  1 10:02:19 localhost sshd[4871]: Accepted publickey for billybob from 192.168.1.115 port 59934 ssh2: RSA SHA256:s7ckJWULRXKCWx8oDWt8t7eAQ94Bh7dw5ZKXYeir7Aw
+Mar  1 10:02:19 localhost sshd[4871]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+Mar  1 10:03:03 localhost sshd[4830]: Received disconnect from 192.168.1.115 port 59932:11: disconnected by user
+Mar  1 10:03:03 localhost sshd[4830]: Disconnected from user root 192.168.1.115 port 59932
+Mar  1 10:03:03 localhost sshd[4830]: pam_unix(sshd:session): session closed for user root
+Mar  1 10:03:16 localhost su[4887]: Successful su for root by billybob
+Mar  1 10:03:16 localhost su[4887]: + /dev/pts/1 billybob:root
+Mar  1 10:03:16 localhost su[4887]: pam_unix(su:session): session opened for user root by billybob(uid=1000)
+Mar  1 10:03:35 localhost sshd[3270]: Received signal 15; terminating.
+Mar  1 10:03:35 localhost sshd[4941]: Server listening on 0.0.0.0 port 22.
+Mar  1 10:03:35 localhost sshd[4941]: Server listening on :: port 22.
+Mar  1 10:03:38 localhost su[4887]: pam_unix(su:session): session closed for user root
+Mar  1 10:18:53 localhost sshd[5203]: Accepted publickey for billybob from 192.168.1.115 port 59942 ssh2: RSA SHA256:s7ckJWULRXKCWx8oDWt8t7eAQ94Bh7dw5ZKXYeir7Aw
+Mar  1 10:18:53 localhost sshd[5203]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+Mar  1 10:19:01 localhost su[5214]: Successful su for root by billybob
+Mar  1 10:19:01 localhost su[5214]: + /dev/pts/1 billybob:root
+Mar  1 10:19:01 localhost su[5214]: pam_unix(su:session): session opened for user root by billybob(uid=1000)
+Mar  1 10:19:08 localhost sshd[5218]: Accepted publickey for root from ::1 port 48376 ssh2: RSA SHA256:XNsAV7lWpOCQtxDKXapb+Cp06TKbzfDu8WVcOtcLIZo
+Mar  1 10:19:08 localhost sshd[5218]: pam_unix(sshd:session): session opened for user root by (uid=0)
+Mar  1 10:19:22 localhost sshd[5218]: error: bind [::]:44: Address already in use
+Mar  1 10:19:22 localhost sshd[5218]: error: channel_setup_fwd_listener_tcpip: cannot listen to port: 44
+Mar  1 10:19:22 localhost sshd[5232]: Accepted publickey for root from ::1 port 48378 ssh2: RSA SHA256:XNsAV7lWpOCQtxDKXapb+Cp06TKbzfDu8WVcOtcLIZo
+Mar  1 10:19:22 localhost sshd[5232]: pam_unix(sshd:session): session opened for user root by (uid=0)
+Mar  1 10:19:22 localhost sshd[5232]: error: bind [::]:44: Address already in use
+Mar  1 10:19:22 localhost sshd[5232]: error: channel_setup_fwd_listener_tcpip: cannot listen to port: 44
+Mar  1 10:19:30 localhost sshd[5232]: Received disconnect from ::1 port 48378:11: disconnected by user
+Mar  1 10:19:30 localhost sshd[5232]: Disconnected from user root ::1 port 48378
+Mar  1 10:19:30 localhost sshd[5232]: pam_unix(sshd:session): session closed for user root
+Mar  1 10:19:33 localhost sshd[5218]: error: bind [::]:44: Address already in use
+Mar  1 10:19:33 localhost sshd[5218]: error: channel_setup_fwd_listener_tcpip: cannot listen to port: 44
+Mar  1 10:19:33 localhost sshd[5251]: Accepted publickey for root from ::1 port 48380 ssh2: RSA SHA256:XNsAV7lWpOCQtxDKXapb+Cp06TKbzfDu8WVcOtcLIZo
+Mar  1 10:19:33 localhost sshd[5251]: pam_unix(sshd:session): session opened for user root by (uid=0)
+Mar  1 10:19:33 localhost sshd[5251]: error: bind [::]:44: Address already in use
+Mar  1 10:19:33 localhost sshd[5251]: error: channel_setup_fwd_listener_tcpip: cannot listen to port: 44
+Mar  1 10:19:45 localhost sshd[5251]: Received disconnect from ::1 port 48380:11: disconnected by user
+Mar  1 10:19:45 localhost sshd[5251]: Disconnected from user root ::1 port 48380
+Mar  1 10:19:45 localhost sshd[5251]: pam_unix(sshd:session): session closed for user root
+Mar  1 10:20:05 localhost su[5214]: pam_unix(su:session): session closed for user root
+Mar  1 10:20:10 localhost sshd[5211]: Received disconnect from 192.168.1.115 port 59942:11: disconnected by user
+Mar  1 10:20:10 localhost sshd[5211]: Disconnected from user billybob 192.168.1.115 port 59942
+Mar  1 10:20:10 localhost sshd[5203]: pam_unix(sshd:session): session closed for user billybob
+Mar  1 10:20:14 localhost sshd[4879]: error: bind [127.0.0.1]:44: Permission denied
+Mar  1 10:20:14 localhost sshd[4879]: error: channel_setup_fwd_listener_tcpip: cannot listen to port: 44
+Mar  1 10:20:14 localhost sshd[5303]: Accepted publickey for billybob from 192.168.1.115 port 59946 ssh2: RSA SHA256:s7ckJWULRXKCWx8oDWt8t7eAQ94Bh7dw5ZKXYeir7Aw
+Mar  1 10:20:14 localhost sshd[5303]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+Mar  1 10:20:14 localhost sshd[5311]: error: bind [::]:44: Permission denied
+Mar  1 10:20:14 localhost sshd[5311]: error: channel_setup_fwd_listener_tcpip: cannot listen to port: 44
+Mar  1 10:20:19 localhost sshd[5311]: Received disconnect from 192.168.1.115 port 59946:11: disconnected by user
+Mar  1 10:20:19 localhost sshd[5311]: Disconnected from user billybob 192.168.1.115 port 59946
+Mar  1 10:20:19 localhost sshd[5303]: pam_unix(sshd:session): session closed for user billybob
+Mar  1 10:20:27 localhost sshd[4879]: error: bind [127.0.0.1]:47: Permission denied
+Mar  1 10:20:27 localhost sshd[4879]: error: channel_setup_fwd_listener_tcpip: cannot listen to port: 47
+Mar  1 10:20:27 localhost sshd[5320]: Accepted publickey for billybob from 192.168.1.115 port 59950 ssh2: RSA SHA256:s7ckJWULRXKCWx8oDWt8t7eAQ94Bh7dw5ZKXYeir7Aw
+Mar  1 10:20:27 localhost sshd[5320]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+Mar  1 10:20:27 localhost sshd[5328]: error: bind [::]:47: Permission denied
+Mar  1 10:20:27 localhost sshd[5328]: error: channel_setup_fwd_listener_tcpip: cannot listen to port: 47
+Mar  1 10:21:02 localhost sshd[5218]: Received disconnect from ::1 port 48376:11: disconnected by user
+Mar  1 10:21:02 localhost sshd[5218]: Disconnected from user root ::1 port 48376
+Mar  1 10:21:02 localhost sshd[5218]: pam_unix(sshd:session): session closed for user root
+Mar  1 10:28:43 localhost sshd[5328]: Received disconnect from 192.168.1.115 port 59950:11: disconnected by user
+Mar  1 10:28:43 localhost sshd[5328]: Disconnected from user billybob 192.168.1.115 port 59950
+Mar  1 10:28:43 localhost sshd[5320]: pam_unix(sshd:session): session closed for user billybob
+Mar  1 10:28:48 localhost sshd[4879]: error: bind [127.0.0.1]:47: Permission denied
+Mar  1 10:28:48 localhost sshd[4879]: error: channel_setup_fwd_listener_tcpip: cannot listen to port: 47
+Mar  1 10:28:49 localhost sshd[5392]: Accepted publickey for billybob from 192.168.1.115 port 59954 ssh2: RSA SHA256:s7ckJWULRXKCWx8oDWt8t7eAQ94Bh7dw5ZKXYeir7Aw
+Mar  1 10:28:49 localhost sshd[5392]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+Mar  1 10:28:49 localhost sshd[5400]: error: bind [::]:47: Permission denied
+Mar  1 10:28:49 localhost sshd[5400]: error: channel_setup_fwd_listener_tcpip: cannot listen to port: 47
+Mar  1 10:28:59 localhost sshd[5400]: Received disconnect from 192.168.1.115 port 59954:11: disconnected by user
+Mar  1 10:28:59 localhost sshd[5400]: Disconnected from user billybob 192.168.1.115 port 59954
+Mar  1 10:28:59 localhost sshd[5392]: pam_unix(sshd:session): session closed for user billybob
+Mar  1 10:29:45 localhost sshd[5418]: Accepted publickey for root from 192.168.1.115 port 59956 ssh2: RSA SHA256:ANmXNvtX7iSlswtrEgXlveTkTyE5ySDCOJfTpSRK9wA
+Mar  1 10:29:45 localhost sshd[5418]: pam_unix(sshd:session): session opened for user root by (uid=0)
+Mar  1 10:30:28 localhost sshd[4879]: Received disconnect from 192.168.1.115 port 59934:11: disconnected by user
+Mar  1 10:30:28 localhost sshd[4879]: Disconnected from user billybob 192.168.1.115 port 59934
+Mar  1 10:30:28 localhost sshd[4871]: pam_unix(sshd:session): session closed for user billybob
+Mar  1 10:38:18 localhost gnome-keyring-daemon[5516]: couldn't access control socket: /var/run/user/1000/keyring/control: No such file or directory
+Mar  1 11:14:56 localhost sshd[4310]: pam_unix(sshd:session): session closed for user billybob
+Mar  1 11:15:56 localhost sshd[5418]: Received disconnect from 192.168.1.115 port 59956:11: disconnected by user
+Mar  1 11:15:56 localhost sshd[5418]: Disconnected from user root 192.168.1.115 port 59956
+Mar  1 11:15:56 localhost sshd[5418]: pam_unix(sshd:session): session closed for user root
+Mar  1 11:18:18 localhost sshd[5765]: Accepted keyboard-interactive/pam for billybob from 192.168.1.115 port 60052 ssh2
+Mar  1 11:18:18 localhost sshd[5765]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+Mar  1 13:43:19 localhost sshd[6787]: Accepted publickey for billybob from 192.168.1.115 port 60186 ssh2: RSA SHA256:s7ckJWULRXKCWx8oDWt8t7eAQ94Bh7dw5ZKXYeir7Aw
+Mar  1 13:43:19 localhost sshd[6787]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+Mar  1 13:43:40 localhost su[6801]: Successful su for root by billybob
+Mar  1 13:43:40 localhost su[6801]: + /dev/pts/1 billybob:root
+Mar  1 13:43:40 localhost su[6801]: pam_unix(su:session): session opened for user root by billybob(uid=1000)
+Mar  1 13:43:54 localhost sshd[4941]: Received signal 15; terminating.
+Mar  1 13:43:54 localhost sshd[6855]: Server listening on 0.0.0.0 port 22.
+Mar  1 13:43:54 localhost sshd[6855]: Server listening on :: port 22.
+Mar  1 13:43:56 localhost su[6801]: pam_unix(su:session): session closed for user root
+Mar  1 13:44:15 localhost su[6874]: Successful su for root by billybob
+Mar  1 13:44:15 localhost su[6874]: + /dev/pts/1 billybob:root
+Mar  1 13:44:15 localhost su[6874]: pam_unix(su:session): session opened for user root by billybob(uid=1000)
+Mar  1 13:44:21 localhost su[6874]: pam_unix(su:session): session closed for user root
+Mar  1 13:45:24 localhost sshd[6881]: Accepted publickey for root from 192.168.1.115 port 60190 ssh2: RSA SHA256:ANmXNvtX7iSlswtrEgXlveTkTyE5ySDCOJfTpSRK9wA
+Mar  1 13:45:24 localhost sshd[6881]: pam_unix(sshd:session): session opened for user root by (uid=0)
+Mar  1 13:47:10 localhost su[7302]: Successful su for root by billybob
+Mar  1 13:47:10 localhost su[7302]: + /dev/pts/0 billybob:root
+Mar  1 13:47:10 localhost su[7302]: pam_unix(su:session): session opened for user root by billybob(uid=1000)
+Mar  1 13:47:13 localhost lightdm: pam_unix(lightdm-greeter:session): session closed for user root
+Mar  1 13:47:15 localhost sshd[6855]: Received signal 15; terminating.
+Mar  1 13:47:45 localhost polkitd[2966]: Loading rules from directory /etc/polkit-1/rules.d
+Mar  1 13:47:45 localhost polkitd[2966]: Loading rules from directory /usr/share/polkit-1/rules.d
+Mar  1 13:47:45 localhost polkitd[2966]: Finished loading, compiling and executing 2 rules
+Mar  1 13:47:45 localhost polkitd[2966]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
+Mar  1 13:47:46 localhost sshd[3266]: Server listening on 0.0.0.0 port 22.
+Mar  1 13:47:46 localhost sshd[3266]: Server listening on :: port 22.
+Mar  1 13:47:50 localhost lightdm: pam_unix(lightdm-greeter:session): session opened for user root by (uid=0)
+Mar  1 13:47:50 localhost lightdm: pam_ck_connector(lightdm-greeter:session): nox11 mode, ignoring PAM_TTY :0
+Mar  1 13:49:58 localhost sshd[3509]: Accepted keyboard-interactive/pam for billybob from 192.168.1.115 port 60204 ssh2
+Mar  1 13:49:58 localhost sshd[3509]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+Mar  1 13:50:49 localhost sshd[3545]: Accepted publickey for billybob from 192.168.1.115 port 60206 ssh2: RSA SHA256:s7ckJWULRXKCWx8oDWt8t7eAQ94Bh7dw5ZKXYeir7Aw
+Mar  1 13:50:49 localhost sshd[3545]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+Mar  1 14:33:54 localhost sshd[3553]: Received disconnect from 192.168.1.115 port 60206:11: disconnected by user
+Mar  1 14:33:54 localhost sshd[3553]: Disconnected from user billybob 192.168.1.115 port 60206
+Mar  1 14:33:54 localhost sshd[3545]: pam_unix(sshd:session): session closed for user billybob
+Mar  1 14:37:05 localhost sshd[3509]: pam_unix(sshd:session): session closed for user billybob
+Mar  1 19:14:38 localhost sshd[5242]: Accepted publickey for billybob from 192.168.1.101 port 53922 ssh2: RSA SHA256:chQaEj8bIy1KpZkrjRFdDyqOQe9WGyAoyGeclhivzV0
+Mar  1 19:14:38 localhost sshd[5242]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+Mar  1 20:10:03 localhost su[7335]: Successful su for man by root
+Mar  1 20:10:03 localhost su[7335]: + ??? root:man
+Mar  1 20:10:03 localhost su[7335]: pam_unix(su:session): session opened for user man by (uid=0)
+Mar  1 20:10:21 localhost su[7335]: pam_unix(su:session): session closed for user man
+Mar  1 20:32:05 localhost su[11412]: Successful su for root by billybob
+Mar  1 20:32:05 localhost su[11412]: + /dev/pts/0 billybob:root
+Mar  1 20:32:05 localhost su[11412]: pam_unix(su:session): session opened for user root by billybob(uid=1000)
+Mar  1 22:57:54 localhost lightdm: pam_unix(lightdm-greeter:session): session closed for user root
+Mar  1 22:57:56 localhost sshd[3266]: Received signal 15; terminating.
+Mar  2 10:14:38 localhost polkitd[2968]: Loading rules from directory /etc/polkit-1/rules.d
+Mar  2 10:14:38 localhost polkitd[2968]: Loading rules from directory /usr/share/polkit-1/rules.d
+Mar  2 10:14:38 localhost polkitd[2968]: Finished loading, compiling and executing 2 rules
+Mar  2 10:14:38 localhost polkitd[2968]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
+Mar  2 10:14:39 localhost sshd[3269]: Server listening on 0.0.0.0 port 22.
+Mar  2 10:14:39 localhost sshd[3269]: Server listening on :: port 22.
+Mar  2 10:14:43 localhost lightdm: pam_unix(lightdm-greeter:session): session opened for user root by (uid=0)
+Mar  2 10:14:43 localhost lightdm: pam_ck_connector(lightdm-greeter:session): nox11 mode, ignoring PAM_TTY :0
+Mar  2 10:20:07 localhost sshd[3543]: Accepted publickey for billybob from 192.168.1.101 port 46186 ssh2: RSA SHA256:chQaEj8bIy1KpZkrjRFdDyqOQe9WGyAoyGeclhivzV0
+Mar  2 10:20:07 localhost sshd[3543]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+Mar  2 10:24:48 localhost su[4038]: Successful su for root by billybob
+Mar  2 10:24:48 localhost su[4038]: + /dev/pts/0 billybob:root
+Mar  2 10:24:48 localhost su[4038]: pam_unix(su:session): session opened for user root by billybob(uid=1000)
+Mar  2 19:26:13 localhost su[4038]: pam_unix(su:session): session closed for user root
+Mar  2 20:04:49 localhost su[7118]: pam_unix(su:auth): authentication failure; logname=billybob uid=1000 euid=0 tty=/dev/pts/0 ruser=billybob rhost=  user=root
+Mar  2 20:04:51 localhost su[7118]: pam_authenticate: Authentication failure
+Mar  2 20:04:51 localhost su[7118]: FAILED su for root by billybob
+Mar  2 20:04:51 localhost su[7118]: - /dev/pts/0 billybob:root
+Mar  2 20:04:58 localhost su[7119]: Successful su for root by billybob
+Mar  2 20:04:58 localhost su[7119]: + /dev/pts/0 billybob:root
+Mar  2 20:04:58 localhost su[7119]: pam_unix(su:session): session opened for user root by billybob(uid=1000)
+Mar  2 20:20:03 localhost su[25348]: Successful su for man by root
+Mar  2 20:20:03 localhost su[25348]: + ??? root:man
+Mar  2 20:20:03 localhost su[25348]: pam_unix(su:session): session opened for user man by (uid=0)
+Mar  2 20:20:09 localhost su[25348]: pam_unix(su:session): session closed for user man
+Mar  2 20:40:54 localhost su[7119]: pam_unix(su:session): session closed for user root
+Mar  2 21:00:57 localhost su[27868]: Successful su for root by billybob
+Mar  2 21:00:57 localhost su[27868]: + /dev/pts/0 billybob:root
+Mar  2 21:00:57 localhost su[27868]: pam_unix(su:session): session opened for user root by billybob(uid=1000)
+Mar  2 21:01:01 localhost su[27868]: pam_unix(su:session): session closed for user root
+Mar  2 21:01:01 localhost lightdm: pam_unix(lightdm-greeter:session): session closed for user root
+Mar  2 21:01:03 localhost sshd[3551]: Received disconnect from 192.168.1.101 port 46186:11: disconnected by user
+Mar  2 21:01:03 localhost sshd[3551]: Disconnected from user billybob 192.168.1.101 port 46186
+Mar  2 21:01:03 localhost sshd[3543]: pam_unix(sshd:session): session closed for user billybob
+Mar  2 21:01:03 localhost sshd[3269]: Received signal 15; terminating.
+Mar  3 16:37:48 localhost polkitd[2963]: Loading rules from directory /etc/polkit-1/rules.d
+Mar  3 16:37:48 localhost polkitd[2963]: Loading rules from directory /usr/share/polkit-1/rules.d
+Mar  3 16:37:48 localhost polkitd[2963]: Finished loading, compiling and executing 2 rules
+Mar  3 16:37:48 localhost polkitd[2963]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
+Mar  3 16:37:49 localhost sshd[3264]: Server listening on 0.0.0.0 port 22.
+Mar  3 16:37:49 localhost sshd[3264]: Server listening on :: port 22.
+Mar  3 16:37:53 localhost lightdm: pam_unix(lightdm-greeter:session): session opened for user root by (uid=0)
+Mar  3 16:37:53 localhost lightdm: pam_ck_connector(lightdm-greeter:session): nox11 mode, ignoring PAM_TTY :0
+Mar  3 16:38:19 localhost lightdm: pam_unix(lightdm-greeter:session): session closed for user root
+Mar  3 16:38:19 localhost lightdm: pam_unix(lightdm:session): session opened for user billybob by (uid=0)
+Mar  3 16:38:19 localhost lightdm: pam_ck_connector(lightdm:session): nox11 mode, ignoring PAM_TTY :0
+Mar  3 16:38:22 localhost polkitd[2963]: Registered Authentication Agent for unix-session:/org/freedesktop/ConsoleKit/Session2 (system bus name :1.12 [/usr/lib64/libexec/polkit-kde-authentication-agent-1], object path /org/kde/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8)
+Mar  3 16:38:56 localhost sshd[3901]: Accepted publickey for root from 192.168.1.100 port 59496 ssh2: RSA SHA256:QW4ErgDUT7epSmk9sF8WJmizNue1nYTijdoCtTUZlB4
+Mar  3 16:38:56 localhost sshd[3901]: pam_unix(sshd:session): session opened for user root by (uid=0)
+Mar  3 16:41:02 localhost dbus-daemon[3544]: [session uid=1000 pid=3542] Failed to activate service 'org.a11y.Bus': timed out (service_start_timeout=120000ms)
+Mar  3 16:48:26 localhost polkitd[2963]: Unregistered Authentication Agent for unix-session:/org/freedesktop/ConsoleKit/Session2 (system bus name :1.12, object path /org/kde/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8) (disconnected from bus)
+Mar  3 16:48:27 localhost lightdm: pam_unix(lightdm:session): session closed for user billybob
+Mar  3 16:48:28 localhost sshd[3264]: Received signal 15; terminating.
+Mar  3 16:49:13 localhost polkitd[2969]: Loading rules from directory /etc/polkit-1/rules.d
+Mar  3 16:49:13 localhost polkitd[2969]: Loading rules from directory /usr/share/polkit-1/rules.d
+Mar  3 16:49:13 localhost polkitd[2969]: Finished loading, compiling and executing 2 rules
+Mar  3 16:49:13 localhost polkitd[2969]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
+Mar  3 16:49:13 localhost sshd[3269]: Server listening on 0.0.0.0 port 22.
+Mar  3 16:49:13 localhost sshd[3269]: Server listening on :: port 22.
+Mar  3 16:49:18 localhost lightdm: pam_unix(lightdm-greeter:session): session opened for user root by (uid=0)
+Mar  3 16:49:18 localhost lightdm: pam_ck_connector(lightdm-greeter:session): nox11 mode, ignoring PAM_TTY :0
+Mar  3 16:49:20 localhost sshd[3504]: Accepted publickey for root from 192.168.1.100 port 60696 ssh2: RSA SHA256:QW4ErgDUT7epSmk9sF8WJmizNue1nYTijdoCtTUZlB4
+Mar  3 16:49:20 localhost sshd[3504]: pam_unix(sshd:session): session opened for user root by (uid=0)
+Mar  3 16:49:55 localhost lightdm: pam_unix(lightdm-greeter:session): session closed for user root
+Mar  3 16:49:55 localhost lightdm: pam_unix(lightdm:session): session opened for user sgroombr by (uid=0)
+Mar  3 16:49:55 localhost lightdm: pam_ck_connector(lightdm:session): nox11 mode, ignoring PAM_TTY :0
+Mar  3 16:49:58 localhost polkitd[2969]: Registered Authentication Agent for unix-session:/org/freedesktop/ConsoleKit/Session3 (system bus name :1.13 [/usr/lib64/libexec/polkit-kde-authentication-agent-1], object path /org/kde/PolicyKit1/AuthenticationAgent, locale en_US.utf8)
+Mar  3 16:49:59 localhost dbus-daemon[2864]: [system] Rejected send message, 2 matched rules; type="method_call", sender=":1.18" (uid=1001 pid=3684 comm="/usr/bin/pulseaudio --start --log-target=syslog ") interface="org.freedesktop.DBus.ObjectManager" member="GetManagedObjects" error name="(unset)" requested_reply="0" destination="org.bluez" (uid=0 pid=2891 comm="/usr/libexec/bluetooth/bluetoothd ")
+Mar  3 16:50:25 localhost dbus-daemon[2864]: [system] Rejected send message, 2 matched rules; type="method_call", sender=":1.27" (uid=1001 pid=3604 comm="kded5 [kdeinit5]                                  ") interface="org.freedesktop.DBus.ObjectManager" member="GetManagedObjects" error name="(unset)" requested_reply="0" destination="org.bluez" (uid=0 pid=2891 comm="/usr/libexec/bluetooth/bluetoothd ")
+Mar  3 16:50:25 localhost dbus-daemon[2864]: [system] Rejected send message, 2 matched rules; type="method_call", sender=":1.31" (uid=1001 pid=3952 comm="/usr/libexec/bluetooth/obexd ") interface="org.bluez.ProfileManager1" member="RegisterProfile" error name="(unset)" requested_reply="0" destination="org.bluez" (uid=0 pid=2891 comm="/usr/libexec/bluetooth/bluetoothd ")
+Mar  3 16:50:25 localhost dbus-daemon[2864]: [system] Rejected send message, 2 matched rules; type="method_call", sender=":1.31" (uid=1001 pid=3952 comm="/usr/libexec/bluetooth/obexd ") interface="org.bluez.ProfileManager1" member="RegisterProfile" error name="(unset)" requested_reply="0" destination="org.bluez" (uid=0 pid=2891 comm="/usr/libexec/bluetooth/bluetoothd ")
+Mar  3 16:50:25 localhost dbus-daemon[2864]: [system] Rejected send message, 2 matched rules; type="method_call", sender=":1.31" (uid=1001 pid=3952 comm="/usr/libexec/bluetooth/obexd ") interface="org.bluez.ProfileManager1" member="RegisterProfile" error name="(unset)" requested_reply="0" destination="org.bluez" (uid=0 pid=2891 comm="/usr/libexec/bluetooth/bluetoothd ")
+Mar  3 16:50:25 localhost dbus-daemon[2864]: [system] Rejected send message, 2 matched rules; type="method_call", sender=":1.31" (uid=1001 pid=3952 comm="/usr/libexec/bluetooth/obexd ") interface="org.bluez.ProfileManager1" member="RegisterProfile" error name="(unset)" requested_reply="0" destination="org.bluez" (uid=0 pid=2891 comm="/usr/libexec/bluetooth/bluetoothd ")
+Mar  3 16:50:25 localhost dbus-daemon[2864]: [system] Rejected send message, 2 matched rules; type="method_call", sender=":1.31" (uid=1001 pid=3952 comm="/usr/libexec/bluetooth/obexd ") interface="org.bluez.ProfileManager1" member="RegisterProfile" error name="(unset)" requested_reply="0" destination="org.bluez" (uid=0 pid=2891 comm="/usr/libexec/bluetooth/bluetoothd ")
+Mar  3 16:50:25 localhost dbus-daemon[2864]: [system] Rejected send message, 2 matched rules; type="method_call", sender=":1.31" (uid=1001 pid=3952 comm="/usr/libexec/bluetooth/obexd ") interface="org.bluez.ProfileManager1" member="RegisterProfile" error name="(unset)" requested_reply="0" destination="org.bluez" (uid=0 pid=2891 comm="/usr/libexec/bluetooth/bluetoothd ")
+Mar  3 16:50:30 localhost dbus-daemon[2864]: [system] Rejected send message, 2 matched rules; type="method_call", sender=":1.30" (uid=1001 pid=3898 comm="/usr/bin/plasmashell /usr/bin/plasmashell ") interface="org.freedesktop.DBus.ObjectManager" member="GetManagedObjects" error name="(unset)" requested_reply="0" destination="org.bluez" (uid=0 pid=2891 comm="/usr/libexec/bluetooth/bluetoothd ")
+Mar  3 16:51:15 localhost polkitd[2969]: Unregistered Authentication Agent for unix-session:/org/freedesktop/ConsoleKit/Session3 (system bus name :1.13, object path /org/kde/PolicyKit1/AuthenticationAgent, locale en_US.utf8)
+Mar  3 16:51:19 localhost lightdm: pam_unix(lightdm:session): session closed for user sgroombr
+Mar  3 16:51:23 localhost lightdm: pam_unix(lightdm-greeter:session): session opened for user root by (uid=0)
+Mar  3 16:51:23 localhost lightdm: pam_ck_connector(lightdm-greeter:session): nox11 mode, ignoring PAM_TTY :0
+Mar  3 16:51:33 localhost lightdm: pam_unix(lightdm-greeter:session): session closed for user root
+Mar  3 16:51:33 localhost lightdm: pam_unix(lightdm:session): session opened for user billybob by (uid=0)
+Mar  3 16:51:33 localhost lightdm: pam_ck_connector(lightdm:session): nox11 mode, ignoring PAM_TTY :0
+Mar  3 16:51:35 localhost polkitd[2969]: Registered Authentication Agent for unix-session:/org/freedesktop/ConsoleKit/Session5 (system bus name :1.42 [/usr/lib64/libexec/polkit-kde-authentication-agent-1], object path /org/kde/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8)
+Mar  3 20:30:03 localhost su[5640]: Successful su for man by root
+Mar  3 20:30:03 localhost su[5640]: + ??? root:man
+Mar  3 20:30:03 localhost su[5640]: pam_unix(su:session): session opened for user man by (uid=0)
+Mar  3 20:30:11 localhost su[5640]: pam_unix(su:session): session closed for user man
+Mar  3 21:11:50 localhost sshd[6101]: Accepted publickey for root from 192.168.1.101 port 55304 ssh2: RSA SHA256:SRYQE52DTaMykNlntpAIxjnVQMRwZz1aVNMnoB2OxNk
+Mar  3 21:11:50 localhost sshd[6101]: pam_unix(sshd:session): session opened for user root by (uid=0)
+Mar  3 21:26:30 localhost sshd[6101]: Received disconnect from 192.168.1.101 port 55304:11: disconnected by user
+Mar  3 21:26:30 localhost sshd[6101]: Disconnected from user root 192.168.1.101 port 55304
+Mar  3 21:26:30 localhost sshd[6101]: pam_unix(sshd:session): session closed for user root
+Mar  3 21:26:36 localhost sshd[27993]: Accepted publickey for billybob from 192.168.1.101 port 56154 ssh2: RSA SHA256:chQaEj8bIy1KpZkrjRFdDyqOQe9WGyAoyGeclhivzV0
+Mar  3 21:26:36 localhost sshd[27993]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+Mar  3 21:33:12 localhost su[28206]: Successful su for root by billybob
+Mar  3 21:33:12 localhost su[28206]: + /dev/pts/2 billybob:root
+Mar  3 21:33:12 localhost su[28206]: pam_unix(su:session): session opened for user root by billybob(uid=1000)
+Mar  3 21:33:16 localhost su[28206]: pam_unix(su:session): session closed for user root
+Mar  3 21:33:17 localhost sshd[28001]: Received disconnect from 192.168.1.101 port 56154:11: disconnected by user
+Mar  3 21:33:17 localhost sshd[28001]: Disconnected from user billybob 192.168.1.101 port 56154
+Mar  3 21:33:17 localhost sshd[27993]: pam_unix(sshd:session): session closed for user billybob
+Mar  3 21:33:34 localhost sshd[3504]: Received disconnect from 192.168.1.100 port 60696:11: disconnected by user
+Mar  3 21:33:34 localhost sshd[3504]: Disconnected from user root 192.168.1.100 port 60696
+Mar  3 21:33:34 localhost sshd[3504]: pam_unix(sshd:session): session closed for user root
+Mar  4 03:10:01 localhost su[29880]: Successful su for man by root
+Mar  4 03:10:01 localhost su[29880]: + ??? root:man
+Mar  4 03:10:01 localhost su[29880]: pam_unix(su:session): session opened for user man by (uid=0)
+Mar  4 03:10:06 localhost su[29880]: pam_unix(su:session): session closed for user man
+Mar  4 08:42:35 localhost sshd[31668]: Accepted keyboard-interactive/pam for billybob from 192.168.1.115 port 52166 ssh2
+Mar  4 08:42:35 localhost sshd[31668]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+Mar  4 18:43:58 localhost dbus-daemon[4097]: [session uid=1000 pid=4095] Failed to activate service 'org.a11y.Bus': timed out (service_start_timeout=120000ms)
+Mar  4 19:09:58 localhost login[3405]: pam_unix(login:auth): authentication failure; logname=LOGIN uid=0 euid=0 tty=/dev/tty1 ruser= rhost=  user=root
+Mar  4 19:10:01 localhost login[3405]: FAILED LOGIN (1) on '/dev/tty1' FOR 'root', Authentication failure
+Mar  4 19:10:04 localhost login[3405]: pam_unix(login:session): session opened for user root by LOGIN(uid=0)
+Mar  4 19:10:04 localhost login[5612]: ROOT LOGIN  on '/dev/tty1'
+Mar  4 19:10:06 localhost polkitd[2969]: Unregistered Authentication Agent for unix-session:/org/freedesktop/ConsoleKit/Session5 (system bus name :1.42, object path /org/kde/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8) (disconnected from bus)
+Mar  4 19:10:06 localhost lightdm: pam_unix(lightdm:session): session closed for user billybob
+Mar  4 19:10:07 localhost sshd[3269]: Received signal 15; terminating.
+Mar  4 19:11:30 localhost polkitd[2971]: Loading rules from directory /etc/polkit-1/rules.d
+Mar  4 19:11:30 localhost polkitd[2971]: Loading rules from directory /usr/share/polkit-1/rules.d
+Mar  4 19:11:30 localhost polkitd[2971]: Finished loading, compiling and executing 2 rules
+Mar  4 19:11:30 localhost polkitd[2971]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
+Mar  4 19:11:31 localhost sshd[3273]: Server listening on 0.0.0.0 port 22.
+Mar  4 19:11:31 localhost sshd[3273]: Server listening on :: port 22.
+Mar  4 19:11:35 localhost lightdm: pam_unix(lightdm-greeter:session): session opened for user root by (uid=0)
+Mar  4 19:11:35 localhost lightdm: pam_ck_connector(lightdm-greeter:session): nox11 mode, ignoring PAM_TTY :0
+Mar  4 19:11:48 localhost lightdm: pam_unix(lightdm-greeter:session): session closed for user root
+Mar  4 19:11:48 localhost lightdm: pam_unix(lightdm:session): session opened for user billybob by (uid=0)
+Mar  4 19:11:48 localhost lightdm: pam_ck_connector(lightdm:session): nox11 mode, ignoring PAM_TTY :0
+Mar  4 19:11:51 localhost polkitd[2971]: Registered Authentication Agent for unix-session:/org/freedesktop/ConsoleKit/Session2 (system bus name :1.14 [/usr/lib64/libexec/polkit-kde-authentication-agent-1], object path /org/kde/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8)
+Mar  4 19:16:26 localhost dbus-daemon[3544]: [session uid=1000 pid=3542] Failed to activate service 'org.a11y.Bus': timed out (service_start_timeout=120000ms)
+Mar  4 19:32:21 localhost sshd[4644]: Accepted publickey for billybob from 192.168.1.100 port 41832 ssh2: RSA SHA256:OmU3MyqULombzC3me22dkuRfY1DLWwTjIdmBHalD0So
+Mar  4 19:32:21 localhost sshd[4644]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+Mar  4 19:32:43 localhost su[4656]: Successful su for root by billybob
+Mar  4 19:32:43 localhost su[4656]: + /dev/pts/1 billybob:root
+Mar  4 19:32:43 localhost su[4656]: pam_unix(su:session): session opened for user root by billybob(uid=1000)
+Mar  4 19:36:51 localhost polkitd[2971]: Unregistered Authentication Agent for unix-session:/org/freedesktop/ConsoleKit/Session2 (system bus name :1.14, object path /org/kde/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8) (disconnected from bus)
+Mar  4 19:36:51 localhost lightdm: pam_unix(lightdm:session): session closed for user billybob
+Mar  4 19:36:52 localhost sshd[3273]: Received signal 15; terminating.
+Mar  4 19:38:00 localhost polkitd[2966]: Loading rules from directory /etc/polkit-1/rules.d
+Mar  4 19:38:00 localhost polkitd[2966]: Loading rules from directory /usr/share/polkit-1/rules.d
+Mar  4 19:38:00 localhost polkitd[2966]: Finished loading, compiling and executing 2 rules
+Mar  4 19:38:00 localhost polkitd[2966]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
+Mar  4 19:38:01 localhost sshd[3268]: Server listening on 0.0.0.0 port 22.
+Mar  4 19:38:01 localhost sshd[3268]: Server listening on :: port 22.
+Mar  4 19:38:05 localhost lightdm: pam_unix(lightdm-greeter:session): session opened for user root by (uid=0)
+Mar  4 19:38:05 localhost lightdm: pam_ck_connector(lightdm-greeter:session): nox11 mode, ignoring PAM_TTY :0
+Mar  4 19:38:12 localhost lightdm: pam_unix(lightdm-greeter:session): session closed for user root
+Mar  4 19:38:12 localhost lightdm: pam_unix(lightdm:session): session opened for user billybob by (uid=0)
+Mar  4 19:38:12 localhost lightdm: pam_ck_connector(lightdm:session): nox11 mode, ignoring PAM_TTY :0
+Mar  4 19:38:15 localhost polkitd[2966]: Registered Authentication Agent for unix-session:/org/freedesktop/ConsoleKit/Session2 (system bus name :1.16 [/usr/lib64/libexec/polkit-kde-authentication-agent-1], object path /org/kde/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8)
+Mar  4 19:39:25 localhost su[3978]: Successful su for root by billybob
+Mar  4 19:39:25 localhost su[3978]: + /dev/pts/1 billybob:root
+Mar  4 19:39:25 localhost su[3978]: pam_unix(su:session): session opened for user root by billybob(uid=1000)
+Mar  4 19:39:45 localhost polkitd[2966]: Unregistered Authentication Agent for unix-session:/org/freedesktop/ConsoleKit/Session2 (system bus name :1.16, object path /org/kde/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8) (disconnected from bus)
+Mar  4 19:39:45 localhost su[3978]: pam_unix(su:session): session closed for user root
+Mar  4 19:39:45 localhost lightdm: pam_unix(lightdm:session): session closed for user billybob
+Mar  4 19:39:46 localhost sshd[3268]: Received signal 15; terminating.
+Mar  4 19:40:53 localhost polkitd[2995]: Loading rules from directory /etc/polkit-1/rules.d
+Mar  4 19:40:53 localhost polkitd[2995]: Loading rules from directory /usr/share/polkit-1/rules.d
+Mar  4 19:40:53 localhost polkitd[2995]: Finished loading, compiling and executing 2 rules
+Mar  4 19:40:53 localhost polkitd[2995]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
+Mar  4 19:40:54 localhost sshd[3278]: Server listening on 0.0.0.0 port 22.
+Mar  4 19:40:54 localhost sshd[3278]: Server listening on :: port 22.
+Mar  4 19:40:57 localhost lightdm: pam_unix(lightdm-greeter:session): session opened for user root by (uid=0)
+Mar  4 19:40:57 localhost lightdm: pam_ck_connector(lightdm-greeter:session): nox11 mode, ignoring PAM_TTY :0
+Mar  4 19:41:01 localhost lightdm: pam_unix(lightdm-greeter:session): session closed for user root
+Mar  4 19:41:01 localhost lightdm: pam_unix(lightdm:session): session opened for user billybob by (uid=0)
+Mar  4 19:41:01 localhost lightdm: pam_ck_connector(lightdm:session): nox11 mode, ignoring PAM_TTY :0
+Mar  4 19:41:05 localhost polkitd[2995]: Registered Authentication Agent for unix-session:/org/freedesktop/ConsoleKit/Session2 (system bus name :1.14 [/usr/lib64/libexec/polkit-kde-authentication-agent-1], object path /org/kde/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8)
+Mar  4 19:43:14 localhost dbus-daemon[3549]: [session uid=1000 pid=3547] Failed to activate service 'org.a11y.Bus': timed out (service_start_timeout=120000ms)
+Mar  4 19:46:29 localhost dbus-daemon[3549]: [session uid=1000 pid=3547] Failed to activate service 'org.a11y.Bus': timed out (service_start_timeout=120000ms)
+Mar  4 19:59:08 localhost sshd[4578]: Accepted publickey for billybob from 192.168.1.100 port 46058 ssh2: RSA SHA256:OmU3MyqULombzC3me22dkuRfY1DLWwTjIdmBHalD0So
+Mar  4 19:59:08 localhost sshd[4578]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+Mar  4 19:59:12 localhost su[4589]: Successful su for root by billybob
+Mar  4 19:59:12 localhost su[4589]: + /dev/pts/1 billybob:root
+Mar  4 19:59:12 localhost su[4589]: pam_unix(su:session): session opened for user root by billybob(uid=1000)
+Mar  4 19:59:34 localhost su[4589]: pam_unix(su:session): session closed for user root
+Mar  4 20:09:34 localhost sshd[4586]: Received disconnect from 192.168.1.100 port 46058:11: disconnected by user
+Mar  4 20:09:34 localhost sshd[4586]: Disconnected from user billybob 192.168.1.100 port 46058
+Mar  4 20:09:34 localhost sshd[4578]: pam_unix(sshd:session): session closed for user billybob
+Mar  4 20:20:37 localhost sshd[4716]: Accepted publickey for root from 192.168.1.101 port 60666 ssh2: RSA SHA256:SRYQE52DTaMykNlntpAIxjnVQMRwZz1aVNMnoB2OxNk
+Mar  4 20:20:37 localhost sshd[4716]: pam_unix(sshd:session): session opened for user root by (uid=0)
+Mar  4 20:21:46 localhost sshd[4727]: Accepted publickey for root from 192.168.1.101 port 60676 ssh2: RSA SHA256:SRYQE52DTaMykNlntpAIxjnVQMRwZz1aVNMnoB2OxNk
+Mar  4 20:21:46 localhost sshd[4727]: pam_unix(sshd:session): session opened for user root by (uid=0)
+Mar  4 20:50:27 localhost sshd[4716]: Received disconnect from 192.168.1.101 port 60666:11: disconnected by user
+Mar  4 20:50:27 localhost sshd[4716]: Disconnected from user root 192.168.1.101 port 60666
+Mar  4 20:50:27 localhost sshd[4716]: pam_unix(sshd:session): session closed for user root
+Mar  4 20:51:49 localhost sshd[4727]: Received disconnect from 192.168.1.101 port 60676:11: disconnected by user
+Mar  4 20:51:49 localhost sshd[4727]: Disconnected from user root 192.168.1.101 port 60676
+Mar  4 20:51:49 localhost sshd[4727]: pam_unix(sshd:session): session closed for user root
+Mar  4 20:51:49 localhost polkitd[2995]: Unregistered Authentication Agent for unix-session:/org/freedesktop/ConsoleKit/Session2 (system bus name :1.14, object path /org/kde/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8) (disconnected from bus)
+Mar  4 20:51:50 localhost lightdm: pam_unix(lightdm:session): session closed for user billybob
+Mar  4 20:51:51 localhost sshd[3278]: Received signal 15; terminating.
+Mar  4 20:54:52 localhost polkitd[2975]: Loading rules from directory /etc/polkit-1/rules.d
+Mar  4 20:54:52 localhost polkitd[2975]: Loading rules from directory /usr/share/polkit-1/rules.d
+Mar  4 20:54:52 localhost polkitd[2975]: Finished loading, compiling and executing 2 rules
+Mar  4 20:54:52 localhost polkitd[2975]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
+Mar  4 20:54:53 localhost sshd[3276]: Server listening on 0.0.0.0 port 22.
+Mar  4 20:54:53 localhost sshd[3276]: Server listening on :: port 22.
+Mar  4 20:54:56 localhost lightdm: pam_unix(lightdm-greeter:session): session opened for user root by (uid=0)
+Mar  4 20:54:56 localhost lightdm: pam_ck_connector(lightdm-greeter:session): nox11 mode, ignoring PAM_TTY :0
+Mar  4 20:55:00 localhost sshd[3510]: Accepted publickey for root from 192.168.1.101 port 60938 ssh2: RSA SHA256:SRYQE52DTaMykNlntpAIxjnVQMRwZz1aVNMnoB2OxNk
+Mar  4 20:55:00 localhost sshd[3510]: pam_unix(sshd:session): session opened for user root by (uid=0)
+Mar  4 20:55:18 localhost sshd[3510]: Received disconnect from 192.168.1.101 port 60938:11: disconnected by user
+Mar  4 20:55:18 localhost sshd[3510]: Disconnected from user root 192.168.1.101 port 60938
+Mar  4 20:55:18 localhost sshd[3510]: pam_unix(sshd:session): session closed for user root
+Mar  4 20:55:24 localhost sshd[3527]: Accepted publickey for billybob from 192.168.1.101 port 60940 ssh2: RSA SHA256:chQaEj8bIy1KpZkrjRFdDyqOQe9WGyAoyGeclhivzV0
+Mar  4 20:55:24 localhost sshd[3527]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+Mar  4 20:55:32 localhost su[3543]: Successful su for root by billybob
+Mar  4 20:55:32 localhost su[3543]: + /dev/pts/0 billybob:root
+Mar  4 20:55:32 localhost su[3543]: pam_unix(su:session): session opened for user root by billybob(uid=1000)
+Mar  4 20:55:46 localhost su[3543]: pam_unix(su:session): session closed for user root
+Mar  4 20:55:52 localhost su[3547]: Successful su for root by billybob
+Mar  4 20:55:52 localhost su[3547]: + /dev/pts/0 billybob:root
+Mar  4 20:55:52 localhost su[3547]: pam_unix(su:session): session opened for user root by billybob(uid=1000)
+Mar  4 20:55:57 localhost sshd[3276]: Received signal 15; terminating.
+Mar  4 20:55:57 localhost sshd[3600]: Server listening on 0.0.0.0 port 22.
+Mar  4 20:55:57 localhost sshd[3600]: Server listening on :: port 22.
+Mar  4 20:55:59 localhost su[3547]: pam_unix(su:session): session closed for user root
+Mar  4 20:56:01 localhost sshd[3535]: Received disconnect from 192.168.1.101 port 60940:11: disconnected by user
+Mar  4 20:56:01 localhost sshd[3535]: Disconnected from user billybob 192.168.1.101 port 60940
+Mar  4 20:56:01 localhost sshd[3527]: pam_unix(sshd:session): session closed for user billybob
+Mar  4 20:56:02 localhost sshd[3620]: Accepted publickey for billybob from 192.168.1.101 port 60942 ssh2: RSA SHA256:chQaEj8bIy1KpZkrjRFdDyqOQe9WGyAoyGeclhivzV0
+Mar  4 20:56:02 localhost sshd[3620]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+Mar  4 20:56:46 localhost su[3766]: Successful su for root by billybob
+Mar  4 20:56:46 localhost su[3766]: + /dev/pts/0 billybob:root
+Mar  4 20:56:46 localhost su[3766]: pam_unix(su:session): session opened for user root by billybob(uid=1000)
+Mar  4 20:56:49 localhost su[3766]: pam_unix(su:session): session closed for user root
+Mar  4 20:56:49 localhost lightdm: pam_unix(lightdm-greeter:session): session closed for user root
+Mar  4 20:56:50 localhost sshd[3628]: Received disconnect from 192.168.1.101 port 60942:11: disconnected by user
+Mar  4 20:56:50 localhost sshd[3628]: Disconnected from user billybob 192.168.1.101 port 60942
+Mar  4 20:56:50 localhost sshd[3620]: pam_unix(sshd:session): session closed for user billybob
+Mar  4 20:56:51 localhost sshd[3600]: Received signal 15; terminating.
+Mar  5 06:23:06 localhost polkitd[2969]: Loading rules from directory /etc/polkit-1/rules.d
+Mar  5 06:23:06 localhost polkitd[2969]: Loading rules from directory /usr/share/polkit-1/rules.d
+Mar  5 06:23:06 localhost polkitd[2969]: Finished loading, compiling and executing 2 rules
+Mar  5 06:23:06 localhost polkitd[2969]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
+Mar  5 06:23:07 localhost sshd[3270]: Server listening on 0.0.0.0 port 22.
+Mar  5 06:23:07 localhost sshd[3270]: Server listening on :: port 22.
+Mar  5 06:23:10 localhost lightdm: pam_unix(lightdm-greeter:session): session opened for user root by (uid=0)
+Mar  5 06:23:10 localhost lightdm: pam_ck_connector(lightdm-greeter:session): nox11 mode, ignoring PAM_TTY :0
+Mar  5 06:30:01 localhost su[3547]: Successful su for man by root
+Mar  5 06:30:01 localhost su[3547]: + ??? root:man
+Mar  5 06:30:01 localhost su[3547]: pam_unix(su:session): session opened for user man by (uid=0)
+Mar  5 06:30:17 localhost su[3547]: pam_unix(su:session): session closed for user man
+Mar  5 08:19:07 localhost sshd[7614]: Accepted keyboard-interactive/pam for billybob from 192.168.1.115 port 38204 ssh2
+Mar  5 08:19:07 localhost sshd[7614]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+Mar  5 09:13:04 localhost su[9714]: Successful su for root by billybob
+Mar  5 09:13:04 localhost su[9714]: + /dev/pts/0 billybob:root
+Mar  5 09:13:04 localhost su[9714]: pam_unix(su:session): session opened for user root by billybob(uid=1000)
+Mar  5 09:13:33 localhost su[9714]: pam_unix(su:session): session closed for user root
+Mar  5 09:25:00 localhost su[11229]: pam_unix(su:auth): authentication failure; logname=billybob uid=1000 euid=0 tty=/dev/pts/0 ruser=billybob rhost=  user=root
+Mar  5 09:25:01 localhost su[11229]: pam_authenticate: Authentication failure
+Mar  5 09:25:01 localhost su[11229]: FAILED su for root by billybob
+Mar  5 09:25:01 localhost su[11229]: - /dev/pts/0 billybob:root
+Mar  5 09:25:04 localhost su[11230]: Successful su for root by billybob
+Mar  5 09:25:04 localhost su[11230]: + /dev/pts/0 billybob:root
+Mar  5 09:25:04 localhost su[11230]: pam_unix(su:session): session opened for user root by billybob(uid=1000)
+Mar  5 09:25:14 localhost su[11230]: pam_unix(su:session): session closed for user root
+Mar  5 09:25:14 localhost lightdm: pam_unix(lightdm-greeter:session): session closed for user root
+Mar  5 09:25:16 localhost sshd[3270]: Received signal 15; terminating.
+Mar  5 09:25:43 localhost polkitd[2970]: Loading rules from directory /etc/polkit-1/rules.d
+Mar  5 09:25:43 localhost polkitd[2970]: Loading rules from directory /usr/share/polkit-1/rules.d
+Mar  5 09:25:43 localhost polkitd[2970]: Finished loading, compiling and executing 2 rules
+Mar  5 09:25:43 localhost polkitd[2970]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
+Mar  5 09:25:44 localhost sshd[3271]: Server listening on 0.0.0.0 port 22.
+Mar  5 09:25:44 localhost sshd[3271]: Server listening on :: port 22.
+Mar  5 09:25:47 localhost lightdm: pam_unix(lightdm-greeter:session): session opened for user root by (uid=0)
+Mar  5 09:25:47 localhost lightdm: pam_ck_connector(lightdm-greeter:session): nox11 mode, ignoring PAM_TTY :0
+Mar  5 09:26:08 localhost sshd[3511]: Accepted keyboard-interactive/pam for billybob from 192.168.1.115 port 38270 ssh2
+Mar  5 09:26:08 localhost sshd[3511]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+Mar  5 09:26:10 localhost su[3524]: Successful su for root by billybob
+Mar  5 09:26:10 localhost su[3524]: + /dev/pts/0 billybob:root
+Mar  5 09:26:10 localhost su[3524]: pam_unix(su:session): session opened for user root by billybob(uid=1000)
+Mar  5 09:26:18 localhost su[3524]: pam_unix(su:session): session closed for user root
+Mar  5 09:26:46 localhost su[3716]: Successful su for root by billybob
+Mar  5 09:26:46 localhost su[3716]: + /dev/pts/0 billybob:root
+Mar  5 09:26:46 localhost su[3716]: pam_unix(su:session): session opened for user root by billybob(uid=1000)
+Mar  5 09:27:44 localhost su[3716]: pam_unix(su:session): session closed for user root
+Mar  5 09:28:11 localhost su[5361]: Successful su for root by billybob
+Mar  5 09:28:11 localhost su[5361]: + /dev/pts/0 billybob:root
+Mar  5 09:28:11 localhost su[5361]: pam_unix(su:session): session opened for user root by billybob(uid=1000)
+Mar  5 09:32:25 localhost sshd[5710]: Accepted publickey for billybob from 192.168.1.115 port 38292 ssh2: RSA SHA256:s7ckJWULRXKCWx8oDWt8t7eAQ94Bh7dw5ZKXYeir7Aw
+Mar  5 09:32:25 localhost sshd[5710]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+Mar  5 09:32:28 localhost su[5721]: Successful su for root by billybob
+Mar  5 09:32:28 localhost su[5721]: + /dev/pts/2 billybob:root
+Mar  5 09:32:28 localhost su[5721]: pam_unix(su:session): session opened for user root by billybob(uid=1000)
+Mar  5 09:34:19 localhost su[5361]: pam_unix(su:session): session closed for user root
+Mar  5 09:34:33 localhost su[31790]: Successful su for root by billybob
+Mar  5 09:34:33 localhost su[31790]: + /dev/pts/0 billybob:root
+Mar  5 09:34:33 localhost su[31790]: pam_unix(su:session): session opened for user root by billybob(uid=1000)
+Mar  5 09:39:13 localhost su[31790]: pam_unix(su:session): session closed for user root
+Mar  5 20:46:50 localhost sshd[7542]: Accepted publickey for root from 192.168.1.101 port 37256 ssh2: RSA SHA256:SRYQE52DTaMykNlntpAIxjnVQMRwZz1aVNMnoB2OxNk
+Mar  5 20:46:50 localhost sshd[7542]: pam_unix(sshd:session): session opened for user root by (uid=0)
+Mar  5 21:45:15 localhost sshd[7542]: Received disconnect from 192.168.1.101 port 37256:11: disconnected by user
+Mar  5 21:45:15 localhost sshd[7542]: Disconnected from user root 192.168.1.101 port 37256
+Mar  5 21:45:15 localhost sshd[7542]: pam_unix(sshd:session): session closed for user root
+Mar  5 21:45:16 localhost lightdm: pam_unix(lightdm-greeter:session): session closed for user root
+Mar  5 21:45:19 localhost sshd[3271]: Received signal 15; terminating.
+Mar  6 06:28:19 localhost polkitd[2974]: Loading rules from directory /etc/polkit-1/rules.d
+Mar  6 06:28:19 localhost polkitd[2974]: Loading rules from directory /usr/share/polkit-1/rules.d
+Mar  6 06:28:19 localhost polkitd[2974]: Finished loading, compiling and executing 2 rules
+Mar  6 06:28:19 localhost polkitd[2974]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
+Mar  6 06:28:20 localhost sshd[3278]: Server listening on 0.0.0.0 port 22.
+Mar  6 06:28:20 localhost sshd[3278]: Server listening on :: port 22.
+Mar  6 06:28:23 localhost lightdm: pam_unix(lightdm-greeter:session): session opened for user root by (uid=0)
+Mar  6 06:28:23 localhost lightdm: pam_ck_connector(lightdm-greeter:session): nox11 mode, ignoring PAM_TTY :0
+Mar  6 06:40:02 localhost su[3580]: Successful su for man by root
+Mar  6 06:40:02 localhost su[3580]: + ??? root:man
+Mar  6 06:40:02 localhost su[3580]: pam_unix(su:session): session opened for user man by (uid=0)
+Mar  6 06:40:10 localhost su[3580]: pam_unix(su:session): session closed for user man
+Mar  6 07:42:14 localhost sshd[4405]: Accepted keyboard-interactive/pam for billybob from 192.168.1.115 port 39804 ssh2
+Mar  6 07:42:14 localhost sshd[4405]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+Mar  6 08:27:00 localhost su[5464]: Successful su for root by billybob
+Mar  6 08:27:00 localhost su[5464]: + /dev/pts/0 billybob:root
+Mar  6 08:27:00 localhost su[5464]: pam_unix(su:session): session opened for user root by billybob(uid=1000)
+Mar  6 08:27:10 localhost su[5464]: pam_unix(su:session): session closed for user root
+Mar  6 08:29:45 localhost su[5657]: Successful su for root by billybob
+Mar  6 08:29:45 localhost su[5657]: + /dev/pts/0 billybob:root
+Mar  6 08:29:45 localhost su[5657]: pam_unix(su:session): session opened for user root by billybob(uid=1000)
+Mar  6 08:30:56 localhost su[5657]: pam_unix(su:session): session closed for user root
+Mar  6 08:31:27 localhost su[8438]: Successful su for root by billybob
+Mar  6 08:31:27 localhost su[8438]: + /dev/pts/0 billybob:root
+Mar  6 08:31:27 localhost su[8438]: pam_unix(su:session): session opened for user root by billybob(uid=1000)
+Mar  6 08:37:20 localhost su[8438]: pam_unix(su:session): session closed for user root
+Mar  6 08:37:49 localhost su[10083]: Successful su for root by billybob
+Mar  6 08:37:49 localhost su[10083]: + /dev/pts/0 billybob:root
+Mar  6 08:37:49 localhost su[10083]: pam_unix(su:session): session opened for user root by billybob(uid=1000)
+Mar  6 09:00:54 localhost su[10083]: pam_unix(su:session): session closed for user root
+Mar  6 09:04:32 localhost su[10640]: Successful su for root by billybob
+Mar  6 09:04:32 localhost su[10640]: + /dev/pts/0 billybob:root
+Mar  6 09:04:32 localhost su[10640]: pam_unix(su:session): session opened for user root by billybob(uid=1000)
+Mar  6 09:04:55 localhost su[10640]: pam_unix(su:session): session closed for user root
+Mar  6 09:31:35 localhost su[10941]: Successful su for root by billybob
+Mar  6 09:31:35 localhost su[10941]: + /dev/pts/0 billybob:root
+Mar  6 09:31:35 localhost su[10941]: pam_unix(su:session): session opened for user root by billybob(uid=1000)
+Mar  6 09:46:29 localhost su[10941]: pam_unix(su:session): session closed for user root
+Mar  6 10:46:48 localhost su[14819]: Successful su for root by billybob
+Mar  6 10:46:48 localhost su[14819]: + /dev/pts/0 billybob:root
+Mar  6 10:46:48 localhost su[14819]: pam_unix(su:session): session opened for user root by billybob(uid=1000)
+Mar  6 11:28:18 localhost su[14819]: pam_unix(su:session): session closed for user root
+Mar  6 11:39:30 localhost su[15803]: Successful su for root by billybob
+Mar  6 11:39:30 localhost su[15803]: + /dev/pts/0 billybob:root
+Mar  6 11:39:30 localhost su[15803]: pam_unix(su:session): session opened for user root by billybob(uid=1000)
+Mar  6 13:33:13 localhost su[15803]: pam_unix(su:session): session closed for user root
+Mar  6 14:45:01 localhost su[18020]: Successful su for root by billybob
+Mar  6 14:45:01 localhost su[18020]: + /dev/pts/0 billybob:root
+Mar  6 14:45:01 localhost su[18020]: pam_unix(su:session): session opened for user root by billybob(uid=1000)
+Mar  6 17:27:36 localhost lightdm: pam_unix(lightdm-greeter:session): session closed for user root
+Mar  6 17:27:36 localhost lightdm: pam_unix(lightdm:session): session opened for user billybob by (uid=0)
+Mar  6 17:27:36 localhost lightdm: pam_ck_connector(lightdm:session): nox11 mode, ignoring PAM_TTY :0
+Mar  6 17:27:37 localhost polkitd[2974]: Registered Authentication Agent for unix-session:/org/freedesktop/ConsoleKit/Session3 (system bus name :1.31 [/usr/lib64/libexec/polkit-kde-authentication-agent-1], object path /org/kde/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8)
+Mar  6 17:29:43 localhost dbus-daemon[19315]: [session uid=1000 pid=19313] Failed to activate service 'org.a11y.Bus': timed out (service_start_timeout=120000ms)
+Mar  6 18:31:55 localhost dbus-daemon[19315]: [session uid=1000 pid=19313] Failed to activate service 'org.a11y.Bus': timed out (service_start_timeout=120000ms)
+Mar  6 20:46:52 localhost sshd[21983]: Accepted publickey for root from 192.168.1.101 port 38114 ssh2: RSA SHA256:SRYQE52DTaMykNlntpAIxjnVQMRwZz1aVNMnoB2OxNk
+Mar  6 20:46:52 localhost sshd[21983]: pam_unix(sshd:session): session opened for user root by (uid=0)
+Mar  6 21:18:49 localhost polkitd[2974]: Unregistered Authentication Agent for unix-session:/org/freedesktop/ConsoleKit/Session3 (system bus name :1.31, object path /org/kde/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8) (disconnected from bus)
+Mar  6 21:18:49 localhost lightdm: pam_unix(lightdm:session): session closed for user billybob
+Mar  6 21:18:50 localhost sshd[21983]: Received disconnect from 192.168.1.101 port 38114:11: disconnected by user
+Mar  6 21:18:50 localhost sshd[21983]: Disconnected from user root 192.168.1.101 port 38114
+Mar  6 21:18:50 localhost sshd[21983]: pam_unix(sshd:session): session closed for user root
+Mar  6 21:18:52 localhost sshd[3278]: Received signal 15; terminating.
+Mar  7 06:27:03 localhost polkitd[2973]: Loading rules from directory /etc/polkit-1/rules.d
+Mar  7 06:27:03 localhost polkitd[2973]: Loading rules from directory /usr/share/polkit-1/rules.d
+Mar  7 06:27:03 localhost polkitd[2973]: Finished loading, compiling and executing 2 rules
+Mar  7 06:27:03 localhost polkitd[2973]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
+Mar  7 06:27:04 localhost sshd[3274]: Server listening on 0.0.0.0 port 22.
+Mar  7 06:27:04 localhost sshd[3274]: Server listening on :: port 22.
+Mar  7 06:27:08 localhost lightdm: pam_unix(lightdm-greeter:session): session opened for user root by (uid=0)
+Mar  7 06:27:08 localhost lightdm: pam_ck_connector(lightdm-greeter:session): nox11 mode, ignoring PAM_TTY :0
+Mar  7 06:50:02 localhost su[3628]: Successful su for man by root
+Mar  7 06:50:02 localhost su[3628]: + ??? root:man
+Mar  7 06:50:02 localhost su[3628]: pam_unix(su:session): session opened for user man by (uid=0)
+Mar  7 06:50:40 localhost su[3628]: pam_unix(su:session): session closed for user man
+Mar  7 08:39:16 localhost sshd[16370]: Accepted keyboard-interactive/pam for billybob from 192.168.1.115 port 44586 ssh2
+Mar  7 08:39:16 localhost sshd[16370]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+Mar  7 13:17:07 localhost su[17998]: Successful su for root by billybob
+Mar  7 13:17:07 localhost su[17998]: + /dev/pts/0 billybob:root
+Mar  7 13:17:07 localhost su[17998]: pam_unix(su:session): session opened for user root by billybob(uid=1000)
+Mar  7 19:12:25 localhost sshd[20291]: Accepted publickey for billybob from 192.168.1.101 port 43430 ssh2: RSA SHA256:chQaEj8bIy1KpZkrjRFdDyqOQe9WGyAoyGeclhivzV0
+Mar  7 19:12:25 localhost sshd[20291]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+Mar  7 20:59:05 localhost sshd[20299]: Received disconnect from 192.168.1.101 port 43430:11: disconnected by user
+Mar  7 20:59:05 localhost sshd[20299]: Disconnected from user billybob 192.168.1.101 port 43430
+Mar  7 20:59:05 localhost sshd[20291]: pam_unix(sshd:session): session closed for user billybob
+Mar  8 03:10:02 localhost su[22682]: Successful su for man by root
+Mar  8 03:10:02 localhost su[22682]: + ??? root:man
+Mar  8 03:10:02 localhost su[22682]: pam_unix(su:session): session opened for user man by (uid=0)
+Mar  8 03:10:07 localhost su[22682]: pam_unix(su:session): session closed for user man
+Mar  8 07:49:32 localhost su[17998]: pam_unix(su:session): session closed for user root
+Mar  8 11:52:40 localhost su[26854]: Successful su for root by billybob
+Mar  8 11:52:40 localhost su[26854]: + /dev/pts/0 billybob:root
+Mar  8 11:52:40 localhost su[26854]: pam_unix(su:session): session opened for user root by billybob(uid=1000)
+Mar  8 11:52:47 localhost su[26854]: pam_unix(su:session): session closed for user root
+Mar  8 13:28:16 localhost sshd[28886]: Accepted publickey for billybob from 192.168.1.115 port 46446 ssh2: RSA SHA256:s7ckJWULRXKCWx8oDWt8t7eAQ94Bh7dw5ZKXYeir7Aw
+Mar  8 13:28:16 localhost sshd[28886]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+Mar  8 13:28:23 localhost su[28897]: Successful su for root by billybob
+Mar  8 13:28:23 localhost su[28897]: + /dev/pts/1 billybob:root
+Mar  8 13:28:23 localhost su[28897]: pam_unix(su:session): session opened for user root by billybob(uid=1000)
+Mar  8 19:18:17 localhost sshd[31869]: Accepted publickey for billybob from 192.168.1.101 port 51914 ssh2: RSA SHA256:chQaEj8bIy1KpZkrjRFdDyqOQe9WGyAoyGeclhivzV0
+Mar  8 19:18:17 localhost sshd[31869]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+Mar  8 20:28:42 localhost su[1850]: Successful su for root by billybob
+Mar  8 20:28:42 localhost su[1850]: + /dev/pts/2 billybob:root
+Mar  8 20:28:42 localhost su[1850]: pam_unix(su:session): session opened for user root by billybob(uid=1000)
+Mar  8 21:10:23 localhost sshd[22284]: Accepted publickey for root from 192.168.1.101 port 60146 ssh2: RSA SHA256:SRYQE52DTaMykNlntpAIxjnVQMRwZz1aVNMnoB2OxNk
+Mar  8 21:10:23 localhost sshd[22284]: pam_unix(sshd:session): session opened for user root by (uid=0)
+Mar  8 21:10:54 localhost sshd[22284]: Received disconnect from 192.168.1.101 port 60146:11: disconnected by user
+Mar  8 21:10:54 localhost sshd[22284]: Disconnected from user root 192.168.1.101 port 60146
+Mar  8 21:10:54 localhost sshd[22284]: pam_unix(sshd:session): session closed for user root
+Mar  8 22:01:07 localhost su[1850]: pam_unix(su:session): session closed for user root
+Mar  8 22:01:41 localhost su[13060]: Successful su for root by billybob
+Mar  8 22:01:41 localhost su[13060]: + /dev/pts/2 billybob:root
+Mar  8 22:01:41 localhost su[13060]: pam_unix(su:session): session opened for user root by billybob(uid=1000)
+Mar  8 22:01:45 localhost su[13060]: pam_unix(su:session): session closed for user root
+Mar  8 22:01:46 localhost lightdm: pam_unix(lightdm-greeter:session): session closed for user root
+Mar  8 22:01:48 localhost sshd[3274]: Received signal 15; terminating.
+Mar  9 20:06:54 localhost polkitd[2973]: Loading rules from directory /etc/polkit-1/rules.d
+Mar  9 20:06:54 localhost polkitd[2973]: Loading rules from directory /usr/share/polkit-1/rules.d
+Mar  9 20:06:54 localhost polkitd[2973]: Finished loading, compiling and executing 2 rules
+Mar  9 20:06:54 localhost polkitd[2973]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
+Mar  9 20:06:55 localhost sshd[3274]: Server listening on 0.0.0.0 port 22.
+Mar  9 20:06:55 localhost sshd[3274]: Server listening on :: port 22.
+Mar  9 20:06:58 localhost lightdm: pam_unix(lightdm-greeter:session): session opened for user root by (uid=0)
+Mar  9 20:06:58 localhost lightdm: pam_ck_connector(lightdm-greeter:session): nox11 mode, ignoring PAM_TTY :0
+Mar  9 20:10:02 localhost su[3537]: Successful su for man by root
+Mar  9 20:10:02 localhost su[3537]: + ??? root:man
+Mar  9 20:10:02 localhost su[3537]: pam_unix(su:session): session opened for user man by (uid=0)
+Mar  9 20:10:07 localhost sshd[4655]: Accepted publickey for billybob from 192.168.1.101 port 40702 ssh2: RSA SHA256:chQaEj8bIy1KpZkrjRFdDyqOQe9WGyAoyGeclhivzV0
+Mar  9 20:10:07 localhost sshd[4655]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+Mar  9 20:10:29 localhost su[3537]: pam_unix(su:session): session closed for user man
+Mar  9 20:13:51 localhost su[9022]: Successful su for root by billybob
+Mar  9 20:13:51 localhost su[9022]: + /dev/pts/0 billybob:root
+Mar  9 20:13:51 localhost su[9022]: pam_unix(su:session): session opened for user root by billybob(uid=1000)
+Mar  9 20:59:39 localhost su[9022]: pam_unix(su:session): session closed for user root
+Mar  9 21:00:07 localhost su[7039]: Successful su for root by billybob
+Mar  9 21:00:07 localhost su[7039]: + /dev/pts/0 billybob:root
+Mar  9 21:00:07 localhost su[7039]: pam_unix(su:session): session opened for user root by billybob(uid=1000)
+Mar  9 21:00:10 localhost su[7039]: pam_unix(su:session): session closed for user root
+Mar  9 21:00:11 localhost lightdm: pam_unix(lightdm-greeter:session): session closed for user root
+Mar  9 21:00:11 localhost sshd[5185]: Received disconnect from 192.168.1.101 port 40702:11: disconnected by user
+Mar  9 21:00:11 localhost sshd[5185]: Disconnected from user billybob 192.168.1.101 port 40702
+Mar  9 21:00:11 localhost sshd[4655]: pam_unix(sshd:session): session closed for user billybob
+Mar  9 21:00:12 localhost sshd[3274]: Received signal 15; terminating.
+Mar 10 20:25:43 localhost polkitd[2972]: Loading rules from directory /etc/polkit-1/rules.d
+Mar 10 20:25:43 localhost polkitd[2972]: Loading rules from directory /usr/share/polkit-1/rules.d
+Mar 10 20:25:43 localhost polkitd[2972]: Finished loading, compiling and executing 2 rules
+Mar 10 20:25:43 localhost polkitd[2972]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
+Mar 10 20:25:44 localhost sshd[3273]: Server listening on 0.0.0.0 port 22.
+Mar 10 20:25:44 localhost sshd[3273]: Server listening on :: port 22.
+Mar 10 20:25:47 localhost lightdm: pam_unix(lightdm-greeter:session): session opened for user root by (uid=0)
+Mar 10 20:25:47 localhost lightdm: pam_ck_connector(lightdm-greeter:session): nox11 mode, ignoring PAM_TTY :0
+Mar 10 20:27:23 localhost sshd[3513]: Accepted publickey for root from 192.168.1.101 port 47364 ssh2: RSA SHA256:SRYQE52DTaMykNlntpAIxjnVQMRwZz1aVNMnoB2OxNk
+Mar 10 20:27:23 localhost sshd[3513]: pam_unix(sshd:session): session opened for user root by (uid=0)
+Mar 10 20:29:45 localhost sshd[3529]: Accepted publickey for root from 192.168.1.101 port 47526 ssh2: RSA SHA256:SRYQE52DTaMykNlntpAIxjnVQMRwZz1aVNMnoB2OxNk
+Mar 10 20:29:45 localhost sshd[3529]: pam_unix(sshd:session): session opened for user root by (uid=0)
+Mar 10 20:33:52 localhost sshd[3569]: Accepted publickey for billybob from 192.168.1.101 port 47590 ssh2: RSA SHA256:chQaEj8bIy1KpZkrjRFdDyqOQe9WGyAoyGeclhivzV0
+Mar 10 20:33:53 localhost sshd[3569]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+Mar 10 20:36:03 localhost sshd[3798]: Accepted publickey for root from 192.168.1.100 port 38674 ssh2: RSA SHA256:QW4ErgDUT7epSmk9sF8WJmizNue1nYTijdoCtTUZlB4
+Mar 10 20:36:03 localhost sshd[3798]: pam_unix(sshd:session): session opened for user root by (uid=0)
+Mar 10 20:46:04 localhost sshd[3798]: Received disconnect from 192.168.1.100 port 38674:11: disconnected by user
+Mar 10 20:46:04 localhost sshd[3798]: Disconnected from user root 192.168.1.100 port 38674
+Mar 10 20:46:04 localhost sshd[3798]: pam_unix(sshd:session): session closed for user root
+Mar 10 20:53:31 localhost sshd[3529]: Received disconnect from 192.168.1.101 port 47526:11: disconnected by user
+Mar 10 20:53:31 localhost sshd[3529]: Disconnected from user root 192.168.1.101 port 47526
+Mar 10 20:53:31 localhost sshd[3529]: pam_unix(sshd:session): session closed for user root
+Mar 10 21:09:41 localhost su[4087]: Successful su for root by billybob
+Mar 10 21:09:41 localhost su[4087]: + /dev/pts/2 billybob:root
+Mar 10 21:09:41 localhost su[4087]: pam_unix(su:session): session opened for user root by billybob(uid=1000)
+Mar 10 21:09:53 localhost su[4087]: pam_unix(su:session): session closed for user root
+Mar 10 21:09:56 localhost sshd[3577]: Received disconnect from 192.168.1.101 port 47590:11: disconnected by user
+Mar 10 21:09:56 localhost sshd[3577]: Disconnected from user billybob 192.168.1.101 port 47590
+Mar 10 21:09:56 localhost sshd[3569]: pam_unix(sshd:session): session closed for user billybob
+Mar 10 21:20:06 localhost su[7306]: Successful su for man by root
+Mar 10 21:20:06 localhost su[7306]: + ??? root:man
+Mar 10 21:20:06 localhost su[7306]: pam_unix(su:session): session opened for user man by (uid=0)
+Mar 10 21:20:33 localhost su[7306]: pam_unix(su:session): session closed for user man
+Mar 10 21:24:35 localhost sshd[3513]: Received disconnect from 192.168.1.101 port 47364:11: disconnected by user
+Mar 10 21:24:35 localhost sshd[3513]: Disconnected from user root 192.168.1.101 port 47364
+Mar 10 21:24:35 localhost sshd[3513]: pam_unix(sshd:session): session closed for user root
+Mar 10 21:24:37 localhost sshd[5121]: Accepted publickey for root from 192.168.1.101 port 48544 ssh2: RSA SHA256:SRYQE52DTaMykNlntpAIxjnVQMRwZz1aVNMnoB2OxNk
+Mar 10 21:24:37 localhost sshd[5121]: pam_unix(sshd:session): session opened for user root by (uid=0)
+Mar 10 21:24:40 localhost sshd[5121]: Received disconnect from 192.168.1.101 port 48544:11: disconnected by user
+Mar 10 21:24:40 localhost sshd[5121]: Disconnected from user root 192.168.1.101 port 48544
+Mar 10 21:24:40 localhost sshd[5121]: pam_unix(sshd:session): session closed for user root
+Mar 10 21:24:41 localhost lightdm: pam_unix(lightdm-greeter:session): session closed for user root
+Mar 10 21:24:42 localhost sshd[3273]: Received signal 15; terminating.
+Mar 11 06:21:20 localhost polkitd[2989]: Loading rules from directory /etc/polkit-1/rules.d
+Mar 11 06:21:20 localhost polkitd[2989]: Loading rules from directory /usr/share/polkit-1/rules.d
+Mar 11 06:21:20 localhost polkitd[2989]: Finished loading, compiling and executing 2 rules
+Mar 11 06:21:20 localhost polkitd[2989]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
+Mar 11 06:21:20 localhost sshd[3272]: Server listening on 0.0.0.0 port 22.
+Mar 11 06:21:20 localhost sshd[3272]: Server listening on :: port 22.
+Mar 11 06:21:24 localhost lightdm: pam_unix(lightdm-greeter:session): session opened for user root by (uid=0)
+Mar 11 06:21:24 localhost lightdm: pam_ck_connector(lightdm-greeter:session): nox11 mode, ignoring PAM_TTY :0
+Mar 11 08:15:46 localhost sshd[4031]: Accepted publickey for billybob from 192.168.1.115 port 51034 ssh2: RSA SHA256:s7ckJWULRXKCWx8oDWt8t7eAQ94Bh7dw5ZKXYeir7Aw
+Mar 11 08:15:46 localhost sshd[4031]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+Mar 11 08:15:49 localhost su[4042]: Successful su for root by billybob
+Mar 11 08:15:49 localhost su[4042]: + /dev/pts/0 billybob:root
+Mar 11 08:15:49 localhost su[4042]: pam_unix(su:session): session opened for user root by billybob(uid=1000)
+Mar 11 10:15:04 localhost su[4042]: pam_unix(su:session): session closed for user root
+Mar 11 10:15:30 localhost sshd[7172]: Connection closed by authenticating user billybob 192.168.1.115 port 51098 [preauth]
+Mar 11 10:15:37 localhost sshd[7175]: Accepted keyboard-interactive/pam for billybob from 192.168.1.115 port 51100 ssh2
+Mar 11 10:15:37 localhost sshd[7175]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+Mar 11 11:13:08 localhost su[7692]: Successful su for root by billybob
+Mar 11 11:13:08 localhost su[7692]: + /dev/pts/0 billybob:root
+Mar 11 11:13:08 localhost su[7692]: pam_unix(su:session): session opened for user root by billybob(uid=1000)
+Mar 11 21:00:05 localhost sshd[12458]: Accepted publickey for root from 192.168.1.101 port 50766 ssh2: RSA SHA256:SRYQE52DTaMykNlntpAIxjnVQMRwZz1aVNMnoB2OxNk
+Mar 11 21:00:05 localhost sshd[12458]: pam_unix(sshd:session): session opened for user root by (uid=0)
+Mar 11 21:03:02 localhost sshd[12474]: Accepted publickey for billybob from 192.168.1.101 port 50798 ssh2: RSA SHA256:chQaEj8bIy1KpZkrjRFdDyqOQe9WGyAoyGeclhivzV0
+Mar 11 21:03:02 localhost sshd[12474]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+Mar 11 21:05:58 localhost sshd[12482]: Received disconnect from 192.168.1.101 port 50798:11: disconnected by user
+Mar 11 21:05:58 localhost sshd[12482]: Disconnected from user billybob 192.168.1.101 port 50798
+Mar 11 21:05:58 localhost sshd[12474]: pam_unix(sshd:session): session closed for user billybob
+Mar 11 21:26:06 localhost sshd[12458]: Received disconnect from 192.168.1.101 port 50766:11: disconnected by user
+Mar 11 21:26:06 localhost sshd[12458]: Disconnected from user root 192.168.1.101 port 50766
+Mar 11 21:26:06 localhost sshd[12458]: pam_unix(sshd:session): session closed for user root
+Mar 11 21:26:07 localhost lightdm: pam_unix(lightdm-greeter:session): session closed for user root
+Mar 11 21:26:09 localhost sshd[3272]: Received signal 15; terminating.
+Mar 12 06:18:37 localhost polkitd[2974]: Loading rules from directory /etc/polkit-1/rules.d
+Mar 12 06:18:37 localhost polkitd[2974]: Loading rules from directory /usr/share/polkit-1/rules.d
+Mar 12 06:18:37 localhost polkitd[2974]: Finished loading, compiling and executing 2 rules
+Mar 12 06:18:37 localhost polkitd[2974]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
+Mar 12 06:18:38 localhost sshd[3276]: Server listening on 0.0.0.0 port 22.
+Mar 12 06:18:38 localhost sshd[3276]: Server listening on :: port 22.
+Mar 12 06:18:41 localhost lightdm: pam_unix(lightdm-greeter:session): session opened for user root by (uid=0)
+Mar 12 06:18:41 localhost lightdm: pam_ck_connector(lightdm-greeter:session): nox11 mode, ignoring PAM_TTY :0
+Mar 12 06:20:02 localhost su[3534]: Successful su for man by root
+Mar 12 06:20:02 localhost su[3534]: + ??? root:man
+Mar 12 06:20:02 localhost su[3534]: pam_unix(su:session): session opened for user man by (uid=0)
+Mar 12 06:20:21 localhost su[3534]: pam_unix(su:session): session closed for user man
+Mar 12 10:22:16 localhost sshd[10654]: Accepted publickey for billybob from 192.168.1.115 port 34308 ssh2: RSA SHA256:s7ckJWULRXKCWx8oDWt8t7eAQ94Bh7dw5ZKXYeir7Aw
+Mar 12 10:22:16 localhost sshd[10654]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+Mar 12 10:22:19 localhost su[10665]: Successful su for root by billybob
+Mar 12 10:22:19 localhost su[10665]: + /dev/pts/0 billybob:root
+Mar 12 10:22:19 localhost su[10665]: pam_unix(su:session): session opened for user root by billybob(uid=1000)
+Mar 12 10:22:21 localhost lightdm: pam_unix(lightdm-greeter:session): session closed for user root
+Mar 12 10:22:22 localhost su[10665]: pam_unix(su:session): session closed for user root
+Mar 12 10:22:23 localhost sshd[3276]: Received signal 15; terminating.
+Mar 12 10:22:46 localhost polkitd[2969]: Loading rules from directory /etc/polkit-1/rules.d
+Mar 12 10:22:46 localhost polkitd[2969]: Loading rules from directory /usr/share/polkit-1/rules.d
+Mar 12 10:22:46 localhost polkitd[2969]: Finished loading, compiling and executing 2 rules
+Mar 12 10:22:46 localhost polkitd[2969]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
+Mar 12 10:22:46 localhost sshd[3270]: Server listening on 0.0.0.0 port 22.
+Mar 12 10:22:46 localhost sshd[3270]: Server listening on :: port 22.
+Mar 12 10:22:50 localhost lightdm: pam_unix(lightdm-greeter:session): session opened for user root by (uid=0)
+Mar 12 10:22:50 localhost lightdm: pam_ck_connector(lightdm-greeter:session): nox11 mode, ignoring PAM_TTY :0
+Mar 12 10:22:57 localhost sshd[3505]: Accepted keyboard-interactive/pam for billybob from 192.168.1.115 port 34314 ssh2
+Mar 12 10:22:57 localhost sshd[3505]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+Mar 12 16:40:27 localhost sshd[3505]: pam_unix(sshd:session): session closed for user billybob
+Mar 12 16:59:08 localhost sshd[6429]: Accepted keyboard-interactive/pam for billybob from 192.168.1.115 port 34572 ssh2
+Mar 12 16:59:08 localhost sshd[6429]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+Mar 12 20:57:33 localhost sshd[8142]: Accepted publickey for root from 192.168.1.101 port 44266 ssh2: RSA SHA256:SRYQE52DTaMykNlntpAIxjnVQMRwZz1aVNMnoB2OxNk
+Mar 12 20:57:33 localhost sshd[8142]: pam_unix(sshd:session): session opened for user root by (uid=0)
+Mar 12 20:57:55 localhost sshd[8152]: Accepted publickey for billybob from 192.168.1.101 port 44268 ssh2: RSA SHA256:chQaEj8bIy1KpZkrjRFdDyqOQe9WGyAoyGeclhivzV0
+Mar 12 20:57:55 localhost sshd[8152]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+Mar 12 21:38:28 localhost sshd[8160]: Received disconnect from 192.168.1.101 port 44268:11: disconnected by user
+Mar 12 21:38:28 localhost sshd[8160]: Disconnected from user billybob 192.168.1.101 port 44268
+Mar 12 21:38:28 localhost sshd[8152]: pam_unix(sshd:session): session closed for user billybob
+Mar 12 22:31:41 localhost lightdm: pam_unix(lightdm-greeter:session): session closed for user root
+Mar 12 22:31:42 localhost sshd[3270]: Received signal 15; terminating.
+Mar 13 06:18:25 localhost polkitd[2975]: Loading rules from directory /etc/polkit-1/rules.d
+Mar 13 06:18:25 localhost polkitd[2975]: Loading rules from directory /usr/share/polkit-1/rules.d
+Mar 13 06:18:25 localhost polkitd[2975]: Finished loading, compiling and executing 2 rules
+Mar 13 06:18:25 localhost polkitd[2975]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
+Mar 13 06:18:26 localhost sshd[3276]: Server listening on 0.0.0.0 port 22.
+Mar 13 06:18:26 localhost sshd[3276]: Server listening on :: port 22.
+Mar 13 06:18:29 localhost lightdm: pam_unix(lightdm-greeter:session): session opened for user root by (uid=0)
+Mar 13 06:18:29 localhost lightdm: pam_ck_connector(lightdm-greeter:session): nox11 mode, ignoring PAM_TTY :0
+Mar 13 06:30:01 localhost su[3578]: Successful su for man by root
+Mar 13 06:30:01 localhost su[3578]: + ??? root:man
+Mar 13 06:30:01 localhost su[3578]: pam_unix(su:session): session opened for user man by (uid=0)
+Mar 13 06:30:09 localhost su[3578]: pam_unix(su:session): session closed for user man
+Mar 13 07:26:06 localhost sshd[4227]: Accepted keyboard-interactive/pam for billybob from 192.168.1.115 port 35220 ssh2
+Mar 13 07:26:06 localhost sshd[4227]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+Mar 13 08:39:49 localhost su[5397]: Successful su for root by billybob
+Mar 13 08:39:49 localhost su[5397]: + /dev/pts/0 billybob:root
+Mar 13 08:39:49 localhost su[5397]: pam_unix(su:session): session opened for user root by billybob(uid=1000)
+Mar 13 08:39:57 localhost su[5397]: pam_unix(su:session): session closed for user root
+Mar 13 19:41:43 localhost sshd[4227]: pam_unix(sshd:session): session closed for user billybob
+Mar 13 20:28:57 localhost sshd[11505]: Accepted publickey for root from 192.168.1.101 port 57104 ssh2: RSA SHA256:SRYQE52DTaMykNlntpAIxjnVQMRwZz1aVNMnoB2OxNk
+Mar 13 20:28:57 localhost sshd[11505]: pam_unix(sshd:session): session opened for user root by (uid=0)
+Mar 13 20:29:01 localhost sshd[11505]: Received disconnect from 192.168.1.101 port 57104:11: disconnected by user
+Mar 13 20:29:01 localhost sshd[11505]: Disconnected from user root 192.168.1.101 port 57104
+Mar 13 20:29:01 localhost sshd[11505]: pam_unix(sshd:session): session closed for user root
+Mar 13 20:45:14 localhost sshd[11718]: Accepted publickey for root from 192.168.1.101 port 58034 ssh2: RSA SHA256:SRYQE52DTaMykNlntpAIxjnVQMRwZz1aVNMnoB2OxNk
+Mar 13 20:45:14 localhost sshd[11718]: pam_unix(sshd:session): session opened for user root by (uid=0)
+Mar 13 21:25:27 localhost sshd[14474]: Accepted publickey for root from 192.168.1.101 port 58234 ssh2: RSA SHA256:SRYQE52DTaMykNlntpAIxjnVQMRwZz1aVNMnoB2OxNk
+Mar 13 21:25:27 localhost sshd[14474]: pam_unix(sshd:session): session opened for user root by (uid=0)
+Mar 13 21:49:47 localhost sshd[14474]: Received disconnect from 192.168.1.101 port 58234:11: disconnected by user
+Mar 13 21:49:47 localhost sshd[14474]: Disconnected from user root 192.168.1.101 port 58234
+Mar 13 21:49:47 localhost sshd[14474]: pam_unix(sshd:session): session closed for user root
+Mar 13 21:54:49 localhost lightdm: pam_unix(lightdm-greeter:session): session closed for user root
+Mar 13 21:54:49 localhost sshd[11718]: Received disconnect from 192.168.1.101 port 58034:11: disconnected by user
+Mar 13 21:54:49 localhost sshd[11718]: Disconnected from user root 192.168.1.101 port 58034
+Mar 13 21:54:49 localhost sshd[11718]: pam_unix(sshd:session): session closed for user root
+Mar 13 21:54:51 localhost sshd[3276]: Received signal 15; terminating.
+Mar 14 06:19:06 localhost polkitd[2972]: Loading rules from directory /etc/polkit-1/rules.d
+Mar 14 06:19:06 localhost polkitd[2972]: Loading rules from directory /usr/share/polkit-1/rules.d
+Mar 14 06:19:06 localhost polkitd[2972]: Finished loading, compiling and executing 2 rules
+Mar 14 06:19:06 localhost polkitd[2972]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
+Mar 14 06:19:07 localhost sshd[3275]: Server listening on 0.0.0.0 port 22.
+Mar 14 06:19:07 localhost sshd[3275]: Server listening on :: port 22.
+Mar 14 06:19:10 localhost lightdm: pam_unix(lightdm-greeter:session): session opened for user root by (uid=0)
+Mar 14 06:19:10 localhost lightdm: pam_ck_connector(lightdm-greeter:session): nox11 mode, ignoring PAM_TTY :0
+Mar 14 06:40:02 localhost su[3624]: Successful su for man by root
+Mar 14 06:40:02 localhost su[3624]: + ??? root:man
+Mar 14 06:40:02 localhost su[3624]: pam_unix(su:session): session opened for user man by (uid=0)
+Mar 14 06:40:20 localhost su[3624]: pam_unix(su:session): session closed for user man
+Mar 14 13:35:08 localhost sshd[10044]: Accepted keyboard-interactive/pam for billybob from 192.168.1.115 port 36386 ssh2
+Mar 14 13:35:08 localhost sshd[10044]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+Mar 14 21:44:27 localhost sshd[15222]: Accepted publickey for root from 192.168.1.101 port 43396 ssh2: RSA SHA256:SRYQE52DTaMykNlntpAIxjnVQMRwZz1aVNMnoB2OxNk
+Mar 14 21:44:27 localhost sshd[15222]: pam_unix(sshd:session): session opened for user root by (uid=0)
+Mar 14 21:45:04 localhost sshd[15233]: Accepted publickey for billybob from 192.168.1.101 port 43406 ssh2: RSA SHA256:chQaEj8bIy1KpZkrjRFdDyqOQe9WGyAoyGeclhivzV0
+Mar 14 21:45:04 localhost sshd[15233]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+Mar 14 22:05:49 localhost sshd[15222]: Received disconnect from 192.168.1.101 port 43396:11: disconnected by user
+Mar 14 22:05:49 localhost sshd[15222]: Disconnected from user root 192.168.1.101 port 43396
+Mar 14 22:05:49 localhost sshd[15222]: pam_unix(sshd:session): session closed for user root
+Mar 14 22:05:49 localhost lightdm: pam_unix(lightdm-greeter:session): session closed for user root
+Mar 14 22:05:51 localhost sshd[3275]: Received signal 15; terminating.
+Mar 15 07:11:52 localhost polkitd[2972]: Loading rules from directory /etc/polkit-1/rules.d
+Mar 15 07:11:52 localhost polkitd[2972]: Loading rules from directory /usr/share/polkit-1/rules.d
+Mar 15 07:11:52 localhost polkitd[2972]: Finished loading, compiling and executing 2 rules
+Mar 15 07:11:52 localhost polkitd[2972]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
+Mar 15 07:11:53 localhost sshd[3274]: Server listening on 0.0.0.0 port 22.
+Mar 15 07:11:53 localhost sshd[3274]: Server listening on :: port 22.
+Mar 15 07:11:56 localhost lightdm: pam_unix(lightdm-greeter:session): session opened for user root by (uid=0)
+Mar 15 07:11:56 localhost lightdm: pam_ck_connector(lightdm-greeter:session): nox11 mode, ignoring PAM_TTY :0
+Mar 15 07:20:02 localhost su[3554]: Successful su for man by root
+Mar 15 07:20:02 localhost su[3554]: + ??? root:man
+Mar 15 07:20:02 localhost su[3554]: pam_unix(su:session): session opened for user man by (uid=0)
+Mar 15 07:20:10 localhost su[3554]: pam_unix(su:session): session closed for user man
+Mar 15 08:03:28 localhost sshd[3997]: Accepted keyboard-interactive/pam for billybob from 192.168.1.115 port 37188 ssh2
+Mar 15 08:03:28 localhost sshd[3997]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+Mar 15 08:21:40 localhost su[4264]: Successful su for root by billybob
+Mar 15 08:21:40 localhost su[4264]: + /dev/pts/0 billybob:root
+Mar 15 08:21:40 localhost su[4264]: pam_unix(su:session): session opened for user root by billybob(uid=1000)
+Mar 15 08:22:11 localhost su[4264]: pam_unix(su:session): session closed for user root
+Mar 15 10:41:38 localhost sshd[5517]: Accepted publickey for root from 192.168.1.115 port 37474 ssh2: RSA SHA256:ANmXNvtX7iSlswtrEgXlveTkTyE5ySDCOJfTpSRK9wA
+Mar 15 10:41:38 localhost sshd[5517]: pam_unix(sshd:session): session opened for user root by (uid=0)
+Mar 15 11:13:33 localhost sshd[5517]: Received disconnect from 192.168.1.115 port 37474:11: disconnected by user
+Mar 15 11:13:33 localhost sshd[5517]: Disconnected from user root 192.168.1.115 port 37474
+Mar 15 11:13:33 localhost sshd[5517]: pam_unix(sshd:session): session closed for user root
+Mar 15 11:26:09 localhost sshd[5903]: Accepted keyboard-interactive/pam for billybob from 192.168.1.115 port 37496 ssh2
+Mar 15 11:26:09 localhost sshd[5903]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+Mar 15 12:57:28 localhost sshd[4006]: Received disconnect from 192.168.1.115 port 37188:11: disconnected by user
+Mar 15 12:57:28 localhost sshd[4006]: Disconnected from user billybob 192.168.1.115 port 37188
+Mar 15 12:57:28 localhost sshd[3997]: pam_unix(sshd:session): session closed for user billybob
+Mar 15 12:57:28 localhost sshd[5903]: pam_unix(sshd:session): session closed for user billybob
+Mar 15 15:00:06 localhost sshd[8888]: Accepted keyboard-interactive/pam for billybob from 192.168.1.115 port 37658 ssh2
+Mar 15 15:00:06 localhost sshd[8888]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+Mar 15 15:48:30 localhost su[9350]: Successful su for root by billybob
+Mar 15 15:48:30 localhost su[9350]: + /dev/pts/0 billybob:root
+Mar 15 15:48:30 localhost su[9350]: pam_unix(su:session): session opened for user root by billybob(uid=1000)
+Mar 15 20:41:01 localhost sshd[11576]: Accepted publickey for root from 192.168.1.101 port 47182 ssh2: RSA SHA256:SRYQE52DTaMykNlntpAIxjnVQMRwZz1aVNMnoB2OxNk
+Mar 15 20:41:01 localhost sshd[11576]: pam_unix(sshd:session): session opened for user root by (uid=0)
+Mar 15 20:52:12 localhost sshd[11679]: Accepted publickey for root from 192.168.1.100 port 43204 ssh2: RSA SHA256:QW4ErgDUT7epSmk9sF8WJmizNue1nYTijdoCtTUZlB4
+Mar 15 20:52:12 localhost sshd[11679]: pam_unix(sshd:session): session opened for user root by (uid=0)
+Mar 15 20:56:24 localhost sshd[11679]: Received disconnect from 192.168.1.100 port 43204:11: disconnected by user
+Mar 15 20:56:24 localhost sshd[11679]: Disconnected from user root 192.168.1.100 port 43204
+Mar 15 20:56:24 localhost sshd[11679]: pam_unix(sshd:session): session closed for user root
+Mar 15 20:57:01 localhost sshd[19116]: Accepted publickey for billybob from 192.168.1.101 port 47204 ssh2: RSA SHA256:chQaEj8bIy1KpZkrjRFdDyqOQe9WGyAoyGeclhivzV0
+Mar 15 20:57:01 localhost sshd[19116]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+Mar 15 21:11:44 localhost sshd[11576]: Received disconnect from 192.168.1.101 port 47182:11: disconnected by user
+Mar 15 21:11:44 localhost sshd[11576]: Disconnected from user root 192.168.1.101 port 47182
+Mar 15 21:11:44 localhost sshd[11576]: pam_unix(sshd:session): session closed for user root
+Mar 15 21:11:48 localhost sshd[19200]: Received disconnect from 192.168.1.101 port 47204:11: disconnected by user
+Mar 15 21:11:48 localhost sshd[19200]: Disconnected from user billybob 192.168.1.101 port 47204
+Mar 15 21:11:48 localhost sshd[19116]: pam_unix(sshd:session): session closed for user billybob
+Mar 15 22:06:12 localhost sshd[6219]: Accepted publickey for root from 192.168.1.101 port 54250 ssh2: RSA SHA256:SRYQE52DTaMykNlntpAIxjnVQMRwZz1aVNMnoB2OxNk
+Mar 15 22:06:12 localhost sshd[6219]: pam_unix(sshd:session): session opened for user root by (uid=0)
+Mar 15 22:06:15 localhost sshd[6219]: Received disconnect from 192.168.1.101 port 54250:11: disconnected by user
+Mar 15 22:06:15 localhost sshd[6219]: Disconnected from user root 192.168.1.101 port 54250
+Mar 15 22:06:15 localhost sshd[6219]: pam_unix(sshd:session): session closed for user root
+Mar 15 22:06:16 localhost lightdm: pam_unix(lightdm-greeter:session): session closed for user root
+Mar 15 22:06:20 localhost sshd[3274]: Received signal 15; terminating.
+Mar 16 19:35:24 localhost polkitd[2975]: Loading rules from directory /etc/polkit-1/rules.d
+Mar 16 19:35:24 localhost polkitd[2975]: Loading rules from directory /usr/share/polkit-1/rules.d
+Mar 16 19:35:24 localhost polkitd[2975]: Finished loading, compiling and executing 2 rules
+Mar 16 19:35:24 localhost polkitd[2975]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
+Mar 16 19:35:25 localhost sshd[3277]: Server listening on 0.0.0.0 port 22.
+Mar 16 19:35:25 localhost sshd[3277]: Server listening on :: port 22.
+Mar 16 19:35:29 localhost lightdm: pam_unix(lightdm-greeter:session): session opened for user root by (uid=0)
+Mar 16 19:35:29 localhost lightdm: pam_ck_connector(lightdm-greeter:session): nox11 mode, ignoring PAM_TTY :0
+Mar 16 19:40:02 localhost su[3545]: Successful su for man by root
+Mar 16 19:40:02 localhost su[3545]: + ??? root:man
+Mar 16 19:40:02 localhost su[3545]: pam_unix(su:session): session opened for user man by (uid=0)
+Mar 16 19:40:16 localhost su[3545]: pam_unix(su:session): session closed for user man
+Mar 16 20:27:29 localhost sshd[7387]: Accepted publickey for root from 192.168.1.101 port 42312 ssh2: RSA SHA256:SRYQE52DTaMykNlntpAIxjnVQMRwZz1aVNMnoB2OxNk
+Mar 16 20:27:29 localhost sshd[7387]: pam_unix(sshd:session): session opened for user root by (uid=0)
+Mar 16 20:44:18 localhost polkitd[2975]: Reloading rules
+Mar 16 20:44:18 localhost polkitd[2975]: Collecting garbage unconditionally...
+Mar 16 20:44:18 localhost polkitd[2975]: Loading rules from directory /etc/polkit-1/rules.d
+Mar 16 20:44:18 localhost polkitd[2975]: Loading rules from directory /usr/share/polkit-1/rules.d
+Mar 16 20:44:18 localhost polkitd[2975]: Finished loading, compiling and executing 2 rules
+Mar 16 20:44:18 localhost polkitd[2975]: Reloading rules
+Mar 16 20:44:18 localhost polkitd[2975]: Collecting garbage unconditionally...
+Mar 16 20:44:18 localhost polkitd[2975]: Loading rules from directory /etc/polkit-1/rules.d
+Mar 16 20:44:18 localhost polkitd[2975]: Loading rules from directory /usr/share/polkit-1/rules.d
+Mar 16 20:44:18 localhost polkitd[2975]: Finished loading, compiling and executing 2 rules
+Mar 16 20:44:50 localhost polkitd[2975]: Reloading rules
+Mar 16 20:44:50 localhost polkitd[2975]: Collecting garbage unconditionally...
+Mar 16 20:44:50 localhost polkitd[2975]: Loading rules from directory /etc/polkit-1/rules.d
+Mar 16 20:44:50 localhost polkitd[2975]: Loading rules from directory /usr/share/polkit-1/rules.d
+Mar 16 20:44:50 localhost polkitd[2975]: Finished loading, compiling and executing 3 rules
+Mar 16 20:44:50 localhost polkitd[2975]: Reloading rules
+Mar 16 20:44:50 localhost polkitd[2975]: Collecting garbage unconditionally...
+Mar 16 20:44:50 localhost polkitd[2975]: Loading rules from directory /etc/polkit-1/rules.d
+Mar 16 20:44:50 localhost polkitd[2975]: Loading rules from directory /usr/share/polkit-1/rules.d
+Mar 16 20:44:50 localhost polkitd[2975]: Finished loading, compiling and executing 3 rules
+Mar 16 20:45:42 localhost polkitd[2975]: Reloading rules
+Mar 16 20:45:42 localhost polkitd[2975]: Collecting garbage unconditionally...
+Mar 16 20:45:42 localhost polkitd[2975]: Loading rules from directory /etc/polkit-1/rules.d
+Mar 16 20:45:42 localhost polkitd[2975]: Loading rules from directory /usr/share/polkit-1/rules.d
+Mar 16 20:45:42 localhost polkitd[2975]: Finished loading, compiling and executing 3 rules
+Mar 16 20:45:42 localhost polkitd[2975]: Reloading rules
+Mar 16 20:45:42 localhost polkitd[2975]: Collecting garbage unconditionally...
+Mar 16 20:45:42 localhost polkitd[2975]: Loading rules from directory /etc/polkit-1/rules.d
+Mar 16 20:45:42 localhost polkitd[2975]: Loading rules from directory /usr/share/polkit-1/rules.d
+Mar 16 20:45:42 localhost polkitd[2975]: Finished loading, compiling and executing 3 rules
+Mar 16 20:48:08 localhost sshd[7387]: Received disconnect from 192.168.1.101 port 42312:11: disconnected by user
+Mar 16 20:48:08 localhost sshd[7387]: Disconnected from user root 192.168.1.101 port 42312
+Mar 16 20:48:08 localhost sshd[7387]: pam_unix(sshd:session): session closed for user root
+Mar 16 20:48:15 localhost sshd[9651]: Accepted publickey for billybob from 192.168.1.101 port 42452 ssh2: RSA SHA256:chQaEj8bIy1KpZkrjRFdDyqOQe9WGyAoyGeclhivzV0
+Mar 16 20:48:15 localhost sshd[9651]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+Mar 16 21:03:06 localhost su[9953]: Successful su for root by billybob
+Mar 16 21:03:06 localhost su[9953]: + /dev/pts/0 billybob:root
+Mar 16 21:03:06 localhost su[9953]: pam_unix(su:session): session opened for user root by billybob(uid=1000)
+Mar 16 21:03:08 localhost su[9953]: pam_unix(su:session): session closed for user root
+Mar 16 21:03:09 localhost lightdm: pam_unix(lightdm-greeter:session): session closed for user root
+Mar 16 21:03:10 localhost sshd[9659]: Received disconnect from 192.168.1.101 port 42452:11: disconnected by user
+Mar 16 21:03:10 localhost sshd[9659]: Disconnected from user billybob 192.168.1.101 port 42452
+Mar 16 21:03:10 localhost sshd[9651]: pam_unix(sshd:session): session closed for user billybob
+Mar 16 21:03:11 localhost sshd[3277]: Received signal 15; terminating.
+Mar 16 23:19:30 localhost polkitd[2970]: Loading rules from directory /etc/polkit-1/rules.d
+Mar 16 23:19:30 localhost polkitd[2970]: Loading rules from directory /usr/share/polkit-1/rules.d
+Mar 16 23:19:30 localhost polkitd[2970]: Finished loading, compiling and executing 3 rules
+Mar 16 23:19:30 localhost polkitd[2970]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
+Mar 16 23:19:31 localhost sshd[3271]: Server listening on 0.0.0.0 port 22.
+Mar 16 23:19:31 localhost sshd[3271]: Server listening on :: port 22.
+Mar 16 23:19:34 localhost lightdm: pam_unix(lightdm-greeter:session): session opened for user root by (uid=0)
+Mar 16 23:19:34 localhost lightdm: pam_ck_connector(lightdm-greeter:session): nox11 mode, ignoring PAM_TTY :0
+Mar 16 23:21:19 localhost sshd[3531]: Accepted publickey for billybob from 192.168.1.101 port 51454 ssh2: RSA SHA256:chQaEj8bIy1KpZkrjRFdDyqOQe9WGyAoyGeclhivzV0
+Mar 16 23:21:19 localhost sshd[3531]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+Mar 16 23:46:50 localhost sshd[4065]: Accepted publickey for billybob from 192.168.1.101 port 51554 ssh2: RSA SHA256:chQaEj8bIy1KpZkrjRFdDyqOQe9WGyAoyGeclhivzV0
+Mar 16 23:46:50 localhost sshd[4065]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+Mar 16 23:46:50 localhost sshd[4073]: Received disconnect from 192.168.1.101 port 51554:11: disconnected by user
+Mar 16 23:46:50 localhost sshd[4073]: Disconnected from user billybob 192.168.1.101 port 51554
+Mar 16 23:46:50 localhost sshd[4065]: pam_unix(sshd:session): session closed for user billybob
+Mar 17 00:19:39 localhost sshd[4290]: Accepted publickey for billybob from 192.168.1.101 port 52600 ssh2: RSA SHA256:chQaEj8bIy1KpZkrjRFdDyqOQe9WGyAoyGeclhivzV0
+Mar 17 00:19:39 localhost sshd[4290]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+Mar 17 00:47:43 localhost su[4564]: Successful su for root by billybob
+Mar 17 00:47:43 localhost su[4564]: + /dev/pts/1 billybob:root
+Mar 17 00:47:43 localhost su[4564]: pam_unix(su:session): session opened for user root by billybob(uid=1000)
+Mar 17 00:47:49 localhost lightdm: pam_unix(lightdm-greeter:session): session closed for user root
+Mar 17 00:47:50 localhost su[4564]: pam_unix(su:session): session closed for user root
+Mar 17 00:47:50 localhost sshd[4298]: Received disconnect from 192.168.1.101 port 52600:11: disconnected by user
+Mar 17 00:47:50 localhost sshd[4298]: Disconnected from user billybob 192.168.1.101 port 52600
+Mar 17 00:47:50 localhost sshd[4290]: pam_unix(sshd:session): session closed for user billybob
+Mar 17 00:47:51 localhost sshd[3271]: Received signal 15; terminating.
+Mar 17 19:26:46 localhost polkitd[2973]: Loading rules from directory /etc/polkit-1/rules.d
+Mar 17 19:26:46 localhost polkitd[2973]: Loading rules from directory /usr/share/polkit-1/rules.d
+Mar 17 19:26:46 localhost polkitd[2973]: Finished loading, compiling and executing 3 rules
+Mar 17 19:26:46 localhost polkitd[2973]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
+Mar 17 19:26:47 localhost sshd[3274]: Server listening on 0.0.0.0 port 22.
+Mar 17 19:26:47 localhost sshd[3274]: Server listening on :: port 22.
+Mar 17 19:26:50 localhost lightdm: pam_unix(lightdm-greeter:session): session opened for user root by (uid=0)
+Mar 17 19:26:50 localhost lightdm: pam_ck_connector(lightdm-greeter:session): nox11 mode, ignoring PAM_TTY :0
+Mar 17 19:27:47 localhost sshd[3507]: Accepted publickey for billybob from 192.168.1.101 port 55130 ssh2: RSA SHA256:chQaEj8bIy1KpZkrjRFdDyqOQe9WGyAoyGeclhivzV0
+Mar 17 19:27:47 localhost sshd[3507]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+Mar 17 19:50:02 localhost su[4303]: Successful su for man by root
+Mar 17 19:50:02 localhost su[4303]: + ??? root:man
+Mar 17 19:50:02 localhost su[4303]: pam_unix(su:session): session opened for user man by (uid=0)
+Mar 17 19:50:21 localhost su[4303]: pam_unix(su:session): session closed for user man
+Mar 17 20:09:55 localhost su[8441]: Successful su for root by billybob
+Mar 17 20:09:55 localhost su[8441]: + /dev/pts/0 billybob:root
+Mar 17 20:09:55 localhost su[8441]: pam_unix(su:session): session opened for user root by billybob(uid=1000)
+Mar 17 20:22:02 localhost sshd[8521]: Accepted publickey for root from 192.168.1.100 port 37230 ssh2: RSA SHA256:QW4ErgDUT7epSmk9sF8WJmizNue1nYTijdoCtTUZlB4
+Mar 17 20:22:02 localhost sshd[8521]: pam_unix(sshd:session): session opened for user root by (uid=0)
+Mar 17 20:32:09 localhost sshd[8521]: Received disconnect from 192.168.1.100 port 37230:11: disconnected by user
+Mar 17 20:32:09 localhost sshd[8521]: Disconnected from user root 192.168.1.100 port 37230
+Mar 17 20:32:09 localhost sshd[8521]: pam_unix(sshd:session): session closed for user root
+Mar 17 21:23:37 localhost sshd[12175]: Accepted publickey for billybob from 192.168.1.101 port 60246 ssh2: RSA SHA256:chQaEj8bIy1KpZkrjRFdDyqOQe9WGyAoyGeclhivzV0
+Mar 17 21:23:37 localhost sshd[12175]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+Mar 17 21:27:14 localhost sshd[12189]: Received disconnect from 192.168.1.101 port 60246:11: disconnected by user
+Mar 17 21:27:14 localhost sshd[12189]: Disconnected from user billybob 192.168.1.101 port 60246
+Mar 17 21:27:14 localhost sshd[12175]: pam_unix(sshd:session): session closed for user billybob
+Mar 18 01:16:23 localhost lightdm: pam_unix(lightdm-greeter:session): session closed for user root
+Mar 18 01:16:25 localhost sshd[3274]: Received signal 15; terminating.
+Mar 18 06:15:33 localhost polkitd[2971]: Loading rules from directory /etc/polkit-1/rules.d
+Mar 18 06:15:33 localhost polkitd[2971]: Loading rules from directory /usr/share/polkit-1/rules.d
+Mar 18 06:15:33 localhost polkitd[2971]: Finished loading, compiling and executing 3 rules
+Mar 18 06:15:33 localhost polkitd[2971]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
+Mar 18 06:15:34 localhost sshd[3273]: Server listening on 0.0.0.0 port 22.
+Mar 18 06:15:34 localhost sshd[3273]: Server listening on :: port 22.
+Mar 18 06:15:37 localhost lightdm: pam_unix(lightdm-greeter:session): session opened for user root by (uid=0)
+Mar 18 06:15:37 localhost lightdm: pam_ck_connector(lightdm-greeter:session): nox11 mode, ignoring PAM_TTY :0
+Mar 18 07:28:57 localhost sshd[3847]: Accepted keyboard-interactive/pam for billybob from 192.168.1.115 port 41226 ssh2
+Mar 18 07:28:57 localhost sshd[3847]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+Mar 18 07:29:04 localhost sshd[3856]: Received disconnect from 192.168.1.115 port 41226:11: disconnected by user
+Mar 18 07:29:04 localhost sshd[3856]: Disconnected from user billybob 192.168.1.115 port 41226
+Mar 18 07:29:04 localhost sshd[3847]: pam_unix(sshd:session): session closed for user billybob
+Mar 18 07:29:12 localhost sshd[3870]: Accepted keyboard-interactive/pam for billybob from 192.168.1.115 port 41228 ssh2
+Mar 18 07:29:12 localhost sshd[3870]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+Mar 18 08:28:22 localhost sshd[4359]: Accepted publickey for root from 192.168.1.115 port 41282 ssh2: RSA SHA256:ANmXNvtX7iSlswtrEgXlveTkTyE5ySDCOJfTpSRK9wA
+Mar 18 08:28:22 localhost sshd[4359]: pam_unix(sshd:session): session opened for user root by (uid=0)
+Mar 23 20:30:17 localhost sshd[4452]: Accepted keyboard-interactive/pam for billybob from 192.168.1.103 port 31672 ssh2
+Mar 23 20:30:17 localhost sshd[4452]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+Mar 23 23:47:51 localhost sshd[4461]: Received disconnect from 192.168.1.103 port 31672:11: disconnected by user
+Mar 23 23:47:51 localhost sshd[4461]: Disconnected from user billybob 192.168.1.103 port 31672
+Mar 23 23:47:51 localhost sshd[4452]: pam_unix(sshd:session): session closed for user billybob
