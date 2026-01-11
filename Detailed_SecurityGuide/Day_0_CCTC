@@ -1,0 +1,44 @@
+#   CCTC Day 0
+
+
+
+## **My Box**
+
+**Stack Number:** 14
+
+**Jump:** 10.50.15.8
+
+**Username:** student
+
+Password: my default
+
+CTFd: [SECURITY](http://10.50.183.224:8000/)
+
+**Username:** KYKE-005-B
+
+**Password:** Ftz7buipe9nL
+
+Student Guide: [https://sec-cted-tech-college-cttsb-cctc-sec-12e0e75a1babbeec38083447b9.cybbh.io/index.html](https://os.cybbh.io/public/os/latest/index.html)
+
+```bash
+$adminrdp = xfreerdp /u:student /p:password /v:10.50.162.251 /dynamic-resolution
+```
+
+**Initial register:**  
+
+
+
+**Creds for most systems:**
+
+username: student
+
+password: password
+
+
+
+![image-20251210080758116](Images/image-20251210080758116.png)
+
+
+
+Note link: http://10.50.11.248:8080/uploads
+

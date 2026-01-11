@@ -1,0 +1,26 @@
+Static Analysis
+1. Check properties - .exe 
+2. Headers (look in Notepad) - MZ - portable executable for windows. Elf - for linux
+3. Run Strings on the .exe (file name)
+	Enter Key (you can search this)
+	Failed!.
+	Success
+
+  10 strings demo1_new.exe | findstr success
+  11 strings demo1_new.exe | findstr failed
+  12 strings demo1_new.exe | findstr -i failed
+  13 strings demo1_new.exe | findstr -i success
+  14 strings demo1_new.exe | findstr -v success
+  15 strings demo1_new.exe | findstr -v failed
+
+
+
+
+
+Dissassebmly - 
+
+ghidra
+load it
+loko at success 
+rename variables - sttdin - need to identify attributes and align them to the FG
+see FG and corss walk it. 

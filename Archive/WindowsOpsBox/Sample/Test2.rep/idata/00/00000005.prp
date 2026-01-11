@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FILE_INFO>
+    <BASIC_INFO>
+        <STATE NAME="CONTENT_TYPE" TYPE="string" VALUE="Trace" />
+        <STATE NAME="PARENT" TYPE="string" VALUE="/New Traces" />
+        <STATE NAME="FILE_ID" TYPE="string" VALUE="a328d35ef87693071011565700" />
+        <STATE NAME="FILE_TYPE" TYPE="int" VALUE="0" />
+        <STATE NAME="READ_ONLY" TYPE="boolean" VALUE="false" />
+        <STATE NAME="NAME" TYPE="string" VALUE="[0_0x12f4] 2025.12.16-16.02.44-EST" />
+    </BASIC_INFO>
+</FILE_INFO>
