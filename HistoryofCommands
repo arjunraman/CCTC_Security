@@ -1,0 +1,696 @@
+ which openstack
+    2  ./bin/openstack --version
+    3  cd .
+    4  cd ..
+    5  nano .bashrc 
+    6  . .bashrc 
+    7  terminator
+    8  pip install lxml
+    9  pip install requests
+   10  sudo apt install multi-lib
+   11  sudo apt install multilib
+   12  sudo apt install gcc-multilib
+   13  sudo apt-get install lib32z1
+   14  openstack
+   15  gdb
+   16  sudo apt install open-vm-tools open-vm-tools-desktop
+   17  ifconfig
+   18  ipaddress show
+   19  ip addresss show
+   20  ip address show
+   21  ifconfig
+   22  sudo su -
+   23  xfreerdp /u:comrade /p:StudentMidwayPassword /v:192.168.28.9 
+   24  xfreerdp /u:comrade /p:StudentMidwayPassword /v:192.168.28.9:2222 
+   25  xfreerdp /u:comrade /p:StudentMidwayPassword /v:localhost:2222 
+   26  history
+   27  map scan report for 192.168.28.9
+   28  Host is up (0.0010s latency).
+   29  Not shown: 65519 closed ports
+   30  PORT      STATE SERVICE
+   31  135/tcp   open  msrpc
+   32  139/tcp   open  netbios-ssn
+   33  445/tcp   open  microsoft-ds
+   34  3389/tcp  open  ms-wbt-server
+   35  5040/tcp  open  unknown
+   36  5985/tcp  open  wsman
+   37  5986/tcp  open  wsmans
+   38  47001/tcp open  winrm
+   39  49664/tcp open  unknown
+   40  49665/tcp open  unknown
+   41  49666/tcp open  unknown
+   42  49667/tcp open  unknown
+   43  49668/tcp open  unknown
+   44  49669/tcp open  unknown
+   45  49670/tcp open  unknown
+   46  49672/tcp open  unknown
+   47  exit
+   48  xfreerdp /u:comrade /v:192.168.28.135
+   49  xfreerdp /u:comrade /v:192.168.28.9
+   50  clear
+   51  ssh comrade@localhost -p 1111 -L 2222:192.168.28.9:3389
+   52  exit
+   53  cat /etc/hosts
+   54  cat /etc/passwd
+   55  systemctl --type=service
+   56  clear
+   57  ssh student@10.50.12.226
+   58  clear
+   59  ssh student@10.50.12.226 -L 1111:192.168.28.100:2222
+   60  ls
+   61  cd Downloads/
+   62  ls
+   63  proxychains ./scan.sh
+   64  chmod +x scan.sh
+   65  proxychains ./scan.sh
+   66  proxychains nmap 192.168.150.253 -p-
+   67  proxychains nmap 192.168.150.253 -p- -T5
+   68  proxychains nmap -p- -T5 192.168.150.253
+   69  proxychains nmap -p- -T5 192.168.150.225
+   70  clear
+   71  proxychains nmap -p- -T5 192.168.150.253
+   72  proxychains nmap -p- -T5 192.168.28.9
+   73  ss -plant
+   74  proxychains nmap --script http-enum 192.168.28.100
+   75  proxychains scp -P 2222 192.168.28.100:/home/comrade/Dekstop/network/map.png .
+   76  proxychains scp 192.168.28.100:/home/comrade/Dekstop/network/map.png .
+   77  proxychains -P 2222 scp 192.168.28.100:/home/comrade/Dekstop/network/map.png .
+   78  proxychains scp -P 2222 192.168.28.100:/home/comrade/Dekstop/network/map.png .
+   79  proxychains scp -P 2222 www-data@192.168.28.100:/home/comrade/Dekstop/network/map.png .
+   80  ls 
+   81  eog map.png
+   82  sudo snap install eog
+   83  proxychains scp -P 2222 www-data@192.168.28.100:/tmp/backup.tar.gz .
+   84  ls
+   85  unzip backup.tar.gz
+   86  unzip backup.tar.gz > .
+   87  unzip backup.tar.gz .
+   88  cat backup
+   89  zcat backup
+   90  zcat backup.tar.gz
+   91  gunzip backup.tar.gz 
+   92  tar xdf backup.tar 
+   93  tar xdf backup.tar C
+   94  mkdir stolenkeys
+   95  tar -xdf backup.tar C /stolenkeys
+   96  tar -xdf backup.tar C ./stolenkeys
+   97  tar -xvf backup.tar C ./stolenkeys
+   98  tar -xvf backup.tar -C ./stolenkeys
+   99  history
+  100  cd stolenkeys/
+  101  ls
+  102  ls a
+  103  ls -a
+  104  cd .ssh
+  105  ls
+  106  chmod 600 /stolenkeys
+  107  cd ..
+  108  cd..
+  109  cd ..
+  110  ls
+  111  chmod 600 /stolenkeys
+  112  chmod 600 stolenkeys
+  113  proxychains ssh -i stolenkeys comrade@192.168.150.253
+  114  proxychains ssh -i stolenkeys comrade@192.168.150.253 -p 3201
+  115  ls
+  116  cd stolenkeys
+  117  cd stolenkeys/
+  118  ls -al
+  119  cd stolenkeys
+  120  sudo cd stolenkeys/
+  121  sudo chmod 777 stolenkeys/
+  122  cd stolenkeys/
+  123  ls
+  124  ls -a
+  125  cd .ssh
+  126  ls
+  127  cat id_rsa
+  128  ssh student@10.50.12.226 -D 9050
+  129  ssh www-data@192.168.28.100 -D 9050
+  130  ssh www-data@192.168.28.100 -p 2222 -D 9050
+  131  ssh www-data@192.168.28.100 -D 9050
+  132  ssh student@10.50.12.226 -D 9050
+  133  ssh www-data@192.168.28.100 -D 9050
+  134  ssh www-data@192.168.28.100 -p 1111 -D 9050
+  135  ssh www-data@localhost -p 1111 -D 9050
+  136  ssh www-data@192.168.28.100 -p 1111
+  137  ssh www-data@localhost -p 1111
+  138  ssh rsa -keygen
+  139  ssh rsa keygen
+  140  clear
+  141  ssh-keygen -t rsa
+  142  cat ~/.ssh/id_rsa.pub
+  143  proxychains ssh 192.168.28.100 -p 2222
+  144  proxychains ssh 192.168.28.100
+  145  proxychains ssh 192.168.28.100 -p 2222
+  146  proxychains ssh www-data@19
+  147  proxychains ssh 192.168.28.100 -p 2222
+  148  proxychains ssh www-data@192.168.28.100 -p 2222
+  149  proxychains ssh -i stolenkeys comrade@192.168.150.253 -p 3201
+  150  proxychains ssh -i /stolenkeys/.ssh/id_rsa comrade@192.168.150.253 -p 3201
+  151  proxychains ssh -i stolenkeys/.ssh/id_rsa comrade@192.168.150.253 -p 3201
+  152  xfreerdp /u:student /v:localhost:41201 /dynamic-resolution +clipboard
+  153  exit
+  154  ss -plant
+  155  clear
+  156  nano bad.c
+  157  i686-w64-mingw32-g++ -c bad.c -o bad.o
+  158  i686-w64-mingw32-g++ -shared -o bad.dll bad.o -Wl,--out-implib,bad.a
+  159  python -m SimpleHTTPServer 8000
+  160  nano winpriv.c
+  161  i686-w64-mingw32-gcc winpriv.c -o winpriv.exe -mwindows
+  162  nano winpriv.c 
+  163  i686-w64-mingw32-gcc winpriv.c -o winpriv.exe -mwindows
+  164  ssh student@10.50.12.226 -L RHP:10.10.28.45:3389
+  165  ssh student@10.50.12.226 -L 41201:10.10.28.45:3389
+  166  xfreerdp /u:student /v:localhost:41201 /dynamic-resolution +clipboard
+  167  clear
+  168  xfreerdp /u:student /v:localhost:41201 /dynamic-resolution +clipboard
+  169  rm /home/student/.config/freerdp/known_hosts
+  170  xfreerdp /u:student /v:localhost:41201 /dynamic-resolution +clipboard
+  171  xfreerdp /u:student /v:localhost:41201 /dynamic-resolution +clipboard /size:3200x1200
+  172  ip a
+  173  exit
+  174  xfreerdp /u:student /v:localhost:41201 /dynamic-resolution +clipboard /size:3200x1200
+  175  xfreerdp /u:student /v:localhost:1112 /dynamic-resolution +clipboard /size:3200x1200
+  176  rm /home/student/.config/freerdp/known_hosts
+  177  xfreerdp /u:student /v:localhost:1112 /dynamic-resolution +clipboard /size:3200x1200
+  178  xfreerdp /u:comrade /v:localhost:1112 /dynamic-resolution +clipboard /size:3200x1200
+  179  exit
+  180  clear
+  181  ssh student@10.50.12.226 -L 1111:192.168.28.105:2222
+  182  exit
+  183  clear
+  184  history
+  185  exit
+  186  ssh comrade@localhost -p 1111 -L 1112:192.168.28.5:3389
+  187  rm /home/student/.ssh/known_hosts
+  188  ssh comrade@localhost -p 1111 -L 1112:192.168.28.5:3389
+  189  ssh comrade@localhost -p 1111 -L 1132:192.168.28.5:3389
+  190  ssh comrade@localhost -p 1111
+  191  exit
+  192  ssh comrade@localhost -p 1111 -L 1234:192.168.28.5:3389
+  193  ssh comrade@localhost -p 1111 -L 41234:192.168.28.5:3389
+  194  ssh comrade@localhost -p 1111 -L 1112:192.168.28.5:3389
+  195  clear
+  196  exit
+  197  python -m SimpleHTTPServer 8000
+  198  ssh student@10.50.12.226 -L 1234:10.10.28.42:22
+  199  nano ctfhw.c
+  200  i686-w64-mingw32-g++ -c bad.c -o bad.o
+  201  i686-w64-mingw32-g++ -c ctfhw.c -o ctfhw.o
+  202  nano ctfhw.c 
+  203  i686-w64-mingw32-g++ -c ctfhw.c -o ctfhw.o
+  204  nano ctfhw.c 
+  205  i686-w64-mingw32-g++ -c ctfhw.c -o ctfhw.o
+  206  i686-w64-mingw32-g++ -shared -o ctfhw.dll ctfhw.o -Wl,--out-implib,ctfhw.a
+  207  ip a
+  208  nano ctfhw.c
+  209  history
+  210  ssh demo1@localhost -p 1234
+  211  nano ctfhw.c
+  212  history
+  213  proxychains ssh comrade@localhost -p 1111 -D 9050
+  214  proxychains ssh student@localhost -p 1111 -D 9050
+  215  proxychains ssh comrade@192.168.28.27 -D 9050
+  216  ss -plant
+  217  clear
+  218  proxychains ssh student@localhost -p 1111 -D 9050
+  219  cd ..
+  220  ssh-keygen -t rsa
+  221  cat ~/.ssh/id_rsa.pub
+  222  sudo apt install john
+  223  where is john
+  224  whereis john
+  225  nano shadow.txt
+  226  brew install john-the-ripper
+  227  clear
+  228  whereis john
+  229  gunzip john
+  230  sudo john
+  231  john shadow.txt 
+  232  sudo john shadow.txt 
+  233  sc billybob@102.168.28.27:/10-million-password-list-top-10000.txt .
+  234  scp billybob@102.168.28.27:/10-million-password-list-top-10000.txt .
+  235  scp -p 3333 billybob@102.168.28.27:/10-million-password-list-top-10000.txt .
+  236  scp -p 3333 billybob@1ocalhost:/10-million-password-list-top-10000.txt .
+  237  scp -p 3333 billybob@1ocalhost:./10-million-password-list-top-10000.txt .
+  238  scp -p 3333 billybob@1ocalhost:/home/10-million-password-list-top-10000.txt .
+  239  scp -p 3333 billybob@1ocalhost:/home/billybob/10-million-password-list-top-10000.txt .
+  240  scp -P 3333 billybob@1ocalhost:/home/billybob/10-million-password-list-top-10000.txt .
+  241  clear
+  242  sudo john --wordlist=10-million-passwords-list-top-10000.txt 
+  243  sudo john --wordlist=10-million-passwords-list-top-10000.txt shadow.txt
+  244  sudo john --wordlist=/home/student/10-million-passwords-list-top-10000.txt /home/student/shadow.txt
+  245  a
+  246  cat ~/.ssh/id_rsa.pub
+  247  sudo apt install zaproxy
+  248  snap install zaproxy
+  249  snap install zaproxy --classic
+  250  zaproxy
+  251  whereis zaproxy
+  252  history
+
+
+
+    1  which openstack
+    2  ./bin/openstack --version
+    3  cd .
+    4  cd ..
+    5  nano .bashrc 
+    6  . .bashrc 
+    7  terminator
+    8  pip install lxml
+    9  pip install requests
+   10  sudo apt install multi-lib
+   11  sudo apt install multilib
+   12  sudo apt install gcc-multilib
+   13  sudo apt-get install lib32z1
+   14  openstack
+   15  gdb
+   16  sudo apt install open-vm-tools open-vm-tools-desktop
+   17  ifconfig
+   18  ipaddress show
+   19  ip addresss show
+   20  ip address show
+   21  ifconfig
+   22  sudo su -
+   23  xfreerdp /u:comrade /p:StudentMidwayPassword /v:192.168.28.9 
+   24  xfreerdp /u:comrade /p:StudentMidwayPassword /v:192.168.28.9:2222 
+   25  xfreerdp /u:comrade /p:StudentMidwayPassword /v:localhost:2222 
+   26  history
+   27  map scan report for 192.168.28.9
+   28  Host is up (0.0010s latency).
+   29  Not shown: 65519 closed ports
+   30  PORT      STATE SERVICE
+   31  135/tcp   open  msrpc
+   32  139/tcp   open  netbios-ssn
+   33  445/tcp   open  microsoft-ds
+   34  3389/tcp  open  ms-wbt-server
+   35  5040/tcp  open  unknown
+   36  5985/tcp  open  wsman
+   37  5986/tcp  open  wsmans
+   38  47001/tcp open  winrm
+   39  49664/tcp open  unknown
+   40  49665/tcp open  unknown
+   41  49666/tcp open  unknown
+   42  49667/tcp open  unknown
+   43  49668/tcp open  unknown
+   44  49669/tcp open  unknown
+   45  49670/tcp open  unknown
+   46  49672/tcp open  unknown
+   47  exit
+   48  xfreerdp /u:comrade /v:192.168.28.135
+   49  xfreerdp /u:comrade /v:192.168.28.9
+   50  clear
+   51  ssh comrade@localhost -p 1111 -L 2222:192.168.28.9:3389
+   52  exit
+   53  cat /etc/hosts
+   54  cat /etc/passwd
+   55  systemctl --type=service
+   56  clear
+   57  ssh student@10.50.12.226
+   58  clear
+   59  ssh student@10.50.12.226 -L 1111:192.168.28.100:2222
+   60  ls
+   61  cd Downloads/
+   62  ls
+   63  proxychains ./scan.sh
+   64  chmod +x scan.sh
+   65  proxychains ./scan.sh
+   66  proxychains nmap 192.168.150.253 -p-
+   67  proxychains nmap 192.168.150.253 -p- -T5
+   68  proxychains nmap -p- -T5 192.168.150.253
+   69  proxychains nmap -p- -T5 192.168.150.225
+   70  clear
+   71  proxychains nmap -p- -T5 192.168.150.253
+   72  proxychains nmap -p- -T5 192.168.28.9
+   73  ss -plant
+   74  proxychains nmap --script http-enum 192.168.28.100
+   75  proxychains scp -P 2222 192.168.28.100:/home/comrade/Dekstop/network/map.png .
+   76  proxychains scp 192.168.28.100:/home/comrade/Dekstop/network/map.png .
+   77  proxychains -P 2222 scp 192.168.28.100:/home/comrade/Dekstop/network/map.png .
+   78  proxychains scp -P 2222 192.168.28.100:/home/comrade/Dekstop/network/map.png .
+   79  proxychains scp -P 2222 www-data@192.168.28.100:/home/comrade/Dekstop/network/map.png .
+   80  ls 
+   81  eog map.png
+   82  sudo snap install eog
+   83  proxychains scp -P 2222 www-data@192.168.28.100:/tmp/backup.tar.gz .
+   84  ls
+   85  unzip backup.tar.gz
+   86  unzip backup.tar.gz > .
+   87  unzip backup.tar.gz .
+   88  cat backup
+   89  zcat backup
+   90  zcat backup.tar.gz
+   91  gunzip backup.tar.gz 
+   92  tar xdf backup.tar 
+   93  tar xdf backup.tar C
+   94  mkdir stolenkeys
+   95  tar -xdf backup.tar C /stolenkeys
+   96  tar -xdf backup.tar C ./stolenkeys
+   97  tar -xvf backup.tar C ./stolenkeys
+   98  tar -xvf backup.tar -C ./stolenkeys
+   99  history
+  100  cd stolenkeys/
+  101  ls
+  102  ls a
+  103  ls -a
+  104  cd .ssh
+  105  ls
+  106  chmod 600 /stolenkeys
+  107  cd ..
+  108  cd..
+  109  cd ..
+  110  ls
+  111  chmod 600 /stolenkeys
+  112  chmod 600 stolenkeys
+  113  proxychains ssh -i stolenkeys comrade@192.168.150.253
+  114  proxychains ssh -i stolenkeys comrade@192.168.150.253 -p 3201
+  115  ls
+  116  cd stolenkeys
+  117  cd stolenkeys/
+  118  ls -al
+  119  cd stolenkeys
+  120  sudo cd stolenkeys/
+  121  sudo chmod 777 stolenkeys/
+  122  cd stolenkeys/
+  123  ls
+  124  ls -a
+  125  cd .ssh
+  126  ls
+  127  cat id_rsa
+  128  ssh student@10.50.12.226 -D 9050
+  129  ssh www-data@192.168.28.100 -D 9050
+  130  ssh www-data@192.168.28.100 -p 2222 -D 9050
+  131  ssh www-data@192.168.28.100 -D 9050
+  132  ssh student@10.50.12.226 -D 9050
+  133  ssh www-data@192.168.28.100 -D 9050
+  134  ssh www-data@192.168.28.100 -p 1111 -D 9050
+  135  ssh www-data@localhost -p 1111 -D 9050
+  136  ssh www-data@192.168.28.100 -p 1111
+  137  ssh www-data@localhost -p 1111
+  138  ssh rsa -keygen
+  139  ssh rsa keygen
+  140  clear
+  141  ssh-keygen -t rsa
+  142  cat ~/.ssh/id_rsa.pub
+  143  proxychains ssh 192.168.28.100 -p 2222
+  144  proxychains ssh 192.168.28.100
+  145  proxychains ssh 192.168.28.100 -p 2222
+  146  proxychains ssh www-data@19
+  147  proxychains ssh 192.168.28.100 -p 2222
+  148  proxychains ssh www-data@192.168.28.100 -p 2222
+  149  proxychains ssh -i stolenkeys comrade@192.168.150.253 -p 3201
+  150  proxychains ssh -i /stolenkeys/.ssh/id_rsa comrade@192.168.150.253 -p 3201
+  151  proxychains ssh -i stolenkeys/.ssh/id_rsa comrade@192.168.150.253 -p 3201
+  152  xfreerdp /u:student /v:localhost:41201 /dynamic-resolution +clipboard
+  153  exit
+  154  ss -plant
+  155  clear
+  156  nano bad.c
+  157  i686-w64-mingw32-g++ -c bad.c -o bad.o
+  158  i686-w64-mingw32-g++ -shared -o bad.dll bad.o -Wl,--out-implib,bad.a
+  159  python -m SimpleHTTPServer 8000
+  160  nano winpriv.c
+  161  i686-w64-mingw32-gcc winpriv.c -o winpriv.exe -mwindows
+  162  nano winpriv.c 
+  163  i686-w64-mingw32-gcc winpriv.c -o winpriv.exe -mwindows
+  164  ssh student@10.50.12.226 -L RHP:10.10.28.45:3389
+  165  ssh student@10.50.12.226 -L 41201:10.10.28.45:3389
+  166  xfreerdp /u:student /v:localhost:41201 /dynamic-resolution +clipboard
+  167  clear
+  168  xfreerdp /u:student /v:localhost:41201 /dynamic-resolution +clipboard
+  169  rm /home/student/.config/freerdp/known_hosts
+  170  xfreerdp /u:student /v:localhost:41201 /dynamic-resolution +clipboard
+  171  xfreerdp /u:student /v:localhost:41201 /dynamic-resolution +clipboard /size:3200x1200
+  172  ip a
+  173  exit
+  174  xfreerdp /u:student /v:localhost:41201 /dynamic-resolution +clipboard /size:3200x1200
+  175  xfreerdp /u:student /v:localhost:1112 /dynamic-resolution +clipboard /size:3200x1200
+  176  rm /home/student/.config/freerdp/known_hosts
+  177  xfreerdp /u:student /v:localhost:1112 /dynamic-resolution +clipboard /size:3200x1200
+  178  xfreerdp /u:comrade /v:localhost:1112 /dynamic-resolution +clipboard /size:3200x1200
+  179  exit
+  180  clear
+  181  ssh student@10.50.12.226 -L 1111:192.168.28.105:2222
+  182  exit
+  183  clear
+  184  history
+  185  exit
+  186  ssh comrade@localhost -p 1111 -L 1112:192.168.28.5:3389
+  187  rm /home/student/.ssh/known_hosts
+  188  ssh comrade@localhost -p 1111 -L 1112:192.168.28.5:3389
+  189  ssh comrade@localhost -p 1111 -L 1132:192.168.28.5:3389
+  190  ssh comrade@localhost -p 1111
+  191  exit
+  192  ssh comrade@localhost -p 1111 -L 1234:192.168.28.5:3389
+  193  ssh comrade@localhost -p 1111 -L 41234:192.168.28.5:3389
+  194  ssh comrade@localhost -p 1111 -L 1112:192.168.28.5:3389
+  195  clear
+  196  exit
+  197  python -m SimpleHTTPServer 8000
+  198  ssh student@10.50.12.226 -L 1234:10.10.28.42:22
+  199  nano ctfhw.c
+  200  i686-w64-mingw32-g++ -c bad.c -o bad.o
+  201  i686-w64-mingw32-g++ -c ctfhw.c -o ctfhw.o
+  202  nano ctfhw.c 
+  203  i686-w64-mingw32-g++ -c ctfhw.c -o ctfhw.o
+  204  nano ctfhw.c 
+  205  i686-w64-mingw32-g++ -c ctfhw.c -o ctfhw.o
+  206  i686-w64-mingw32-g++ -shared -o ctfhw.dll ctfhw.o -Wl,--out-implib,ctfhw.a
+  207  ip a
+  208  nano ctfhw.c
+  209  history
+  210  ssh demo1@localhost -p 1234
+  211  nano ctfhw.c
+  212  history
+  213  cat rsyslog2.conf 
+  214  cd ..
+  215  ls
+  216  cat shadow.txt 
+  217  ls -la
+  218  cat shadow.txt 
+  219  history
+
+
+    1  which openstack
+    2  ./bin/openstack --version
+    3  cd .
+    4  cd ..
+    5  nano .bashrc 
+    6  . .bashrc 
+    7  terminator
+    8  pip install lxml
+    9  pip install requests
+   10  sudo apt install multi-lib
+   11  sudo apt install multilib
+   12  sudo apt install gcc-multilib
+   13  sudo apt-get install lib32z1
+   14  openstack
+   15  gdb
+   16  sudo apt install open-vm-tools open-vm-tools-desktop
+   17  ifconfig
+   18  ipaddress show
+   19  ip addresss show
+   20  ip address show
+   21  ifconfig
+   22  sudo su -
+   23  xfreerdp /u:comrade /p:StudentMidwayPassword /v:192.168.28.9 
+   24  xfreerdp /u:comrade /p:StudentMidwayPassword /v:192.168.28.9:2222 
+   25  xfreerdp /u:comrade /p:StudentMidwayPassword /v:localhost:2222 
+   26  history
+   27  map scan report for 192.168.28.9
+   28  Host is up (0.0010s latency).
+   29  Not shown: 65519 closed ports
+   30  PORT      STATE SERVICE
+   31  135/tcp   open  msrpc
+   32  139/tcp   open  netbios-ssn
+   33  445/tcp   open  microsoft-ds
+   34  3389/tcp  open  ms-wbt-server
+   35  5040/tcp  open  unknown
+   36  5985/tcp  open  wsman
+   37  5986/tcp  open  wsmans
+   38  47001/tcp open  winrm
+   39  49664/tcp open  unknown
+   40  49665/tcp open  unknown
+   41  49666/tcp open  unknown
+   42  49667/tcp open  unknown
+   43  49668/tcp open  unknown
+   44  49669/tcp open  unknown
+   45  49670/tcp open  unknown
+   46  49672/tcp open  unknown
+   47  exit
+   48  xfreerdp /u:comrade /v:192.168.28.135
+   49  xfreerdp /u:comrade /v:192.168.28.9
+   50  clear
+   51  ssh comrade@localhost -p 1111 -L 2222:192.168.28.9:3389
+   52  exit
+   53  cat /etc/hosts
+   54  cat /etc/passwd
+   55  systemctl --type=service
+   56  clear
+   57  ssh student@10.50.12.226
+   58  clear
+   59  ssh student@10.50.12.226 -L 1111:192.168.28.100:2222
+   60  ls
+   61  cd Downloads/
+   62  ls
+   63  proxychains ./scan.sh
+   64  chmod +x scan.sh
+   65  proxychains ./scan.sh
+   66  proxychains nmap 192.168.150.253 -p-
+   67  proxychains nmap 192.168.150.253 -p- -T5
+   68  proxychains nmap -p- -T5 192.168.150.253
+   69  proxychains nmap -p- -T5 192.168.150.225
+   70  clear
+   71  proxychains nmap -p- -T5 192.168.150.253
+   72  proxychains nmap -p- -T5 192.168.28.9
+   73  ss -plant
+   74  proxychains nmap --script http-enum 192.168.28.100
+   75  proxychains scp -P 2222 192.168.28.100:/home/comrade/Dekstop/network/map.png .
+   76  proxychains scp 192.168.28.100:/home/comrade/Dekstop/network/map.png .
+   77  proxychains -P 2222 scp 192.168.28.100:/home/comrade/Dekstop/network/map.png .
+   78  proxychains scp -P 2222 192.168.28.100:/home/comrade/Dekstop/network/map.png .
+   79  proxychains scp -P 2222 www-data@192.168.28.100:/home/comrade/Dekstop/network/map.png .
+   80  ls 
+   81  eog map.png
+   82  sudo snap install eog
+   83  proxychains scp -P 2222 www-data@192.168.28.100:/tmp/backup.tar.gz .
+   84  ls
+   85  unzip backup.tar.gz
+   86  unzip backup.tar.gz > .
+   87  unzip backup.tar.gz .
+   88  cat backup
+   89  zcat backup
+   90  zcat backup.tar.gz
+   91  gunzip backup.tar.gz 
+   92  tar xdf backup.tar 
+   93  tar xdf backup.tar C
+   94  mkdir stolenkeys
+   95  tar -xdf backup.tar C /stolenkeys
+   96  tar -xdf backup.tar C ./stolenkeys
+   97  tar -xvf backup.tar C ./stolenkeys
+   98  tar -xvf backup.tar -C ./stolenkeys
+   99  history
+  100  cd stolenkeys/
+  101  ls
+  102  ls a
+  103  ls -a
+  104  cd .ssh
+  105  ls
+  106  chmod 600 /stolenkeys
+  107  cd ..
+  108  cd..
+  109  cd ..
+  110  ls
+  111  chmod 600 /stolenkeys
+  112  chmod 600 stolenkeys
+  113  proxychains ssh -i stolenkeys comrade@192.168.150.253
+  114  proxychains ssh -i stolenkeys comrade@192.168.150.253 -p 3201
+  115  ls
+  116  cd stolenkeys
+  117  cd stolenkeys/
+  118  ls -al
+  119  cd stolenkeys
+  120  sudo cd stolenkeys/
+  121  sudo chmod 777 stolenkeys/
+  122  cd stolenkeys/
+  123  ls
+  124  ls -a
+  125  cd .ssh
+  126  ls
+  127  cat id_rsa
+  128  ssh student@10.50.12.226 -D 9050
+  129  ssh www-data@192.168.28.100 -D 9050
+  130  ssh www-data@192.168.28.100 -p 2222 -D 9050
+  131  ssh www-data@192.168.28.100 -D 9050
+  132  ssh student@10.50.12.226 -D 9050
+  133  ssh www-data@192.168.28.100 -D 9050
+  134  ssh www-data@192.168.28.100 -p 1111 -D 9050
+  135  ssh www-data@localhost -p 1111 -D 9050
+  136  ssh www-data@192.168.28.100 -p 1111
+  137  ssh www-data@localhost -p 1111
+  138  ssh rsa -keygen
+  139  ssh rsa keygen
+  140  clear
+  141  ssh-keygen -t rsa
+  142  cat ~/.ssh/id_rsa.pub
+  143  proxychains ssh 192.168.28.100 -p 2222
+  144  proxychains ssh 192.168.28.100
+  145  proxychains ssh 192.168.28.100 -p 2222
+  146  proxychains ssh www-data@19
+  147  proxychains ssh 192.168.28.100 -p 2222
+  148  proxychains ssh www-data@192.168.28.100 -p 2222
+  149  proxychains ssh -i stolenkeys comrade@192.168.150.253 -p 3201
+  150  proxychains ssh -i /stolenkeys/.ssh/id_rsa comrade@192.168.150.253 -p 3201
+  151  proxychains ssh -i stolenkeys/.ssh/id_rsa comrade@192.168.150.253 -p 3201
+  152  xfreerdp /u:student /v:localhost:41201 /dynamic-resolution +clipboard
+  153  exit
+  154  ss -plant
+  155  clear
+  156  nano bad.c
+  157  i686-w64-mingw32-g++ -c bad.c -o bad.o
+  158  i686-w64-mingw32-g++ -shared -o bad.dll bad.o -Wl,--out-implib,bad.a
+  159  python -m SimpleHTTPServer 8000
+  160  nano winpriv.c
+  161  i686-w64-mingw32-gcc winpriv.c -o winpriv.exe -mwindows
+  162  nano winpriv.c 
+  163  i686-w64-mingw32-gcc winpriv.c -o winpriv.exe -mwindows
+  164  ssh student@10.50.12.226 -L RHP:10.10.28.45:3389
+  165  ssh student@10.50.12.226 -L 41201:10.10.28.45:3389
+  166  xfreerdp /u:student /v:localhost:41201 /dynamic-resolution +clipboard
+  167  clear
+  168  xfreerdp /u:student /v:localhost:41201 /dynamic-resolution +clipboard
+  169  rm /home/student/.config/freerdp/known_hosts
+  170  xfreerdp /u:student /v:localhost:41201 /dynamic-resolution +clipboard
+  171  xfreerdp /u:student /v:localhost:41201 /dynamic-resolution +clipboard /size:3200x1200
+  172  ip a
+  173  exit
+  174  xfreerdp /u:student /v:localhost:41201 /dynamic-resolution +clipboard /size:3200x1200
+  175  xfreerdp /u:student /v:localhost:1112 /dynamic-resolution +clipboard /size:3200x1200
+  176  rm /home/student/.config/freerdp/known_hosts
+  177  xfreerdp /u:student /v:localhost:1112 /dynamic-resolution +clipboard /size:3200x1200
+  178  xfreerdp /u:comrade /v:localhost:1112 /dynamic-resolution +clipboard /size:3200x1200
+  179  exit
+  180  clear
+  181  ssh student@10.50.12.226 -L 1111:192.168.28.105:2222
+  182  exit
+  183  clear
+  184  history
+  185  exit
+  186  ssh comrade@localhost -p 1111 -L 1112:192.168.28.5:3389
+  187  rm /home/student/.ssh/known_hosts
+  188  ssh comrade@localhost -p 1111 -L 1112:192.168.28.5:3389
+  189  ssh comrade@localhost -p 1111 -L 1132:192.168.28.5:3389
+  190  ssh comrade@localhost -p 1111
+  191  exit
+  192  ssh comrade@localhost -p 1111 -L 1234:192.168.28.5:3389
+  193  ssh comrade@localhost -p 1111 -L 41234:192.168.28.5:3389
+  194  ssh comrade@localhost -p 1111 -L 1112:192.168.28.5:3389
+  195  clear
+  196  exit
+  197  python -m SimpleHTTPServer 8000
+  198  ssh student@10.50.12.226 -L 1234:10.10.28.42:22
+  199  nano ctfhw.c
+  200  i686-w64-mingw32-g++ -c bad.c -o bad.o
+  201  i686-w64-mingw32-g++ -c ctfhw.c -o ctfhw.o
+  202  nano ctfhw.c 
+  203  i686-w64-mingw32-g++ -c ctfhw.c -o ctfhw.o
+  204  nano ctfhw.c 
+  205  i686-w64-mingw32-g++ -c ctfhw.c -o ctfhw.o
+  206  i686-w64-mingw32-g++ -shared -o ctfhw.dll ctfhw.o -Wl,--out-implib,ctfhw.a
+  207  ip a
+  208  nano ctfhw.c
+  209  history
+  210  ssh demo1@localhost -p 1234
+  211  nano ctfhw.c
+  212  history
+  213  root@192.168.28.12 -p 4444
+  214  ssh root@1ocalhost -p 4444
+  215  ssh root@localhost -p 4444
+  216  history
+
+
+
+
