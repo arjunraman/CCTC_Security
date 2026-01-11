@@ -153,3 +153,9 @@ Exploit Development:
 
 Your opsbox has john the ripper, a password cracker. If you can access /etc/shadow or other password hashes and get your hands on a wordlist, see if you can crack creds
 	john --wordlist=/path/to/wordlist /file/with/hashes
+
+
+
+whoami
+
+
