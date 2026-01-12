@@ -521,10 +521,7 @@ Some editors create temporary/backup files that can contain sensitive content:
 
 ### Archive handling (`.tar.gz`)
 ```bash
-tar -tvf backup.tar
-tar -tzvf backup.tar.gz
-mkdir -p stolenkeys
-tar -xzvf backup.tar.gz -C ./stolenkeys
+
 gunzip backup.tar.gz
 tar -xvf backup.tar -C ./stolenkeys
 zcat backup.tar.gz
@@ -786,6 +783,59 @@ ssh student@10.50.12.226 -L 41201:10.10.28.45:3389
 ssh student@10.50.12.226 -D 9050
 xfreerdp /u:<user> /v:localhost:<port>
 ```
+### SCP
+```bash
+1. scp /path/to/local/file.txt username@remote_host:/path/to/remote/directory/
+2. scp myfile.txt user@192.168.1.100:/home/user/
+3. scp username@remote_host:/path/to/remote/file.txt /path/to/local/directory/
+4. scp user@192.168.1.100:/home/user/myfile.txt .
+```
+
+## Secure Copy Protocol  (SCP)
+
+[TOC]
+
+We will likely need to use the secure copy protocol (scp) in order to pull files to our own machine during the exam. 
+
+Most likely - the file is located within **/usr/share/cctc**. 
+
+### Normal SCP
+
+STEPS:
+
+1. Pull a file to your system
+
+**Command:**
+
+```bash
+# Pulling a file to your system
+scp tgt_username@tgt_ip_address:/path/to/file/flag.txt . # Don't forget the period!
+
+# ! Example with /usr/share/cctc !
+scp tgt_username@tgt_ip_address:/usr/share/cctc/* . 
+```
+
+  1a. Send a file to another system 
+
+**Command:**
+
+```bash
+# Sending a file to another system
+scp /path/to/file/flag.txt tgt_username@tgt_ip_address:/path/to/drop/location
+```
+
+### Using SCP with a Local Tunnel
+
+STEPS:
+
+**Command:**
+
+```bash
+scp -P 1111 Aang@localhost:/usr/share/cctc/Aang-share.png . # Don't forget the period!
+# -P 1111 is from the local tunnel we've built to connect to host Aang
+
+scp -P Local_Tunnel_Port tgt@tgt_ip_address:/path/to/tgt/file.txt . 
+```
 
 ### NIX ops
 ```bash
@@ -831,9 +881,12 @@ schtasks /query /fo LIST /v | Select-String -Pattern "STRING OR REGEX PATTERN"
 ```
 
 ### John- for Password Auditing
+```bash
 sudo john
 sudo unshadow /etc/passwd /etc/shadow > output_file.txt
 john --wordlist=/usr/share/john/password.lst mypasswd.txt
 
+Sample:
 ubuntu@practice-lin-ops:~$ sudo unshadow /etc/passwd /etc/shadow > mypasswd.txt
 ubuntu@practice-lin-ops:~$ john --wordlist=/usr/share/john/password.lst mypasswd.txt
+```
